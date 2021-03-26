@@ -2,7 +2,7 @@ export default function particleText() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
 
-    var adjustX, adjustY, spacing, maxLineDistance, mouse;
+    var adjustX, adjustY, spacing, maxLineDistance, mouse, ballSize;
 
     if (window.innerWidth < 1200) {
         canvas.width = 1500;
@@ -12,6 +12,7 @@ export default function particleText() {
         adjustY = 1.5;
         spacing = 12;
         maxLineDistance = 20;
+        ballSize = 6;
         mouse = {
             x: null,
             y: null,
@@ -25,6 +26,7 @@ export default function particleText() {
         adjustY = 5;
         spacing = 15;
         maxLineDistance = 25;
+        ballSize = 8;
         mouse = {
             x: null,
             y: null,
@@ -48,15 +50,16 @@ export default function particleText() {
 
     class Particle {
         constructor(x, y) {
-            this.x = x;
-            this.y = y;
-            this.size = 3;
-            this.baseX = this.x;
-            this.baseY = this.y;
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = ballSize;
+            this.baseX = x;
+            this.baseY = y;
             this.density = (Math.random() * 30) + 1;
+            this.baseColor = 255;
         }
         draw() {
-            ctx.fillStyle = "white";
+            ctx.fillStyle = "rgb(255," + this.baseColor + ",255)";
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.closePath();
@@ -76,6 +79,9 @@ export default function particleText() {
             if (distance < mouse.radius) {
                 this.x -= directionX;
                 this.y -= directionY;
+                if (this.baseColor > 7) {
+                    this.baseColor -= 8;
+                }
             } else {
                 if (this.x !== this.baseX) {
                     dx = this.x - this.baseX;
@@ -84,6 +90,9 @@ export default function particleText() {
                 if (this.y !== this.baseY) {
                     dy = this.y - this.baseY;
                     this.y -= dy / 50;
+                }
+                if (this.baseColor < 255) {
+                    this.baseColor += 1;
                 }
             }
         }
@@ -109,12 +118,12 @@ export default function particleText() {
             particleArray[i].draw();
             particleArray[i].update();
         }
-        connect();
+        // connect();
         requestAnimationFrame(animate);
     }
     animate();
 
-    function connect() {
+    /* function connect() {
         var opacityValue = 1;
         for (var a = 0; a < particleArray.length; a++) {
             for (var b = a; b < particleArray.length; b++) {
@@ -124,8 +133,8 @@ export default function particleText() {
 
                 if (distance < maxLineDistance) {
                     opacityValue = 1 - (distance / maxLineDistance);
-                    ctx.strokeStyle = 'rgba(255,255,255,' + opacityValue + ')';
-                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = 'rgba(' + particleArray[a].baseColor + ',255,255,' + opacityValue + ')';
+                    ctx.lineWidth = 1.5;
                     ctx.beginPath();
                     ctx.moveTo(particleArray[a].x, particleArray[a].y);
                     ctx.lineTo(particleArray[b].x, particleArray[b].y);
@@ -133,7 +142,7 @@ export default function particleText() {
                 }
             }
         }
-    }
+    } */
 
     window.addEventListener('resize', function(){
         canvasPosition = canvas.getBoundingClientRect();

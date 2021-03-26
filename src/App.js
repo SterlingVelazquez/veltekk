@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
-        <div id="canvas1"></div>
+        <div className="introOverlay"></div>
       </div>
     );
   }
