@@ -1,0 +1,20 @@
+body {
+  background: black;
+  overflow-x:hidden;
+}
+
+#canvas1 {
+  position: absolute;
+  width: 2000px;
+  height: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1200px) {
+  #canvas1 {
+    width: 1500px;
+    height: 600px;
+  }
+}
