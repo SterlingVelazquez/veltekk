@@ -2,15 +2,17 @@ export default function particleText() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
 
+    var adjustX, adjustY, spacing, maxLineDistance, mouse;
+
     if (window.innerWidth < 1200) {
         canvas.width = 1500;
         canvas.height = 600;
         ctx.font = '15px Verdana';
-        var adjustX = 35.5;
-        var adjustY = 1.5;
-        var spacing = 12;
-        var maxLineDistance = 20;
-        var mouse = {
+        adjustX = 35.5;
+        adjustY = 1.5;
+        spacing = 12;
+        maxLineDistance = 20;
+        mouse = {
             x: null,
             y: null,
             radius: 60
@@ -19,11 +21,11 @@ export default function particleText() {
         canvas.width = 2000;
         canvas.height = 800;
         ctx.font = '20px Verdana';
-        var adjustX = 30;
-        var adjustY = 5;
-        var spacing = 15;
-        var maxLineDistance = 25;
-        var mouse = {
+        adjustX = 30;
+        adjustY = 5;
+        spacing = 15;
+        maxLineDistance = 25;
+        mouse = {
             x: null,
             y: null,
             radius: 120
@@ -76,11 +78,11 @@ export default function particleText() {
                 this.y -= directionY;
             } else {
                 if (this.x !== this.baseX) {
-                    var dx = this.x - this.baseX;
+                    dx = this.x - this.baseX;
                     this.x -= dx / 50;
                 }
                 if (this.y !== this.baseY) {
-                    var dy = this.y - this.baseY;
+                    dy = this.y - this.baseY;
                     this.y -= dy / 50;
                 }
             }
