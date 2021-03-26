@@ -2,7 +2,7 @@ export default function particleText() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
 
-    var adjustX, adjustY, spacing, maxLineDistance, mouse, ballSize;
+    var adjustX, adjustY, spacing, mouse, ballSize;
 
     if (window.innerWidth < 1200) {
         canvas.width = 1500;
@@ -11,7 +11,7 @@ export default function particleText() {
         adjustX = 35.5;
         adjustY = 1.5;
         spacing = 12;
-        maxLineDistance = 20;
+        // maxLineDistance = 20;
         ballSize = 6;
         mouse = {
             x: null,
@@ -25,7 +25,7 @@ export default function particleText() {
         adjustX = 30;
         adjustY = 5;
         spacing = 15;
-        maxLineDistance = 25;
+        // maxLineDistance = 25;
         ballSize = 8;
         mouse = {
             x: null,
