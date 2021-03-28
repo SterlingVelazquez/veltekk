@@ -98,7 +98,7 @@ export default function particleText() {
             canvas.width = 240;
             canvas.height = 200;
             adjustX = 3.5;
-            adjustY = 12;
+            adjustY = 11.75;
             spacing = 3;
             // maxLineDistance = 20;
             ballSize = 1.5;
