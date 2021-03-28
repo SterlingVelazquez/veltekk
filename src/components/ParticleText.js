@@ -10,11 +10,11 @@ export default function particleText() {
 
     function initializeVariables() {
         canvasPosition = canvas.getBoundingClientRect();
-        if (window.innerWidth > 1400 && (typeof canvas.width === "undefined" || adjustX !== 10.25)) {
-            canvas.width = 1400;
-            canvas.height = 800;
-            adjustX = 10.25;
-            adjustY = 5;
+        if (window.innerWidth > 1400 && (typeof canvas.width === "undefined" || adjustX !== 63.5)) {
+            canvas.width = 3000;
+            canvas.height = 2000;
+            adjustX = 63.5;
+            adjustY = 45.1;
             spacing = 15;
             // maxLineDistance = 25;
             ballSize = 8;
@@ -24,11 +24,11 @@ export default function particleText() {
                 radius: 120
             }
             initializeParticleText();
-        } else if ((window.innerWidth > 1024 && window.innerWidth <= 1400) && (typeof canvas.width === "undefined" || adjustX !== 6.2)) {
-            canvas.width = 1024;
-            canvas.height = 700;
-            adjustX = 6.2;
-            adjustY = 7.65;
+        } else if ((window.innerWidth > 1024 && window.innerWidth <= 1400) && (typeof canvas.width === "undefined" || adjustX !== 88.5)) {
+            canvas.width = 3000;
+            canvas.height = 2000;
+            adjustX = 88.5;
+            adjustY = 61.85;
             spacing = 12;
             // maxLineDistance = 20;
             ballSize = 6;
@@ -38,11 +38,11 @@ export default function particleText() {
                 radius: 60
             }
             initializeParticleText();
-        } else if ((window.innerWidth > 768 && window.innerWidth <= 1024) && (typeof canvas.width === "undefined" || adjustX !== 11.5)) {
-            canvas.width = 768;
-            canvas.height = 500;
-            adjustX = 11.5;
-            adjustY = 9.75;
+        } else if ((window.innerWidth > 768 && window.innerWidth <= 1024) && (typeof canvas.width === "undefined" || adjustX !== 27.6)) {
+            canvas.width = 1024;
+            canvas.height = 1000;
+            adjustX = 27.6;
+            adjustY = 41;
             spacing = 8;
             // maxLineDistance = 20;
             ballSize = 4;
@@ -52,11 +52,11 @@ export default function particleText() {
                 radius: 45
             }
             initializeParticleText();
-        } else if ((window.innerWidth > 560 && window.innerWidth <= 768) && (typeof canvas.width === "undefined" || adjustX !== 6.3)) {
-            canvas.width = 560;
-            canvas.height = 400;
-            adjustX = 6.3;
-            adjustY = 9.25;
+        } else if ((window.innerWidth > 560 && window.innerWidth <= 768) && (typeof canvas.width === "undefined" || adjustX !== 22.6)) {
+            canvas.width = 768;
+            canvas.height = 1000;
+            adjustX = 22.6;
+            adjustY = 55.25;
             spacing = 6.5;
             // maxLineDistance = 20;
             ballSize = 3.25;
@@ -66,11 +66,11 @@ export default function particleText() {
                 radius: 35
             }
             initializeParticleText();
-        } else if ((window.innerWidth > 400 && window.innerWidth <= 560) && (typeof canvas.width === "undefined" || adjustX !== 3.5)) {
-            canvas.width = 400;
-            canvas.height = 300;
-            adjustX = 3.5;
-            adjustY = 8.5;
+        } else if ((window.innerWidth > 400 && window.innerWidth <= 560) && (typeof canvas.width === "undefined" || adjustX !== 19.6)) {
+            canvas.width = 560;
+            canvas.height = 1000;
+            adjustX = 19.6;
+            adjustY = 78.4;
             spacing = 5;
             // maxLineDistance = 20;
             ballSize = 2.5;
@@ -80,11 +80,11 @@ export default function particleText() {
                 radius: 30
             }
             initializeParticleText();
-        } else if ((window.innerWidth > 300 && window.innerWidth <= 400) && (typeof canvas.width === "undefined" || adjustX !== 3.2)) {
-            canvas.width = 300;
-            canvas.height = 200;
-            adjustX = 3.2;
-            adjustY = 4.75;
+        } else if ((window.innerWidth > 300 && window.innerWidth <= 400) && (typeof canvas.width === "undefined" || adjustX !== 16.3)) {
+            canvas.width = 400;
+            canvas.height = 1000;
+            adjustX = 16.3;
+            adjustY = 110;
             spacing = 3.8;
             // maxLineDistance = 20;
             ballSize = 1.9;
@@ -94,11 +94,11 @@ export default function particleText() {
                 radius: 25
             }
             initializeParticleText();
-        } else if (window.innerWidth <= 300 && (typeof canvas.width === "undefined" || adjustX !== 3.5)) {
-            canvas.width = 240;
-            canvas.height = 200;
-            adjustX = 3.5;
-            adjustY = 11.75;
+        } else if (window.innerWidth <= 300 && (typeof canvas.width === "undefined" || adjustX !== 13.5)) {
+            canvas.width = 300;
+            canvas.height = 1000;
+            adjustX = 13.5;
+            adjustY = 145.2;
             spacing = 3;
             // maxLineDistance = 20;
             ballSize = 1.5;
@@ -113,6 +113,7 @@ export default function particleText() {
 
     function initializeParticleText() {
         particleArray = [];
+        ctx.clearRect(0, 0, canvas.width, canvas.Height);
         ctx.fillStyle = 'white';
         ctx.font = '20px Verdana';
         ctx.fillText('Veltekk', 0, 30);
@@ -237,6 +238,13 @@ export default function particleText() {
             mouse.y = e.touches[0].clientY - canvasPosition.top;
         }
     );
+
+    window.addEventListener('touchend',
+        function(e) {
+            mouse.x = 0;
+            mouse.y = 0;
+        }
+    )
 
     animate();
 
