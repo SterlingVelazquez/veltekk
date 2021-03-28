@@ -1,6 +1,7 @@
 body {
   background: black;
   overflow:hidden;
+  touch-action: none;
 }
 
 #canvas1 {

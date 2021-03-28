@@ -230,10 +230,11 @@ export default function particleText() {
         }
     );
 
-    window.addEventListener('touchmove', {passive:false},
+    window.addEventListener('touchmove',
         function (e) {
-            e.stopPropagation();
-            e.preventDefault(); // stop scrolling
+            e.preventDefault();
+            mouse.x = e.touches[0].clientX - canvasPosition.left;
+            mouse.y = e.touches[0].clientY - canvasPosition.top;
         }
     );
 
