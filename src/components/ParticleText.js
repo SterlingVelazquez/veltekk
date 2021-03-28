@@ -230,19 +230,12 @@ export default function particleText() {
         }
     );
 
-    /* window.addEventListener('touchmove', {passive:false},
+    window.addEventListener('touchmove', {passive:false},
         function (e) {
             e.stopPropagation();
-            e.preventDefault(); // we don't want to scroll
-            var clkEvt = document.createEvent('MouseEvent');
-            clkEvt.initMouseEvent('mousemove', true, true, window, e.detail, 
-                         e.touches[0].screenX, e.touches[0].screenY, 
-                         e.touches[0].clientX, e.touches[0].clientY, 
-                         false, false, false, false, 
-                         0, null);
-            window.dispatchEvent(clkEvt);
-        }, false
-    ); */
+            e.preventDefault(); // stop scrolling
+        }
+    );
 
     animate();
 
