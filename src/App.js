@@ -1,6 +1,5 @@
 import React from 'react';
 import './css/main.css';
-// import particles from './components/ImageEffect.js'
 import particleText from './components/ParticleText.js'
 
 try {

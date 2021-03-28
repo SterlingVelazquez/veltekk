@@ -1,11 +1,11 @@
 body {
   background: black;
-  overflow-x:hidden;
+  overflow:hidden;
 }
 
 #canvas1 {
   position: absolute;
-  width: 2000px;
+  width: 1400px;
   height: 800px;
   top: 50%;
   left: 50%;
@@ -42,9 +42,45 @@ body {
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   #canvas1 {
-    width: 1500px;
-    height: 600px;
+    width: 1024px;
+    height: 700px;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  #canvas1 {
+    width: 768px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #canvas1 {
+    width: 560px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  #canvas1 {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #canvas1 {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #canvas1 {
+    width: 240px;
+    height: 200px;
+  }
+}
+
