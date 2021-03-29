@@ -1,27 +1,25 @@
 import React from 'react';
-import './css/main.css';
-import particleText from './components/ParticleText.js'
+import About from "./pages/About.js"
+import Home from "./pages/Home.js"
+import Projects from "./pages/Projects.js"
+import { AnimatePresence } from 'framer-motion'
+import { BrowserRouter as Switch, Route, useLocation } from "react-router-dom";
 
-try {
-  particleText()
-} catch {
-  // Error
-}
+function App() {
 
-class App extends React.Component {
+  const location = useLocation();
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="main">
-        <div className="introOverlay"></div>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/" exact component={Home} />
+        </Switch>
+      </AnimatePresence>
+    </div>
+  );
 }
 
 export default App;

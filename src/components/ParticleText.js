@@ -1,4 +1,4 @@
-export default function particleText() {
+export default function particleText(isHome) {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
 
@@ -131,10 +131,11 @@ export default function particleText() {
             this.density = (Math.random() * 30) + 1;
             this.baseColor = 255;
             this.hoverColor = 255;
+            this.opacity = 0;
             this.isSet = false;
         }
         draw() {
-            ctx.fillStyle = "rgb(255," + this.baseColor + ",255)";
+            ctx.fillStyle = "rgba(255," + this.baseColor + ",255, " + this.opacity + ")";
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.closePath();
@@ -152,7 +153,8 @@ export default function particleText() {
             var directionY = forceDirectionY * force * this.density;
 
             if (!this.isSet && (Math.abs(this.x - this.baseX) < 1) && (Math.abs(this.y - this.baseY) < 1)) this.isSet = true;
-
+            if (this.opacity < 1) this.opacity += 0.01;
+            
             if (distance < mouse.radius && this.isSet) {
                 this.x -= directionX;
                 this.y -= directionY;
@@ -163,14 +165,14 @@ export default function particleText() {
             } else {
                 if (this.x !== this.baseX) {
                     dx = this.x - this.baseX;
-                    this.x -= dx / 50;
+                    this.x -= dx / 25;
                 }
                 if (this.y !== this.baseY) {
                     dy = this.y - this.baseY;
-                    this.y -= dy / 50;
+                    this.y -= dy / 25;
                 }
                 if (this.baseColor < 255) {
-                    this.baseColor += 1;
+                    this.baseColor += 2;
                 }
             }
         }
@@ -178,12 +180,14 @@ export default function particleText() {
 
     function init() {
         particleArray = [];
-        for (var y = 0, y2 = textCoordinates.height; y < y2; y++) {
-            for (var x = 0, x2 = textCoordinates.width; x < x2; x++) {
-                if (textCoordinates.data[(y * 4 * textCoordinates.width) + (x * 4) + 3] > 128) {
-                    var positionX = x + adjustX;
-                    var positionY = y + adjustY;
-                    particleArray.push(new Particle(positionX * spacing, positionY * spacing));
+        if (isHome) {
+            for (var y = 0, y2 = textCoordinates.height; y < y2; y++) {
+                for (var x = 0, x2 = textCoordinates.width; x < x2; x++) {
+                    if (textCoordinates.data[(y * 4 * textCoordinates.width) + (x * 4) + 3] > 128) {
+                        var positionX = x + adjustX;
+                        var positionY = y + adjustY;
+                        particleArray.push(new Particle(positionX * spacing, positionY * spacing));
+                    }
                 }
             }
         }
@@ -245,7 +249,7 @@ export default function particleText() {
             mouse.y = 0;
         }
     )
-
+    
     animate();
 
     window.addEventListener('resize', function(){

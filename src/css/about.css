@@ -1,0 +1,27 @@
+.aboutMain {
+    background:lightskyblue;
+    width:100vw;
+    height:100vh;
+}
+
+.placeholder {
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    z-index:1;
+}
+.placeholderText {
+    font-size:24px;
+}
+.placeholderButton {
+    height:50px;
+    width:300px;
+    margin-top:30px;
+    font-size:20px;
+    cursor:pointer;
+    border:thin solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color:black;
+}
