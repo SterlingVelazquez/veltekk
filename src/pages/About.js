@@ -20,9 +20,9 @@ const pageVariants = {
   }
 }
 
-const bio = ("I am a full-stack web developer with a knack for creating modern, captivating designs for any kind of project. " +
-  "My passion lies in creating a user experience that leaves people appreciating the attention to the most minute details, " +
-  "and keeps them coming back.").split('');
+const bio = ("I !am !a !full-stack !web !developer !with !a !knack !for !creating !modern, !captivating !designs !for !any !kind !of !project. " +
+  "!My !passion !lies !in !creating !a !user !experience !that !leaves !people !appreciating !the !attention !to !the !most !minute !details, " +
+  "!and !keeps !them !coming !back.").split('!');
 
 class About extends React.Component {
 
