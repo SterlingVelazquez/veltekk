@@ -1,8 +1,7 @@
 body {
+  touch-action:none;
   overflow:hidden;
-  touch-action: none;
 }
-
 #canvas1 {
   position: absolute;
   width: 3000px;
@@ -10,20 +9,30 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
-.introOverlay {
-  position:absolute;
+.App {
+  position:fixed;
+  height:100%; width:100%;
+  overflow:hidden;
   top:0; left:0;
-  width:100%;
-  height:100%;
   background: linear-gradient(130deg, #7847ff, #4164ff, #33d6ff);
   background-size: 200% 200%;
-  z-index:-1;
 
   -webkit-animation: gra 8s ease infinite;
   -moz-animation: gra 8s ease infinite;
   animation: gra 8s ease infinite;
+}
+.App::-webkit-scrollbar {
+  height:10px;
+}
+.App::-webkit-scrollbar-track {
+  background:rgba(66, 66, 66, 0);
+}
+.App::-webkit-scrollbar-thumb {
+  background:linear-gradient(rgb(57, 129, 212) 0%, rgb(202, 227, 235) 100%);
+  border-radius:10px;
 }
 
 .homeButtonContainer {
@@ -38,11 +47,11 @@ body {
   cursor:pointer;
   animation:pulseLeft 2s ease;
 }
-.homeButtonContainer:nth-child(2) {
+.homeButtonContainer:nth-child(1) {
   margin-left:-280px;
 }
-.homeButtonContainer:nth-child(3) {
-  left:auto; right: 50%;
+.homeButtonContainer:nth-child(2) {
+  left:auto; right:50%;
   transform:translate(50%, -50%) scale(1.2);
   margin-right:-280px;
   animation:pulseRight 2s ease;
@@ -58,7 +67,7 @@ body {
   box-shadow:0 0 10px rgba(153, 226, 255, 0.26);
   transition:0.5s;
 }
-.homeButtonContainer:nth-child(3) .homeButtonCircle {
+.homeButtonContainer:nth-child(2) .homeButtonCircle {
   margin-left:80px;
 }
 .homeButtonContainer:hover .homeButtonCircle {
@@ -75,7 +84,7 @@ body {
   opacity: 0.6;
   filter:drop-shadow(0 0 2px white);
 }
-.homeButtonContainer:nth-child(3) .homeButtonArrow {
+.homeButtonContainer:nth-child(2) .homeButtonArrow {
   transform:translate(-50%, -50%) rotateZ(-135deg);
   margin-left:-5px;
 }
@@ -106,19 +115,19 @@ body {
 .homeButtonContainer:hover .homeButtonText:after {
   width:95px;
 }
-.homeButtonContainer:nth-child(3) .homeButtonText {
+.homeButtonContainer:nth-child(2) .homeButtonText {
   left:0; right:0;
   text-align:right;
   margin-right:100px;
   margin-left:auto;
 }
-.homeButtonContainer:nth-child(3) .homeButtonText:after {
+.homeButtonContainer:nth-child(2) .homeButtonText:after {
   position:absolute;
   right:-2px;
   text-align:right;
   width:0;
 }
-.homeButtonContainer:nth-child(3):hover .homeButtonText:after {
+.homeButtonContainer:nth-child(2):hover .homeButtonText:after {
   width:110px;
 }
 
@@ -174,10 +183,10 @@ body {
     margin-top:200px;
     transform:translate(-50%, -50%) scale(1);
   }
-  .homeButtonContainer:nth-child(2) {
+  .homeButtonContainer:nth-child(1) {
     margin-left:-250px;
   }
-  .homeButtonContainer:nth-child(3) {
+  .homeButtonContainer:nth-child(2) {
     transform:translate(50%, -50%) scale(1);
     margin-right:-250px;
   }
@@ -224,10 +233,10 @@ body {
     margin-top:160px;
     transform:translate(-50%, -50%) scale(0.9);
   }
-  .homeButtonContainer:nth-child(2) {
+  .homeButtonContainer:nth-child(1) {
     margin-left:-180px;
   }
-  .homeButtonContainer:nth-child(3) {
+  .homeButtonContainer:nth-child(2) {
     transform:translate(50%, -50%) scale(0.9);
     margin-right:-180px;
   }
@@ -273,10 +282,10 @@ body {
     margin-top:140px;
     transform:translate(-50%, -50%) scale(0.8);
   }
-  .homeButtonContainer:nth-child(2) {
+  .homeButtonContainer:nth-child(1) {
     margin-left:-150px;
   }
-  .homeButtonContainer:nth-child(3) {
+  .homeButtonContainer:nth-child(2) {
     transform:translate(50%, -50%) scale(0.8);
     margin-right:-150px;
   }
@@ -322,10 +331,10 @@ body {
     margin-top:120px;
     transform:translate(-50%, -50%) scale(0.7);
   }
-  .homeButtonContainer:nth-child(2) {
+  .homeButtonContainer:nth-child(1) {
     margin-left:-110px;
   }
-  .homeButtonContainer:nth-child(3) {
+  .homeButtonContainer:nth-child(2) {
     transform:translate(50%, -50%) scale(0.7);
     margin-right:-110px;
   }
@@ -371,10 +380,10 @@ body {
     margin-top:90px;
     transform:translate(-50%, -50%) scale(0.6);
   }
-  .homeButtonContainer:nth-child(2) {
+  .homeButtonContainer:nth-child(1) {
     margin-left:-70px;
   }
-  .homeButtonContainer:nth-child(3) {
+  .homeButtonContainer:nth-child(2) {
     transform:translate(50%, -50%) scale(0.6);
     margin-right:-70px;
   }
@@ -420,10 +429,10 @@ body {
     margin-top:65px;
     transform:translate(-50%, -50%) scale(0.5);
   }
-  .homeButtonContainer:nth-child(2) {
+  .homeButtonContainer:nth-child(1) {
     margin-left:-60px;
   }
-  .homeButtonContainer:nth-child(3) {
+  .homeButtonContainer:nth-child(2) {
     transform:translate(50%, -50%) scale(0.5);
     margin-right:-60px;
   }

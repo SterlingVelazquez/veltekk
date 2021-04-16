@@ -6,11 +6,16 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 
 const pageVariants = {
-    in: { opacity: 1 },
-    out: { opacity: 0 }
+  in: { 
+    opacity: 1,
+  },
+  out: { 
+    opacity: 0,
+    transition: {
+      duration: 1
+    } 
+  }
 }
-
-const pageTransition = { type: "tween", ease: "easeIn" }
 
 class Home extends React.Component {
 
@@ -20,10 +25,10 @@ class Home extends React.Component {
   }
 
   render() {
+    document.getElementById("canvas1").display = "block";
     try { particleText(true) } catch { /* Error */ }
     return (
-      <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
-        <div className="introOverlay"></div>
+      <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants}>
         <Link to="/about" className="homeButtonContainer">
             <div className="homeButtonCircle">
                 <div className="homeButtonArrow"></div>

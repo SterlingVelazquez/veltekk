@@ -1,0 +1,1778 @@
+(this["webpackJsonpveltekk"] = this["webpackJsonpveltekk"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/about.css":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./src/css/about.css ***!
+  \******************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".aboutMain {\r\n    position:relative;\r\n    width:100vw;\r\n    height:100vh;\r\n    overflow-y:auto;\r\n    overflow-x:hidden;\r\n}\r\n.aboutMain::-webkit-scrollbar {\r\n    height:10px;\r\n}\r\n.aboutMain::-webkit-scrollbar-track {\r\n    background:rgba(66, 66, 66, 0);\r\n}\r\n.aboutMain::-webkit-scrollbar-thumb {\r\n    background:linear-gradient(rgb(211, 206, 230) 0%, rgb(152, 190, 202) 100%);\r\n    border-radius:10px;\r\n}\r\n\r\n.aboutButtonContainer {\r\n    position:absolute;\r\n    width:250px;\r\n    height:80px;\r\n    top:50px; right:60px;\r\n    transform:scale(1.2);\r\n    transition:0.3s;\r\n    z-index:1;\r\n    cursor:pointer;\r\n    animation:aboutHomeButton 1s ease;\r\n}\r\n.aboutButtonCircle {\r\n    position:absolute;\r\n    top:50%; right:50%;\r\n    transform:translate(50%, -50%);\r\n    margin-right:-80px;\r\n    width:70px; height:70px;\r\n    border-radius:100%;\r\n    background:radial-gradient(rgba(241, 252, 255, 0.322), rgba(12, 186, 255, 0));\r\n    box-shadow:0 0 10px rgba(153, 226, 255, 0.26);\r\n    transition:0.5s;\r\n}\r\n.aboutButtonContainer:hover .aboutButtonCircle {\r\n    box-shadow:0 0 20px rgba(231, 248, 255, 0.377);\r\n}\r\n.aboutButtonArrow {\r\n    position:absolute;\r\n    top:50%; left:50%;\r\n    transform:translate(-50%, -50%) rotateZ(-135deg);\r\n    width:20px; height:20px;\r\n    border-bottom:2px solid white;\r\n    border-left:2px solid white;\r\n    margin-left:-5px;\r\n    opacity: 0.6;\r\n    filter:drop-shadow(0 0 2px white);\r\n}\r\n.aboutButtonText {\r\n    position:absolute;\r\n    top:50%; left:0;\r\n    transform:translate(0%, -50%);\r\n    margin-left:90px;\r\n    font-size:20px;\r\n    font-family: 'Nunito', sans-serif;\r\n    font-weight:400;\r\n    color:white;\r\n    text-shadow:0 0 4px rgb(179, 179, 179);\r\n    opacity:0.85;\r\n    transition:0.5s;\r\n}\r\n.aboutButtonText:after {\r\n    content:\"\";\r\n    position:absolute;\r\n    display:block;\r\n    right:-2px;\r\n    text-align:right;\r\n    width:0; height:1px;\r\n    background:white;\r\n    margin-top:4px;\r\n    margin-left:-3px;\r\n    transition:0.5s;\r\n    box-shadow:0 0 5px white;\r\n}\r\n.aboutButtonContainer:hover .aboutButtonText:after {\r\n    width:58px;\r\n}\r\n\r\n.aboutTextContainer {\r\n    position:relative;\r\n    width:1000px;\r\n    top: 200px; left:7%;\r\n    padding-bottom:200px;\r\n    opacity:1;\r\n    transition:2s;\r\n}\r\n.aboutTextContainer.switch {\r\n    position:absolute;\r\n    opacity:0;\r\n    top:-1000vh;\r\n}\r\n.aboutHeader {\r\n    position:relative;\r\n    font-size:80px;\r\n    font-family: 'Fredoka One', cursive;\r\n    font-weight:400;\r\n    padding-bottom:70px;\r\n    color:white;\r\n    animation:titleFade 1s ease;\r\n}\r\n.aboutBio {\r\n    position:relative;\r\n    padding-bottom:70px;\r\n}\r\n.bioLetter {\r\n    position:relative;\r\n    font-size:36px;\r\n    line-height:55px;\r\n    font-family: 'Nunito', sans-serif;\r\n    font-weight:400;\r\n    color:white;\r\n}\r\n.aboutLogoDiv {\r\n    position:relative;\r\n    height:120px;\r\n    margin-top:-4px;\r\n}\r\n.aboutLogoDiv:nth-child(3),\r\n.aboutLogoDiv:nth-child(4) {\r\n    width:50%;\r\n    display:inline-block;\r\n}\r\n.aboutLogoCircle {\r\n    position:absolute;\r\n    top:50%;\r\n    transform:translateY(-50%);\r\n    width:80px; height:80px;\r\n    border-radius:100%;\r\n    background:radial-gradient(rgba(241, 252, 255, 0.267), rgba(12, 186, 255, 0));\r\n    box-shadow:0 0 10px rgba(153, 226, 255, 0.26);\r\n}\r\n#ageLogo { animation:logoRoll 2s ease }\r\n#addressLogo { animation:logoRoll 2.25s ease }\r\n#degreeLogo { animation:logoRoll 2.5s ease }\r\n#collegeLogo { animation:logoRoll 2.75s ease }\r\n.aboutLogo {\r\n    position:absolute;\r\n    top:50%; left:50%;\r\n    transform:translate(-50%, -50%);\r\n    width:40px; height:40px;\r\n    filter:contrast(0%) brightness(2) drop-shadow(0 0 3px white);\r\n}\r\n.aboutLogoText {\r\n    position:absolute;\r\n    top:50%; left:120px;\r\n    transform:translateY(-50%);\r\n    font-size:24px;\r\n    font-family: 'Nunito', sans-serif;\r\n    font-weight:300;\r\n    letter-spacing:1px;\r\n    color:white;\r\n    text-shadow:0 0 2px white;\r\n    overflow:hidden;\r\n    white-space: nowrap;\r\n}\r\n#ageText { animation:logoTextFade 2.5s ease }\r\n#addressText { animation:logoTextFade 2.75s ease }\r\n#degreeText { animation:logoTextFade 3.25s ease }\r\n#collegeText { animation:logoTextFade 3.75s ease }\r\n\r\n.mountainContainer {\r\n    position:relative;\r\n    bottom:-220px; left:55%;\r\n    transition:1s;\r\n}\r\n.mountainContainer.switch {\r\n    left:0%;\r\n    bottom:-100vh;\r\n}\r\n.mountain {\r\n    position:absolute;\r\n}\r\n.mountainSwitch {\r\n    position:absolute;\r\n    top:170px; left:-50px;\r\n    width:100px; height:100px;\r\n    padding:20px;\r\n    border-radius:100%;\r\n    background:radial-gradient(rgba(241, 252, 255, 0.329), rgba(12, 186, 255, 0));\r\n    animation:switchScaleIn 3.5s ease-out, switchPulse 1.5s ease infinite 4s;\r\n    cursor:pointer;\r\n    transition:0.5s;\r\n}\r\n.mountainSwitch:hover {\r\n    animation:switchScaleIn 3.5s ease-out;\r\n    transform:scale(1.2);\r\n    box-shadow:0 0 40px rgba(255, 255, 255, 0.664);\r\n}\r\n.hikingLogo {\r\n    filter:contrast(0%) brightness(2) drop-shadow(0 0 3px white);\r\n}\r\n#bigMountain {\r\n    left:0; bottom:0;\r\n    width:0; height:0;\r\n    border-radius:0;\r\n    border-left: 500px solid transparent;\r\n    border-right: 500px solid transparent;\r\n    border-bottom: 1000px solid rgba(88, 188, 255, 0.397);\r\n    animation:3s mountainFadeUp ease;\r\n    transition:left 2s, top 2s, background-color 1s, width 2s, height 2s, border-left 2s, border-right 2s, \r\n        border-bottom 2s, border-radius 2s, bottom 2s;\r\n}\r\n.mountainContainer.switch #bigMountain {\r\n    border-left: 50vw solid transparent;\r\n    border-right: 50vw solid transparent;\r\n    border-bottom: 95vh solid rgba(88, 188, 255, 0.397);\r\n}\r\n#bigMountain.bubble {\r\n    left:-100px; bottom:400px;\r\n    width:500px; height:500px;\r\n    border-radius:100%;\r\n    border-left: 0px solid transparent;\r\n    border-right: 0px solid transparent;\r\n    border-bottom: 0px solid rgba(88, 188, 255, 0);\r\n    animation:3s mountainFadeUp ease;\r\n    background:rgba(88, 188, 255, 0.397);\r\n}\r\n#midMountain {\r\n    bottom:0;\r\n    width:0;\r\n    height:0;\r\n    border-left: 350px solid transparent;\r\n    border-right: 350px solid transparent;\r\n    border-bottom: 700px solid rgba(88, 188, 255, 0.397);\r\n    left:-100px;\r\n    animation:3.5s mountainFadeUp ease;\r\n    transition:left 2s, top 2s, background-color 1s, width 2s, height 2s, border-left 2s, border-right 2s, \r\n        border-bottom 2s, border-radius 2s, bottom 2s;\r\n}\r\n.mountainContainer.switch #midMountain {\r\n    border-left: 35vw solid transparent;\r\n    border-right: 35vw solid transparent;\r\n    border-bottom: 70vh solid rgba(88, 188, 255, 0.397);\r\n}\r\n#smallMountain {\r\n    bottom:0;\r\n    width:0;\r\n    height:0;\r\n    border-left: 400px solid transparent;\r\n    border-right: 400px solid transparent;\r\n    border-bottom: 600px solid rgba(88, 188, 255, 0.397);\r\n    left:400px;\r\n    animation:4s mountainFadeUp ease;\r\n    transition:left 2s, top 2s, background-color 1s, width 2s, height 2s, border-left 2s, border-right 2s, \r\n        border-bottom 2s, border-radius 2s, bottom 2s;\r\n}\r\n.mountainContainer.switch #smallMountain {\r\n    border-left: 50vw solid transparent;\r\n    border-right: 50vw solid transparent;\r\n    border-bottom: 60vh solid rgba(88, 188, 255, 0.397);\r\n}\r\n\r\n\r\n@keyframes aboutHomeButton {\r\n    from {\r\n        opacity:0;\r\n        right:200px;\r\n    } to {\r\n        opacity:1;\r\n        right:60px;\r\n    }\r\n}\r\n\r\n@keyframes titleFade {\r\n    from {\r\n        opacity: 0;\r\n        transform:translateY(-50%);\r\n    } to {\r\n        opacity: 1;\r\n        transform:translateY(0%);\r\n    }\r\n}\r\n\r\n@keyframes letterFade {\r\n    0% {\r\n        opacity:0;\r\n        top:-100px;\r\n    } 60% {\r\n        opacity:0;\r\n        top:-100px;\r\n    } 100% {\r\n        opacity:1;\r\n        top:0px;\r\n    }\r\n}\r\n\r\n@keyframes logoRoll {\r\n    0% {\r\n        opacity:0;\r\n        transform:translateX(-60%) translateY(-50%) rotateZ(-270deg);\r\n    } 60% {\r\n        opacity:0;\r\n        transform:translateX(-60%) translateY(-50%) rotateZ(-270deg);\r\n    } 100% {\r\n        opacity:1;\r\n        transform:translateX(0%) translateY(-50%) rotateZ(0deg);\r\n    }\r\n}\r\n\r\n@keyframes logoTextFade {\r\n    0% {\r\n        opacity:0;\r\n        width:0;\r\n    } 55% {\r\n        opacity:0;\r\n        width:0;\r\n    } 100% {\r\n        opacity:1;\r\n        width:100%;\r\n    }\r\n}\r\n\r\n@keyframes mountainFadeUp {\r\n    from {\r\n        opacity:0;\r\n        transform:translateY(80%);\r\n    } to {\r\n        opacity:1;\r\n        transform:translateY(0%);\r\n    }\r\n}\r\n\r\n@keyframes switchScaleIn {\r\n    0% {\r\n        opacity:0;\r\n        transform:scale(0.5);\r\n    } 80% {\r\n        opacity:0;\r\n        transform:scale(0.5);\r\n    } 90% {\r\n        opacity:0.8;\r\n        transform:scale(1.3);\r\n    } 100% {\r\n        opacity:1;\r\n        transform:scale(1);\r\n    }\r\n}\r\n\r\n@keyframes switchPulse {\r\n    0% {\r\n        box-shadow:0 0 0px rgba(255, 255, 255, 0);\r\n    } 20% {\r\n        box-shadow:0 0 40px rgba(255, 255, 255, 0.664);\r\n    } 100% {\r\n        box-shadow:0 0 0px rgba(255, 255, 255, 0);\r\n    }\r\n}", "",{"version":3,"sources":["webpack://src/css/about.css"],"names":[],"mappings":"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","sourcesContent":[".aboutMain {\r\n    position:relative;\r\n    width:100vw;\r\n    height:100vh;\r\n    overflow-y:auto;\r\n    overflow-x:hidden;\r\n}\r\n.aboutMain::-webkit-scrollbar {\r\n    height:10px;\r\n}\r\n.aboutMain::-webkit-scrollbar-track {\r\n    background:rgba(66, 66, 66, 0);\r\n}\r\n.aboutMain::-webkit-scrollbar-thumb {\r\n    background:linear-gradient(rgb(211, 206, 230) 0%, rgb(152, 190, 202) 100%);\r\n    border-radius:10px;\r\n}\r\n\r\n.aboutButtonContainer {\r\n    position:absolute;\r\n    width:250px;\r\n    height:80px;\r\n    top:50px; right:60px;\r\n    transform:scale(1.2);\r\n    transition:0.3s;\r\n    z-index:1;\r\n    cursor:pointer;\r\n    animation:aboutHomeButton 1s ease;\r\n}\r\n.aboutButtonCircle {\r\n    position:absolute;\r\n    top:50%; right:50%;\r\n    transform:translate(50%, -50%);\r\n    margin-right:-80px;\r\n    width:70px; height:70px;\r\n    border-radius:100%;\r\n    background:radial-gradient(rgba(241, 252, 255, 0.322), rgba(12, 186, 255, 0));\r\n    box-shadow:0 0 10px rgba(153, 226, 255, 0.26);\r\n    transition:0.5s;\r\n}\r\n.aboutButtonContainer:hover .aboutButtonCircle {\r\n    box-shadow:0 0 20px rgba(231, 248, 255, 0.377);\r\n}\r\n.aboutButtonArrow {\r\n    position:absolute;\r\n    top:50%; left:50%;\r\n    transform:translate(-50%, -50%) rotateZ(-135deg);\r\n    width:20px; height:20px;\r\n    border-bottom:2px solid white;\r\n    border-left:2px solid white;\r\n    margin-left:-5px;\r\n    opacity: 0.6;\r\n    filter:drop-shadow(0 0 2px white);\r\n}\r\n.aboutButtonText {\r\n    position:absolute;\r\n    top:50%; left:0;\r\n    transform:translate(0%, -50%);\r\n    margin-left:90px;\r\n    font-size:20px;\r\n    font-family: 'Nunito', sans-serif;\r\n    font-weight:400;\r\n    color:white;\r\n    text-shadow:0 0 4px rgb(179, 179, 179);\r\n    opacity:0.85;\r\n    transition:0.5s;\r\n}\r\n.aboutButtonText:after {\r\n    content:\"\";\r\n    position:absolute;\r\n    display:block;\r\n    right:-2px;\r\n    text-align:right;\r\n    width:0; height:1px;\r\n    background:white;\r\n    margin-top:4px;\r\n    margin-left:-3px;\r\n    transition:0.5s;\r\n    box-shadow:0 0 5px white;\r\n}\r\n.aboutButtonContainer:hover .aboutButtonText:after {\r\n    width:58px;\r\n}\r\n\r\n.aboutTextContainer {\r\n    position:relative;\r\n    width:1000px;\r\n    top: 200px; left:7%;\r\n    padding-bottom:200px;\r\n    opacity:1;\r\n    transition:2s;\r\n}\r\n.aboutTextContainer.switch {\r\n    position:absolute;\r\n    opacity:0;\r\n    top:-1000vh;\r\n}\r\n.aboutHeader {\r\n    position:relative;\r\n    font-size:80px;\r\n    font-family: 'Fredoka One', cursive;\r\n    font-weight:400;\r\n    padding-bottom:70px;\r\n    color:white;\r\n    animation:titleFade 1s ease;\r\n}\r\n.aboutBio {\r\n    position:relative;\r\n    padding-bottom:70px;\r\n}\r\n.bioLetter {\r\n    position:relative;\r\n    font-size:36px;\r\n    line-height:55px;\r\n    font-family: 'Nunito', sans-serif;\r\n    font-weight:400;\r\n    color:white;\r\n}\r\n.aboutLogoDiv {\r\n    position:relative;\r\n    height:120px;\r\n    margin-top:-4px;\r\n}\r\n.aboutLogoDiv:nth-child(3),\r\n.aboutLogoDiv:nth-child(4) {\r\n    width:50%;\r\n    display:inline-block;\r\n}\r\n.aboutLogoCircle {\r\n    position:absolute;\r\n    top:50%;\r\n    transform:translateY(-50%);\r\n    width:80px; height:80px;\r\n    border-radius:100%;\r\n    background:radial-gradient(rgba(241, 252, 255, 0.267), rgba(12, 186, 255, 0));\r\n    box-shadow:0 0 10px rgba(153, 226, 255, 0.26);\r\n}\r\n#ageLogo { animation:logoRoll 2s ease }\r\n#addressLogo { animation:logoRoll 2.25s ease }\r\n#degreeLogo { animation:logoRoll 2.5s ease }\r\n#collegeLogo { animation:logoRoll 2.75s ease }\r\n.aboutLogo {\r\n    position:absolute;\r\n    top:50%; left:50%;\r\n    transform:translate(-50%, -50%);\r\n    width:40px; height:40px;\r\n    filter:contrast(0%) brightness(2) drop-shadow(0 0 3px white);\r\n}\r\n.aboutLogoText {\r\n    position:absolute;\r\n    top:50%; left:120px;\r\n    transform:translateY(-50%);\r\n    font-size:24px;\r\n    font-family: 'Nunito', sans-serif;\r\n    font-weight:300;\r\n    letter-spacing:1px;\r\n    color:white;\r\n    text-shadow:0 0 2px white;\r\n    overflow:hidden;\r\n    white-space: nowrap;\r\n}\r\n#ageText { animation:logoTextFade 2.5s ease }\r\n#addressText { animation:logoTextFade 2.75s ease }\r\n#degreeText { animation:logoTextFade 3.25s ease }\r\n#collegeText { animation:logoTextFade 3.75s ease }\r\n\r\n.mountainContainer {\r\n    position:relative;\r\n    bottom:-220px; left:55%;\r\n    transition:1s;\r\n}\r\n.mountainContainer.switch {\r\n    left:0%;\r\n    bottom:-100vh;\r\n}\r\n.mountain {\r\n    position:absolute;\r\n}\r\n.mountainSwitch {\r\n    position:absolute;\r\n    top:170px; left:-50px;\r\n    width:100px; height:100px;\r\n    padding:20px;\r\n    border-radius:100%;\r\n    background:radial-gradient(rgba(241, 252, 255, 0.329), rgba(12, 186, 255, 0));\r\n    animation:switchScaleIn 3.5s ease-out, switchPulse 1.5s ease infinite 4s;\r\n    cursor:pointer;\r\n    transition:0.5s;\r\n}\r\n.mountainSwitch:hover {\r\n    animation:switchScaleIn 3.5s ease-out;\r\n    transform:scale(1.2);\r\n    box-shadow:0 0 40px rgba(255, 255, 255, 0.664);\r\n}\r\n.hikingLogo {\r\n    filter:contrast(0%) brightness(2) drop-shadow(0 0 3px white);\r\n}\r\n#bigMountain {\r\n    left:0; bottom:0;\r\n    width:0; height:0;\r\n    border-radius:0;\r\n    border-left: 500px solid transparent;\r\n    border-right: 500px solid transparent;\r\n    border-bottom: 1000px solid rgba(88, 188, 255, 0.397);\r\n    animation:3s mountainFadeUp ease;\r\n    transition:left 2s, top 2s, background-color 1s, width 2s, height 2s, border-left 2s, border-right 2s, \r\n        border-bottom 2s, border-radius 2s, bottom 2s;\r\n}\r\n.mountainContainer.switch #bigMountain {\r\n    border-left: 50vw solid transparent;\r\n    border-right: 50vw solid transparent;\r\n    border-bottom: 95vh solid rgba(88, 188, 255, 0.397);\r\n}\r\n#bigMountain.bubble {\r\n    left:-100px; bottom:400px;\r\n    width:500px; height:500px;\r\n    border-radius:100%;\r\n    border-left: 0px solid transparent;\r\n    border-right: 0px solid transparent;\r\n    border-bottom: 0px solid rgba(88, 188, 255, 0);\r\n    animation:3s mountainFadeUp ease;\r\n    background:rgba(88, 188, 255, 0.397);\r\n}\r\n#midMountain {\r\n    bottom:0;\r\n    width:0;\r\n    height:0;\r\n    border-left: 350px solid transparent;\r\n    border-right: 350px solid transparent;\r\n    border-bottom: 700px solid rgba(88, 188, 255, 0.397);\r\n    left:-100px;\r\n    animation:3.5s mountainFadeUp ease;\r\n    transition:left 2s, top 2s, background-color 1s, width 2s, height 2s, border-left 2s, border-right 2s, \r\n        border-bottom 2s, border-radius 2s, bottom 2s;\r\n}\r\n.mountainContainer.switch #midMountain {\r\n    border-left: 35vw solid transparent;\r\n    border-right: 35vw solid transparent;\r\n    border-bottom: 70vh solid rgba(88, 188, 255, 0.397);\r\n}\r\n#smallMountain {\r\n    bottom:0;\r\n    width:0;\r\n    height:0;\r\n    border-left: 400px solid transparent;\r\n    border-right: 400px solid transparent;\r\n    border-bottom: 600px solid rgba(88, 188, 255, 0.397);\r\n    left:400px;\r\n    animation:4s mountainFadeUp ease;\r\n    transition:left 2s, top 2s, background-color 1s, width 2s, height 2s, border-left 2s, border-right 2s, \r\n        border-bottom 2s, border-radius 2s, bottom 2s;\r\n}\r\n.mountainContainer.switch #smallMountain {\r\n    border-left: 50vw solid transparent;\r\n    border-right: 50vw solid transparent;\r\n    border-bottom: 60vh solid rgba(88, 188, 255, 0.397);\r\n}\r\n\r\n\r\n@keyframes aboutHomeButton {\r\n    from {\r\n        opacity:0;\r\n        right:200px;\r\n    } to {\r\n        opacity:1;\r\n        right:60px;\r\n    }\r\n}\r\n\r\n@keyframes titleFade {\r\n    from {\r\n        opacity: 0;\r\n        transform:translateY(-50%);\r\n    } to {\r\n        opacity: 1;\r\n        transform:translateY(0%);\r\n    }\r\n}\r\n\r\n@keyframes letterFade {\r\n    0% {\r\n        opacity:0;\r\n        top:-100px;\r\n    } 60% {\r\n        opacity:0;\r\n        top:-100px;\r\n    } 100% {\r\n        opacity:1;\r\n        top:0px;\r\n    }\r\n}\r\n\r\n@keyframes logoRoll {\r\n    0% {\r\n        opacity:0;\r\n        transform:translateX(-60%) translateY(-50%) rotateZ(-270deg);\r\n    } 60% {\r\n        opacity:0;\r\n        transform:translateX(-60%) translateY(-50%) rotateZ(-270deg);\r\n    } 100% {\r\n        opacity:1;\r\n        transform:translateX(0%) translateY(-50%) rotateZ(0deg);\r\n    }\r\n}\r\n\r\n@keyframes logoTextFade {\r\n    0% {\r\n        opacity:0;\r\n        width:0;\r\n    } 55% {\r\n        opacity:0;\r\n        width:0;\r\n    } 100% {\r\n        opacity:1;\r\n        width:100%;\r\n    }\r\n}\r\n\r\n@keyframes mountainFadeUp {\r\n    from {\r\n        opacity:0;\r\n        transform:translateY(80%);\r\n    } to {\r\n        opacity:1;\r\n        transform:translateY(0%);\r\n    }\r\n}\r\n\r\n@keyframes switchScaleIn {\r\n    0% {\r\n        opacity:0;\r\n        transform:scale(0.5);\r\n    } 80% {\r\n        opacity:0;\r\n        transform:scale(0.5);\r\n    } 90% {\r\n        opacity:0.8;\r\n        transform:scale(1.3);\r\n    } 100% {\r\n        opacity:1;\r\n        transform:scale(1);\r\n    }\r\n}\r\n\r\n@keyframes switchPulse {\r\n    0% {\r\n        box-shadow:0 0 0px rgba(255, 255, 255, 0);\r\n    } 20% {\r\n        box-shadow:0 0 40px rgba(255, 255, 255, 0.664);\r\n    } 100% {\r\n        box-shadow:0 0 0px rgba(255, 255, 255, 0);\r\n    }\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./src/css/index.css ***!
+  \******************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent;\n  box-sizing: border-box;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}\n", "",{"version":3,"sources":["webpack://src/css/index.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,SAAS;EACT,UAAU;EACV,eAAe;EACf,wBAAwB;EACxB,uBAAuB;EACvB,sBAAsB;EACtB;;cAEY;EACZ,mCAAmC;EACnC,kCAAkC;AACpC;;AAEA;EACE;aACW;AACb","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent;\n  box-sizing: border-box;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/main.css":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!./node_modules/postcss-loader/src??postcss!./src/css/main.css ***!
+  \*****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "body {\n  touch-action:none;\n  overflow:hidden;\n}\n\n#canvas1 {\n  position: absolute;\n  width: 3000px;\n  height: 2000px;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index:-1;\n}\n\n.introOverlay {\n  position:absolute;\n  top:0; left:0;\n  width:100%;\n  height:100%;\n  background: linear-gradient(130deg, #7847ff, #4164ff, #33d6ff);\n  background-size: 200% 200%;\n  z-index:-1;\n  animation: gra 8s ease infinite;\n}\n\n.homeButtonContainer {\n  position:absolute;\n  width:250px;\n  height:80px;\n  top:50%; left:50%;\n  margin-top:260px;\n  transform:translate(-50%, -50%) scale(1.2);\n  transition:0.3s;\n  z-index:1;\n  cursor:pointer;\n  animation:pulseLeft 2s ease;\n}\n.homeButtonContainer:nth-child(1) {\n  margin-left:-280px;\n}\n.homeButtonContainer:nth-child(2) {\n  left:auto; right:50%;\n  transform:translate(50%, -50%) scale(1.2);\n  margin-right:-280px;\n  animation:pulseRight 2s ease;\n}\n.homeButtonCircle {\n  position:absolute;\n  top:50%; left:50%;\n  transform:translate(-50%, -50%);\n  margin-left:-80px;\n  width:70px; height:70px;\n  border-radius:100%;\n  background:radial-gradient(rgba(241, 252, 255, 0.322), rgba(12, 186, 255, 0));\n  box-shadow:0 0 10px rgba(153, 226, 255, 0.26);\n  transition:0.5s;\n}\n.homeButtonContainer:nth-child(2) .homeButtonCircle {\n  margin-left:80px;\n}\n.homeButtonContainer:hover .homeButtonCircle {\n  box-shadow:0 0 20px rgba(231, 248, 255, 0.377);\n}\n.homeButtonArrow {\n  position:absolute;\n  top:50%; left:50%;\n  transform:translate(-50%, -50%) rotateZ(45deg);\n  width:20px; height:20px;\n  border-bottom:2px solid white;\n  border-left:2px solid white;\n  margin-left:5px;\n  opacity: 0.6;\n  filter:drop-shadow(0 0 2px white);\n}\n.homeButtonContainer:nth-child(2) .homeButtonArrow {\n  transform:translate(-50%, -50%) rotateZ(-135deg);\n  margin-left:-5px;\n}\n.homeButtonText {\n  position:absolute;\n  top:50%; left:0;\n  transform:translate(0%, -50%);\n  margin-left:100px;\n  font-size:20px;\n  font-family: 'Nunito', sans-serif;\n  font-weight:400;\n  color:white;\n  text-shadow:0 0 4px rgb(179, 179, 179);\n  opacity:0.85;\n  transition:0.5s;\n}\n.homeButtonText:after {\n  content:\"\";\n  position:absolute;\n  display:block;\n  width:0; height:1px;\n  background:white;\n  margin-top:4px;\n  margin-left:-3px;\n  transition:0.5s;\n  box-shadow:0 0 5px white;\n}\n.homeButtonContainer:hover .homeButtonText:after {\n  width:95px;\n}\n.homeButtonContainer:nth-child(2) .homeButtonText {\n  left:0; right:0;\n  text-align:right;\n  margin-right:100px;\n  margin-left:auto;\n}\n.homeButtonContainer:nth-child(2) .homeButtonText:after {\n  position:absolute;\n  right:-2px;\n  text-align:right;\n  width:0;\n}\n.homeButtonContainer:nth-child(2):hover .homeButtonText:after {\n  width:110px;\n}\n@keyframes gra { \n  0%{background-position:10% 0%}\n  50%{background-position:91% 100%}\n  100%{background-position:10% 0%}\n}\n\n@keyframes pulseLeft {\n  0% {\n    opacity:0;\n    transform:translate(-50%, -50%) scale(0.5);\n  } 70% {\n    opacity:0;\n    transform:translate(-50%, -50%) scale(0.5);\n  } 90% {\n    opacity:1;\n    transform:translate(-50%, -50%) scale(1.4);\n  } 100% {\n    opacity:1;\n    transform:translate(-50%, -50%) scale(1.2);\n  }\n}\n@keyframes pulseRight {\n  0% {\n    opacity:0;\n    transform:translate(50%, -50%) scale(0.5);\n  } 70% {\n    opacity:0;\n    transform:translate(50%, -50%) scale(0.5);\n  } 90% {\n    opacity:1;\n    transform:translate(50%, -50%) scale(1.4);\n  } 100% {\n    opacity:1;\n    transform:translate(50%, -50%) scale(1.2);\n  }\n}\n\n@media only screen and (max-width: 1400px) {\n  .homeButtonContainer {\n    margin-top:200px;\n    transform:translate(-50%, -50%) scale(1);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-250px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(1);\n    margin-right:-250px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.5);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.5);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(1.1);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(1);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.5);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.5);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(1.1);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(1);\n    }\n  }\n}\n\n@media only screen and (max-width: 1024px) {\n  #canvas1 {\n    width: 1024px;\n    height: 1000px;\n  }\n\n  .homeButtonContainer {\n    margin-top:160px;\n    transform:translate(-50%, -50%) scale(0.9);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-180px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.9);\n    margin-right:-180px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.4);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.4);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(1);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.9);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.4);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.4);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(1);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.9);\n    }\n  }\n}\n\n@media only screen and (max-width: 768px) {\n  #canvas1 {\n    width: 768px;\n  }\n\n  .homeButtonContainer {\n    margin-top:140px;\n    transform:translate(-50%, -50%) scale(0.8);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-150px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.8);\n    margin-right:-150px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.35);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.35);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.9);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.8);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.35);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.35);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.9);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.8);\n    }\n  }\n}\n\n@media only screen and (max-width: 560px) {\n  #canvas1 {\n    width: 560px;\n  }\n\n  .homeButtonContainer {\n    margin-top:120px;\n    transform:translate(-50%, -50%) scale(0.7);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-110px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.7);\n    margin-right:-110px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.3);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.3);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.775);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.7);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.3);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.3);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.775);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.7);\n    }\n  }\n}\n\n@media only screen and (max-width: 400px) {\n  #canvas1 {\n    width: 400px;\n  }\n\n  .homeButtonContainer {\n    margin-top:90px;\n    transform:translate(-50%, -50%) scale(0.6);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-70px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.6);\n    margin-right:-70px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.2);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.2);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.65);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.6);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.2);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.2);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.65);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.6);\n    }\n  }\n}\n\n@media only screen and (max-width: 300px) {\n  #canvas1 {\n    width: 300px;\n  }\n\n  .homeButtonContainer {\n    margin-top:65px;\n    transform:translate(-50%, -50%) scale(0.5);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-60px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.5);\n    margin-right:-60px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.15);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.15);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.55);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.5);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.15);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.15);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.55);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.5);\n    }\n  }\n}\n\n", "",{"version":3,"sources":["webpack://src/css/main.css"],"names":[],"mappings":"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","sourcesContent":["body {\n  touch-action:none;\n  overflow:hidden;\n}\n\n#canvas1 {\n  position: absolute;\n  width: 3000px;\n  height: 2000px;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index:-1;\n}\n\n.introOverlay {\n  position:absolute;\n  top:0; left:0;\n  width:100%;\n  height:100%;\n  background: linear-gradient(130deg, #7847ff, #4164ff, #33d6ff);\n  background-size: 200% 200%;\n  z-index:-1;\n\n  -webkit-animation: gra 8s ease infinite;\n  -moz-animation: gra 8s ease infinite;\n  animation: gra 8s ease infinite;\n}\n\n.homeButtonContainer {\n  position:absolute;\n  width:250px;\n  height:80px;\n  top:50%; left:50%;\n  margin-top:260px;\n  transform:translate(-50%, -50%) scale(1.2);\n  transition:0.3s;\n  z-index:1;\n  cursor:pointer;\n  animation:pulseLeft 2s ease;\n}\n.homeButtonContainer:nth-child(1) {\n  margin-left:-280px;\n}\n.homeButtonContainer:nth-child(2) {\n  left:auto; right:50%;\n  transform:translate(50%, -50%) scale(1.2);\n  margin-right:-280px;\n  animation:pulseRight 2s ease;\n}\n.homeButtonCircle {\n  position:absolute;\n  top:50%; left:50%;\n  transform:translate(-50%, -50%);\n  margin-left:-80px;\n  width:70px; height:70px;\n  border-radius:100%;\n  background:radial-gradient(rgba(241, 252, 255, 0.322), rgba(12, 186, 255, 0));\n  box-shadow:0 0 10px rgba(153, 226, 255, 0.26);\n  transition:0.5s;\n}\n.homeButtonContainer:nth-child(2) .homeButtonCircle {\n  margin-left:80px;\n}\n.homeButtonContainer:hover .homeButtonCircle {\n  box-shadow:0 0 20px rgba(231, 248, 255, 0.377);\n}\n.homeButtonArrow {\n  position:absolute;\n  top:50%; left:50%;\n  transform:translate(-50%, -50%) rotateZ(45deg);\n  width:20px; height:20px;\n  border-bottom:2px solid white;\n  border-left:2px solid white;\n  margin-left:5px;\n  opacity: 0.6;\n  filter:drop-shadow(0 0 2px white);\n}\n.homeButtonContainer:nth-child(2) .homeButtonArrow {\n  transform:translate(-50%, -50%) rotateZ(-135deg);\n  margin-left:-5px;\n}\n.homeButtonText {\n  position:absolute;\n  top:50%; left:0;\n  transform:translate(0%, -50%);\n  margin-left:100px;\n  font-size:20px;\n  font-family: 'Nunito', sans-serif;\n  font-weight:400;\n  color:white;\n  text-shadow:0 0 4px rgb(179, 179, 179);\n  opacity:0.85;\n  transition:0.5s;\n}\n.homeButtonText:after {\n  content:\"\";\n  position:absolute;\n  display:block;\n  width:0; height:1px;\n  background:white;\n  margin-top:4px;\n  margin-left:-3px;\n  transition:0.5s;\n  box-shadow:0 0 5px white;\n}\n.homeButtonContainer:hover .homeButtonText:after {\n  width:95px;\n}\n.homeButtonContainer:nth-child(2) .homeButtonText {\n  left:0; right:0;\n  text-align:right;\n  margin-right:100px;\n  margin-left:auto;\n}\n.homeButtonContainer:nth-child(2) .homeButtonText:after {\n  position:absolute;\n  right:-2px;\n  text-align:right;\n  width:0;\n}\n.homeButtonContainer:nth-child(2):hover .homeButtonText:after {\n  width:110px;\n}\n\n@-webkit-keyframes gra {\n  0%{background-position:20% 10%}\n  50%{background-position:91% 100%}\n  100%{background-position:20% 10%}\n}\n@-moz-keyframes gra {\n  0%{background-position:10% 0%}\n  50%{background-position:91% 100%}\n  100%{background-position:10% 0%}\n}\n@keyframes gra { \n  0%{background-position:10% 0%}\n  50%{background-position:91% 100%}\n  100%{background-position:10% 0%}\n}\n\n@keyframes pulseLeft {\n  0% {\n    opacity:0;\n    transform:translate(-50%, -50%) scale(0.5);\n  } 70% {\n    opacity:0;\n    transform:translate(-50%, -50%) scale(0.5);\n  } 90% {\n    opacity:1;\n    transform:translate(-50%, -50%) scale(1.4);\n  } 100% {\n    opacity:1;\n    transform:translate(-50%, -50%) scale(1.2);\n  }\n}\n@keyframes pulseRight {\n  0% {\n    opacity:0;\n    transform:translate(50%, -50%) scale(0.5);\n  } 70% {\n    opacity:0;\n    transform:translate(50%, -50%) scale(0.5);\n  } 90% {\n    opacity:1;\n    transform:translate(50%, -50%) scale(1.4);\n  } 100% {\n    opacity:1;\n    transform:translate(50%, -50%) scale(1.2);\n  }\n}\n\n@media only screen and (max-width: 1400px) {\n  .homeButtonContainer {\n    margin-top:200px;\n    transform:translate(-50%, -50%) scale(1);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-250px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(1);\n    margin-right:-250px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.5);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.5);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(1.1);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(1);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.5);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.5);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(1.1);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(1);\n    }\n  }\n}\n\n@media only screen and (max-width: 1024px) {\n  #canvas1 {\n    width: 1024px;\n    height: 1000px;\n  }\n\n  .homeButtonContainer {\n    margin-top:160px;\n    transform:translate(-50%, -50%) scale(0.9);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-180px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.9);\n    margin-right:-180px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.4);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.4);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(1);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.9);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.4);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.4);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(1);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.9);\n    }\n  }\n}\n\n@media only screen and (max-width: 768px) {\n  #canvas1 {\n    width: 768px;\n  }\n\n  .homeButtonContainer {\n    margin-top:140px;\n    transform:translate(-50%, -50%) scale(0.8);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-150px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.8);\n    margin-right:-150px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.35);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.35);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.9);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.8);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.35);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.35);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.9);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.8);\n    }\n  }\n}\n\n@media only screen and (max-width: 560px) {\n  #canvas1 {\n    width: 560px;\n  }\n\n  .homeButtonContainer {\n    margin-top:120px;\n    transform:translate(-50%, -50%) scale(0.7);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-110px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.7);\n    margin-right:-110px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.3);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.3);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.775);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.7);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.3);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.3);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.775);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.7);\n    }\n  }\n}\n\n@media only screen and (max-width: 400px) {\n  #canvas1 {\n    width: 400px;\n  }\n\n  .homeButtonContainer {\n    margin-top:90px;\n    transform:translate(-50%, -50%) scale(0.6);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-70px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.6);\n    margin-right:-70px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.2);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.2);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.65);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.6);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.2);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.2);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.65);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.6);\n    }\n  }\n}\n\n@media only screen and (max-width: 300px) {\n  #canvas1 {\n    width: 300px;\n  }\n\n  .homeButtonContainer {\n    margin-top:65px;\n    transform:translate(-50%, -50%) scale(0.5);\n  }\n  .homeButtonContainer:nth-child(1) {\n    margin-left:-60px;\n  }\n  .homeButtonContainer:nth-child(2) {\n    transform:translate(50%, -50%) scale(0.5);\n    margin-right:-60px;\n  }\n\n  @keyframes pulseLeft {\n    0% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.15);\n    } 70% {\n      opacity:0;\n      transform:translate(-50%, -50%) scale(0.15);\n    } 90% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.55);\n    } 100% {\n      opacity:1;\n      transform:translate(-50%, -50%) scale(0.5);\n    }\n  }\n  @keyframes pulseRight {\n    0% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.15);\n    } 70% {\n      opacity:0;\n      transform:translate(50%, -50%) scale(0.15);\n    } 90% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.55);\n    } 100% {\n      opacity:1;\n      transform:translate(50%, -50%) scale(0.5);\n    }\n  }\n}\n\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _pages_About_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/About.js */ "./src/pages/About.js");
+/* harmony import */ var _pages_Home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Home.js */ "./src/pages/Home.js");
+/* harmony import */ var _pages_Projects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Projects.js */ "./src/pages/Projects.js");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\sterl\\Downloads\\veltekk\\src\\App.js",
+    _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+
+
+
+
+function App() {
+  _s();
+
+  const location = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["useLocation"])();
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+    className: "App",
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+      className: "introOverlay"
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 7
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(framer_motion__WEBPACK_IMPORTED_MODULE_4__["AnimatePresence"], {
+      exitBeforeEnter: true,
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["BrowserRouter"], {
+        location: location,
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+          path: "/about",
+          component: _pages_About_js__WEBPACK_IMPORTED_MODULE_1__["default"]
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+          path: "/projects",
+          component: _pages_Projects_js__WEBPACK_IMPORTED_MODULE_3__["default"]
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+          path: "/",
+          exact: true,
+          component: _pages_Home_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 11
+        }, this)]
+      }, location.pathname, true, {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 9
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }, this)]
+  }, void 0, true, {
+    fileName: _jsxFileName,
+    lineNumber: 13,
+    columnNumber: 5
+  }, this);
+}
+
+_s(App, "pkHmaVRPskBaU4tMJuJJpV42k1I=", false, function () {
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_5__["useLocation"]];
+});
+
+_c = App;
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+var _c;
+
+__webpack_require__.$Refresh$.register(_c, "App");
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/components/ParticleText.js":
+/*!****************************************!*\
+  !*** ./src/components/ParticleText.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return particleText; });
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+function particleText(isHome) {
+  const canvas = document.getElementById('canvas1');
+  const ctx = canvas.getContext('2d');
+  var adjustX, adjustY, spacing, ballSize, canvasPosition, particleArray, textCoordinates;
+  var mouse = {
+    x: null,
+    y: null
+  };
+
+  function initializeVariables() {
+    canvasPosition = canvas.getBoundingClientRect();
+
+    if (window.innerWidth > 1400 && (typeof canvas.width === "undefined" || adjustX !== 63.5)) {
+      canvas.width = 3000;
+      canvas.height = 2000;
+      adjustX = 63.5;
+      adjustY = 45.1;
+      spacing = 15; // maxLineDistance = 25;
+
+      ballSize = 8;
+      mouse = {
+        x: null,
+        y: null,
+        radius: 120
+      };
+      initializeParticleText();
+    } else if (window.innerWidth > 1024 && window.innerWidth <= 1400 && (typeof canvas.width === "undefined" || adjustX !== 88.5)) {
+      canvas.width = 3000;
+      canvas.height = 2000;
+      adjustX = 88.5;
+      adjustY = 61.85;
+      spacing = 12; // maxLineDistance = 20;
+
+      ballSize = 6;
+      mouse = {
+        x: null,
+        y: null,
+        radius: 60
+      };
+      initializeParticleText();
+    } else if (window.innerWidth > 768 && window.innerWidth <= 1024 && (typeof canvas.width === "undefined" || adjustX !== 27.6)) {
+      canvas.width = 1024;
+      canvas.height = 1000;
+      adjustX = 27.6;
+      adjustY = 41;
+      spacing = 8; // maxLineDistance = 20;
+
+      ballSize = 4;
+      mouse = {
+        x: null,
+        y: null,
+        radius: 45
+      };
+      initializeParticleText();
+    } else if (window.innerWidth > 560 && window.innerWidth <= 768 && (typeof canvas.width === "undefined" || adjustX !== 22.6)) {
+      canvas.width = 768;
+      canvas.height = 1000;
+      adjustX = 22.6;
+      adjustY = 55.25;
+      spacing = 6.5; // maxLineDistance = 20;
+
+      ballSize = 3.25;
+      mouse = {
+        x: null,
+        y: null,
+        radius: 35
+      };
+      initializeParticleText();
+    } else if (window.innerWidth > 400 && window.innerWidth <= 560 && (typeof canvas.width === "undefined" || adjustX !== 19.6)) {
+      canvas.width = 560;
+      canvas.height = 1000;
+      adjustX = 19.6;
+      adjustY = 78.4;
+      spacing = 5; // maxLineDistance = 20;
+
+      ballSize = 2.5;
+      mouse = {
+        x: null,
+        y: null,
+        radius: 30
+      };
+      initializeParticleText();
+    } else if (window.innerWidth > 300 && window.innerWidth <= 400 && (typeof canvas.width === "undefined" || adjustX !== 16.3)) {
+      canvas.width = 400;
+      canvas.height = 1000;
+      adjustX = 16.3;
+      adjustY = 110;
+      spacing = 3.8; // maxLineDistance = 20;
+
+      ballSize = 1.9;
+      mouse = {
+        x: null,
+        y: null,
+        radius: 25
+      };
+      initializeParticleText();
+    } else if (window.innerWidth <= 300 && (typeof canvas.width === "undefined" || adjustX !== 13.5)) {
+      canvas.width = 300;
+      canvas.height = 1000;
+      adjustX = 13.5;
+      adjustY = 145.2;
+      spacing = 3; // maxLineDistance = 20;
+
+      ballSize = 1.5;
+      mouse = {
+        x: null,
+        y: null,
+        radius: 20
+      };
+      initializeParticleText();
+    }
+  }
+
+  function initializeParticleText() {
+    particleArray = [];
+    ctx.clearRect(0, 0, canvas.width, canvas.Height);
+    ctx.fillStyle = 'white';
+    ctx.font = '20px Verdana';
+    ctx.fillText('Veltekk', 0, 30);
+    textCoordinates = ctx.getImageData(0, 0, canvas.width, 100);
+    init();
+  }
+
+  class Particle {
+    constructor(x, y) {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = ballSize;
+      this.baseX = x;
+      this.baseY = y;
+      this.density = Math.random() * 30 + 1;
+      this.baseColor = 255;
+      this.hoverColor = 255;
+      this.opacity = 0;
+      this.isSet = false;
+    }
+
+    draw() {
+      ctx.fillStyle = "rgba(255," + this.baseColor + ",255, " + this.opacity + ")";
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    update() {
+      var dx = mouse.x - this.x;
+      var dy = mouse.y - this.y;
+      var distance = Math.sqrt(dx * dx + dy * dy);
+      var forceDirectionX = dx / distance;
+      var forceDirectionY = dy / distance;
+      var maxDistance = mouse.radius;
+      var force = (maxDistance - distance) / maxDistance;
+      var directionX = forceDirectionX * force * this.density;
+      var directionY = forceDirectionY * force * this.density;
+      if (!this.isSet && Math.abs(this.x - this.baseX) < 1 && Math.abs(this.y - this.baseY) < 1) this.isSet = true;
+      if (this.opacity < 1) this.opacity += 0.01;
+
+      if (distance < mouse.radius && this.isSet) {
+        this.x -= directionX;
+        this.y -= directionY; // this.hoverColor = 180 * (mouse.x !== 0 ? (mouse.x / canvas.width) : 0) + 75;
+
+        if (this.baseColor > 7) {
+          this.baseColor -= 8;
+        }
+      } else {
+        if (this.x !== this.baseX) {
+          dx = this.x - this.baseX;
+          this.x -= dx / 25;
+        }
+
+        if (this.y !== this.baseY) {
+          dy = this.y - this.baseY;
+          this.y -= dy / 25;
+        }
+
+        if (this.baseColor < 255) {
+          this.baseColor += 2;
+        }
+      }
+    }
+
+  }
+
+  function init() {
+    particleArray = [];
+
+    if (isHome) {
+      for (var y = 0, y2 = textCoordinates.height; y < y2; y++) {
+        for (var x = 0, x2 = textCoordinates.width; x < x2; x++) {
+          if (textCoordinates.data[y * 4 * textCoordinates.width + x * 4 + 3] > 128) {
+            var positionX = x + adjustX;
+            var positionY = y + adjustY;
+            particleArray.push(new Particle(positionX * spacing, positionY * spacing));
+          }
+        }
+      }
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (var i = 0; i < particleArray.length; i++) {
+      particleArray[i].draw();
+      particleArray[i].update();
+    } // connect();
+
+
+    requestAnimationFrame(animate);
+  }
+  /* function connect() {
+      var opacityValue = 1;
+      for (var a = 0; a < particleArray.length; a++) {
+          for (var b = a; b < particleArray.length; b++) {
+              var dx = particleArray[a].x - particleArray[b].x;
+              var dy = particleArray[a].y - particleArray[b].y;
+              var distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < maxLineDistance) {
+                  opacityValue = 1 - (distance / maxLineDistance);
+                  ctx.strokeStyle = 'rgba(' + particleArray[a].baseColor + ',255,255,' + opacityValue + ')';
+                  ctx.lineWidth = 1.5;
+                  ctx.beginPath();
+                  ctx.moveTo(particleArray[a].x, particleArray[a].y);
+                  ctx.lineTo(particleArray[b].x, particleArray[b].y);
+                  ctx.stroke();
+              }
+          }
+      }
+  } */
+
+
+  initializeVariables();
+  initializeParticleText();
+  window.addEventListener('mousemove', function (e) {
+    mouse.x = e.x - canvasPosition.left;
+    mouse.y = e.y - canvasPosition.top;
+  });
+  window.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+    mouse.x = e.touches[0].clientX - canvasPosition.left;
+    mouse.y = e.touches[0].clientY - canvasPosition.top;
+  });
+  window.addEventListener('touchend', function (e) {
+    mouse.x = 0;
+    mouse.y = 0;
+  });
+  animate();
+  window.addEventListener('resize', function () {
+    initializeVariables();
+  });
+}
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/css/about.css":
+/*!***************************!*\
+  !*** ./src/css/about.css ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./about.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/about.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+if (true) {
+  if (!content.locals || module.hot.invalidate) {
+    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {
+  if (!a && b || a && !b) {
+    return false;
+  }
+
+  var p;
+
+  for (p in a) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (a[p] !== b[p]) {
+      return false;
+    }
+  }
+
+  for (p in b) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (!a[p]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+    var oldLocals = content.locals;
+
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./about.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/about.css",
+      function () {
+        content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./about.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/about.css");
+
+              content = content.__esModule ? content.default : content;
+
+              if (typeof content === 'string') {
+                content = [[module.i, content, '']];
+              }
+
+              if (!isEqualLocals(oldLocals, content.locals)) {
+                module.hot.invalidate();
+
+                return;
+              }
+
+              oldLocals = content.locals;
+
+              update(content);
+      }
+    )
+  }
+
+  module.hot.dispose(function() {
+    update();
+  });
+}
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/css/index.css":
+/*!***************************!*\
+  !*** ./src/css/index.css ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+if (true) {
+  if (!content.locals || module.hot.invalidate) {
+    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {
+  if (!a && b || a && !b) {
+    return false;
+  }
+
+  var p;
+
+  for (p in a) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (a[p] !== b[p]) {
+      return false;
+    }
+  }
+
+  for (p in b) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (!a[p]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+    var oldLocals = content.locals;
+
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css",
+      function () {
+        content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css");
+
+              content = content.__esModule ? content.default : content;
+
+              if (typeof content === 'string') {
+                content = [[module.i, content, '']];
+              }
+
+              if (!isEqualLocals(oldLocals, content.locals)) {
+                module.hot.invalidate();
+
+                return;
+              }
+
+              oldLocals = content.locals;
+
+              update(content);
+      }
+    )
+  }
+
+  module.hot.dispose(function() {
+    update();
+  });
+}
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/css/main.css":
+/*!**************************!*\
+  !*** ./src/css/main.css ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./main.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/main.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+if (true) {
+  if (!content.locals || module.hot.invalidate) {
+    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {
+  if (!a && b || a && !b) {
+    return false;
+  }
+
+  var p;
+
+  for (p in a) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (a[p] !== b[p]) {
+      return false;
+    }
+  }
+
+  for (p in b) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (!a[p]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+    var oldLocals = content.locals;
+
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./main.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/main.css",
+      function () {
+        content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-4-1!../../node_modules/postcss-loader/src??postcss!./main.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/main.css");
+
+              content = content.__esModule ? content.default : content;
+
+              if (typeof content === 'string') {
+                content = [[module.i, content, '']];
+              }
+
+              if (!isEqualLocals(oldLocals, content.locals)) {
+                module.hot.invalidate();
+
+                return;
+              }
+
+              oldLocals = content.locals;
+
+              update(content);
+      }
+    )
+  }
+
+  module.hot.dispose(function() {
+    update();
+  });
+}
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\sterl\\Downloads\\veltekk\\src\\index.js";
+
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["BrowserRouter"], {
+  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_App__WEBPACK_IMPORTED_MODULE_2__["default"], {}, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 6,
+    columnNumber: 25
+  }, undefined)
+}, void 0, false, {
+  fileName: _jsxFileName,
+  lineNumber: 6,
+  columnNumber: 17
+}, undefined), document.getElementById('root'));
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/About.js":
+/*!****************************!*\
+  !*** ./src/pages/About.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_about_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/about.css */ "./src/css/about.css");
+/* harmony import */ var _css_about_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_about_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_ParticleText_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ParticleText.js */ "./src/components/ParticleText.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/index.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\sterl\\Downloads\\veltekk\\src\\pages\\About.js";
+
+
+
+
+
+
+
+const pageVariants = {
+  in: {
+    opacity: 1,
+    transition: {
+      duration: 1
+    }
+  },
+  out: {
+    opacity: 0,
+    transition: {
+      duration: 1
+    }
+  }
+};
+const bio = ("I am a full-stack web developer with a knack for creating modern, captivating designs for any kind of project. " + "My passion lies in creating a user experience that leaves people appreciating the attention to the most minute details, " + "and keeps them coming back.").split('');
+
+class About extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  switchMountain() {
+    document.getElementById("mountaincontainer").classList.toggle("switch");
+    document.getElementById("abouttextcontainer").classList.toggle("switch");
+  }
+
+  render() {
+    document.getElementById("canvas1").display = "none";
+
+    try {
+      Object(_components_ParticleText_js__WEBPACK_IMPORTED_MODULE_3__["default"])(false);
+    } catch {
+      /* Error */
+    }
+
+    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(framer_motion__WEBPACK_IMPORTED_MODULE_5__["motion"].div, {
+      className: "aboutMain",
+      initial: "out",
+      animate: "in",
+      exit: "out",
+      variants: pageVariants,
+      exitBeforeEnter: true,
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+        to: "/",
+        className: "aboutButtonContainer",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "aboutButtonCircle",
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "aboutButtonArrow"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 13
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 45,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+          className: "aboutButtonText",
+          children: "Home"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 48,
+          columnNumber: 11
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 9
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+        className: "aboutTextContainer",
+        id: "abouttextcontainer",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("h1", {
+          className: "aboutHeader",
+          children: "Hi, I'm Sterling Velazquez"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 51,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+          className: "aboutBio",
+          children: bio.map(char => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("span", {
+            className: "bioLetter",
+            style: {
+              animation: `letterFade ${Math.random() * 2 + 1}s ease-out`
+            },
+            children: char
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 53,
+            columnNumber: 30
+          }, this))
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 52,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "aboutLogoDiv",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "aboutLogoCircle",
+            id: "ageLogo",
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("img", {
+              className: "aboutLogo",
+              src: "age.svg",
+              alt: "age"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 57,
+              columnNumber: 15
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 13
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+            className: "aboutLogoText",
+            id: "ageText",
+            children: "23 Years Old"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 59,
+            columnNumber: 13
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "aboutLogoDiv",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "aboutLogoCircle",
+            id: "addressLogo",
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("img", {
+              className: "aboutLogo",
+              src: "address.svg",
+              alt: "address"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 63,
+              columnNumber: 15
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 13
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+            className: "aboutLogoText",
+            id: "addressText",
+            children: "Atlanta, GA"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 65,
+            columnNumber: 13
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "aboutLogoDiv",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "aboutLogoCircle",
+            id: "degreeLogo",
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("img", {
+              className: "aboutLogo",
+              src: "degree.svg",
+              alt: "degree"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 69,
+              columnNumber: 15
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 68,
+            columnNumber: 13
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+            className: "aboutLogoText",
+            id: "degreeText",
+            children: "Bachelor's Degree in Computer Science"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 13
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 67,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "aboutLogoDiv",
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "aboutLogoCircle",
+            id: "collegeLogo",
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("img", {
+              className: "aboutLogo",
+              src: "college.svg",
+              alt: "college"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 75,
+              columnNumber: 15
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 74,
+            columnNumber: 13
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+            className: "aboutLogoText",
+            id: "collegeText",
+            children: "Georgia Institute of Technology"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 77,
+            columnNumber: 13
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 73,
+          columnNumber: 11
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 50,
+        columnNumber: 9
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+        className: "mountainContainer",
+        id: "mountaincontainer",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "mountain",
+          id: "bigMountain",
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "mountainSwitch",
+            onClick: e => this.switchMountain(),
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("img", {
+              className: "hikingLogo",
+              src: "hiking.svg",
+              alt: "hiking"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 83,
+              columnNumber: 15
+            }, this)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 82,
+            columnNumber: 13
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 81,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "mountain",
+          id: "midMountain"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 86,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "mountain",
+          id: "smallMountain"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 87,
+          columnNumber: 11
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 80,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 7
+    }, this);
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/Home.js":
+/*!***************************!*\
+  !*** ./src/pages/Home.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/main.css */ "./src/css/main.css");
+/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_ParticleText_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ParticleText.js */ "./src/components/ParticleText.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/index.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\sterl\\Downloads\\veltekk\\src\\pages\\Home.js";
+
+
+
+
+
+
+
+const pageVariants = {
+  in: {
+    opacity: 1
+  },
+  out: {
+    opacity: 0,
+    transition: {
+      duration: 1
+    }
+  }
+};
+
+class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    document.getElementById("canvas1").display = "block";
+
+    try {
+      Object(_components_ParticleText_js__WEBPACK_IMPORTED_MODULE_3__["default"])(true);
+    } catch {
+      /* Error */
+    }
+
+    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(framer_motion__WEBPACK_IMPORTED_MODULE_5__["motion"].div, {
+      className: "main",
+      initial: "out",
+      animate: "in",
+      exit: "out",
+      variants: pageVariants,
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+        to: "/about",
+        className: "homeButtonContainer",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "homeButtonCircle",
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "homeButtonArrow"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 34,
+            columnNumber: 17
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 13
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+          className: "homeButtonText",
+          children: "About Me"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 36,
+          columnNumber: 13
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 32,
+        columnNumber: 9
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+        to: "/projects",
+        className: "homeButtonContainer",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+          className: "homeButtonCircle",
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+            className: "homeButtonArrow"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 40,
+            columnNumber: 17
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 13
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+          className: "homeButtonText",
+          children: "My Projects"
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 13
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 38,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 7
+    }, this);
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ "./src/pages/Projects.js":
+/*!*******************************!*\
+  !*** ./src/pages/Projects.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_about_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/about.css */ "./src/css/about.css");
+/* harmony import */ var _css_about_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_about_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_ParticleText_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ParticleText.js */ "./src/components/ParticleText.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/index.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+var _jsxFileName = "C:\\Users\\sterl\\Downloads\\veltekk\\src\\pages\\Projects.js";
+
+
+
+
+
+
+
+const pageVariants = {
+  in: {
+    opacity: 1
+  },
+  out: {
+    opacity: 0
+  }
+};
+const pageTransition = {
+  type: "tween",
+  ease: "easeIn"
+};
+
+class Projects extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    try {
+      Object(_components_ParticleText_js__WEBPACK_IMPORTED_MODULE_3__["default"])(false);
+    } catch {
+      /* Error */
+    }
+
+    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(framer_motion__WEBPACK_IMPORTED_MODULE_5__["motion"].div, {
+      className: "aboutMain",
+      initial: "out",
+      animate: "in",
+      exit: "out",
+      variants: pageVariants,
+      transition: pageTransition,
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+        className: "placeholder",
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("p", {
+          className: "placeholderText",
+          children: "This page is under construction."
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 27,
+          columnNumber: 13
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+          to: "/",
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("button", {
+            className: "placeholderButton",
+            children: "Click here to go back"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 29,
+            columnNumber: 15
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 13
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 26,
+        columnNumber: 11
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 7
+    }, this);
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Projects);
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ }),
+
+/***/ 1:
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** multi (webpack)/hot/dev-server.js ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\sterl\Downloads\veltekk\node_modules\webpack\hot\dev-server.js */"./node_modules/webpack/hot/dev-server.js");
+__webpack_require__(/*! C:\Users\sterl\Downloads\veltekk\node_modules\@pmmmwh\react-refresh-webpack-plugin\client\ReactRefreshEntry.js */"./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js");
+__webpack_require__(/*! C:\Users\sterl\Downloads\veltekk\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\sterl\Downloads\veltekk\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[1,"runtime-main","vendors~main"]]]);
+//# sourceMappingURL=main.chunk.js.map

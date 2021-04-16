@@ -10,7 +10,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="App">
+    <div className="App" id="app">
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path="/about" component={About} />
