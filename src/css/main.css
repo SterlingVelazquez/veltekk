@@ -150,6 +150,21 @@ body {
   50%{transform:translate(30%, 50%)}
   100%{transform:translate(10%, 0%)}
 }
+@keyframes pulseLeft {
+  0% {
+    opacity:0;
+    transform:translate(-50%, -50%) scale(0.5);
+  } 70% {
+    opacity:0;
+    transform:translate(-50%, -50%) scale(0.5);
+  } 90% {
+    opacity:1;
+    transform:translate(-50%, -50%) scale(1.4);
+  } 100% {
+    opacity:1;
+    transform:translate(-50%, -50%) scale(1.2);
+  }
+}
 @keyframes pulseRight {
   0% {
     opacity:0;
@@ -221,7 +236,7 @@ body {
     margin-top:160px;
     transform:translate(-50%, -50%) scale(0.9);
   }
-  .homeButtonContainer:nth-child(1) {
+  .homeButtonContainer:nth-child(0) {
     margin-left:-180px;
   }
   .homeButtonContainer:nth-child(2) {

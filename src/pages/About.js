@@ -61,7 +61,7 @@ class About extends React.Component {
   }
 
   render() {
-    document.getElementById("canvas1").display = "none";
+    document.getElementById("canvas1").style.display = "none";
     return (
       <motion.div className="aboutMain" id="aboutmain" initial="out" animate="in" exit="out" variants={pageVariants} exitBeforeEnter>
         <Link to="/" className="aboutButtonContainer">

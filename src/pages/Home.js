@@ -25,7 +25,7 @@ class Home extends React.Component {
   }
 
   render() {
-    document.getElementById("canvas1").display = "block";
+    document.getElementById("canvas1").style.display = "block";
     try { particleText(true) } catch { /* Error */ }
     return (
       <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants}>
