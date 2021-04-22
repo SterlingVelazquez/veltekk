@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/index.css';
 import '../css/about.css';
-import particleText from '../components/ParticleText.js'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 
@@ -20,7 +19,6 @@ class Projects extends React.Component {
   }
 
   render() {
-    try { particleText(false) } catch { /* Error */ }
     return (
       <motion.div className="aboutMain" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
           <div className="placeholder">

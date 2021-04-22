@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/index.css';
 import '../css/about.css';
-import particleText from '../components/ParticleText.js'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 
