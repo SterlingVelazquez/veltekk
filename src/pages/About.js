@@ -63,7 +63,6 @@ class About extends React.Component {
 
   render() {
     document.getElementById("canvas1").display = "none";
-    try { particleText(false) } catch { /* Error */ }
     return (
       <motion.div className="aboutMain" id="aboutmain" initial="out" animate="in" exit="out" variants={pageVariants} exitBeforeEnter>
         <Link to="/" className="aboutButtonContainer">

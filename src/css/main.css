@@ -17,9 +17,13 @@ body {
   height:100%; width:100%;
   overflow:hidden;
   top:0; left:0;
+}
+.App:before {
+  content:"";
+  position:fixed;
+  top:-100%; left:-100%;
+  width:200%; height:200%;
   background: linear-gradient(130deg, #7847ff, #4164ff, #33d6ff);
-  background-size: 200% 200%;
-
   -webkit-animation: gra 8s ease infinite;
   -moz-animation: gra 8s ease infinite;
   animation: gra 8s ease infinite;
@@ -132,35 +136,19 @@ body {
 }
 
 @-webkit-keyframes gra {
-  0%{background-position:20% 10%}
-  50%{background-position:91% 100%}
-  100%{background-position:20% 10%}
+  0%{transform:translate(20%, 10%)}
+  50%{transform:translate(40%, 50%)}
+  100%{transform:translate(20%, 10%)}
 }
 @-moz-keyframes gra {
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
+  0%{transform:translate(10%, 0%)}
+  50%{transform:translate(30%, 50%)}
+  100%{transform:translate(10%, 0%)}
 }
 @keyframes gra { 
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
-}
-
-@keyframes pulseLeft {
-  0% {
-    opacity:0;
-    transform:translate(-50%, -50%) scale(0.5);
-  } 70% {
-    opacity:0;
-    transform:translate(-50%, -50%) scale(0.5);
-  } 90% {
-    opacity:1;
-    transform:translate(-50%, -50%) scale(1.4);
-  } 100% {
-    opacity:1;
-    transform:translate(-50%, -50%) scale(1.2);
-  }
+  0%{transform:translate(10%, 0%)}
+  50%{transform:translate(30%, 50%)}
+  100%{transform:translate(10%, 0%)}
 }
 @keyframes pulseRight {
   0% {
