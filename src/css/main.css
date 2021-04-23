@@ -28,14 +28,7 @@ body {
   animation: gra 8s ease infinite;
 }
 .App::-webkit-scrollbar {
-  height:10px;
-}
-.App::-webkit-scrollbar-track {
-  background:rgb(255, 255, 255);
-}
-.App::-webkit-scrollbar-thumb {
-  background:linear-gradient(rgb(57, 129, 212) 0%, rgb(202, 227, 235) 100%);
-  border-radius:10px;
+  width:0;
 }
 
 .homeButtonContainer {

@@ -1,14 +1,4 @@
 .App { overflow-y:auto !important }
-.App::-webkit-scrollbar {
-    height:10px;
-}
-.App::-webkit-scrollbar-track {
-    background:rgb(255, 255, 255);
-}
-.App::-webkit-scrollbar-thumb {
-    background:linear-gradient(rgb(57, 129, 212) 0%, rgb(202, 227, 235) 100%);
-    border-radius:10px;
-}
 
 .aboutMain {
    display:grid;
@@ -178,16 +168,20 @@
     height:100%;
     left:0%;
     transition:1s;
-    transform:translateX(0);
-}
-.mountainContainer.switch,
-.mountainContainer.bubble {
     transform:translateX(-100%);
+    transform-origin:bottom;
+}
+.mountainContainer.switch {
+    transform:translateX(-250%) scaleX(2) scaleY(1.1);
+}
+.mountainContainer.bubble {
+    transform:translateX(-100%) scale(1);
 }
 
 .mountain {
     position:absolute;
     transition:1s;
+    transform-origin: bottom;
 }
 .mountainSwitch {
     position:absolute;
@@ -200,20 +194,17 @@
     animation:switchScaleIn 3.5s ease-out, switchPulse 1.5s ease infinite 4s;
     cursor:pointer;
     transition:1s;
+    transform:scaleX(1) scaleY(1) translateX(50vw) translateY(0);
 }
 .mountainContainer.switch .mountainSwitch {
-    top:0px;
-    margin-top:150px;
-    left:30vw;
+    transform:scaleX(0.5) scaleY(0.91) translateX(55vw) translateY(-263px);
 }
 .mountainContainer.bubble .mountainSwitch {
-    top:0px;
-    margin-top:50px;
-    left:60px;
+    transform:scale(0.9) translateX(-23vw) translateY(-400px);
 }
 .mountainSwitch:hover {
     animation:switchScaleIn 3.5s ease-out;
-    transform:scale(1.2);
+    transform:scale(1.2) translateX(41.7vw) translateY(0);
     filter:drop-shadow(0 0 40px rgba(255, 255, 255, 0.664));
 }
 .hikingLogo {
@@ -230,32 +221,34 @@
     text-shadow:0 0 10px white;
     letter-spacing:0;
     opacity:0;
-    transition:1.5s;
+    transform:scaleX(1) scaleY(1);
+    transition:1s;
 }
 .mountainContainer.switch .mountainText {
     opacity:1;
+    transform:scaleX(0.5) scaleY(0.9);
 }
 
 #bigMountain {
-    left:0; bottom:0;
+    left:100%; bottom:0;
     width:100%;
     height:80%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
     animation:3s mountainFadeUp ease;
 }
 .mountainContainer.switch #bigMountain {
-    width:100vw;
-    height:90%;
     cursor:pointer;
 }
 .mountainContainer.switch #bigMountain:hover {
-    height:95%;
+    transform:scaleY(1.08);
+}
+.mountainContainer.switch #bigMountain:hover #bigMountainText {
+    transform:scaleX(0.5) scaleY(0.85);
 }
 #bigMountain.bubbleKnowledge {
-    left:calc(100% - 585px); bottom:35%;
     width:500px; height:500px;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    transform:scale(1.8);
+    transform:scale(1.8) translateX(-330px) translateY(-30%);
 }
 #bigMountain.bubbleExperience {
     left:calc(100% - 250px); bottom:27.5%;
@@ -271,26 +264,26 @@
 }
 
 #midMountain {
-    bottom:0; left:-5vw;
-    width:70%;
-    height:60%;
+    bottom:0; left:100%;
+    width:70%; height:60%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
     animation:3.5s mountainFadeUp ease;
     filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
+    transform:translateX(-5vw);
 }
 .mountainContainer.switch #midMountain {
-    width:70vw;
-    height:70%;
     cursor:pointer;
 }
 .mountainContainer.switch #midMountain:hover {
-    height:75%;
+    transform:scaleY(1.1) translateX(-5vw);
+}
+.mountainContainer.switch #midMountain:hover #midMountainText {
+    transform:scaleX(0.5) scaleY(0.8);
 }
 #midMountain.bubbleKnowledge {
-    left:calc(100% + 165px); bottom:35%;
     width:500px; height:500px;
     clip-path: polygon(36% 0, 70% 5%, 89% 33%, 84% 64%, 59% 85%, 24% 80%, 4% 55%, 10% 21%);
-    transform:scale(1.9);
+    transform:scale(1.9) translateX(95px) translateY(-20%);
 }
 #midMountain.bubbleExperience {
     left:calc(100% - 250px); bottom:32.5%;
@@ -306,27 +299,26 @@
 }
 
 #smallMountain {
-    bottom:0;
-    width:80%;
-    height:50%;
+    bottom:0; left:100%;
+    width:80%; height:50%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
-    left:20vw;
     animation:4s mountainFadeUp ease;
     filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
+    transform:translateX(18vw);
 }
 .mountainContainer.switch #smallMountain {
-    width:100vw;
-    height:60%;
     cursor:pointer;
 }
 .mountainContainer.switch #smallMountain:hover {
-    height:65%;
+    transform:scaleY(1.15) translateX(18vw);
+}
+.mountainContainer.switch #smallMountain:hover #smallMountainText {
+    transform:scaleX(0.5) scaleY(0.8);
 }
 #smallMountain.bubbleKnowledge {
-    left:calc(100% - 200px); bottom:-15%;
     width:500px; height:500px;
     clip-path: polygon(30% 6%, 60% 0, 81% 16%, 88% 41%, 75% 65%, 45% 72%, 23% 57%, 16% 30%);
-    transform:scale(2.2);
+    transform:scale(2.2) translateX(-100px) translateY(45%);
 }
 #smallMountain.bubbleExperience {
     left:calc(100% - 250px); bottom:26.25%;
