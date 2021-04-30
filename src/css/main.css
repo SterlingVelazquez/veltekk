@@ -21,6 +21,9 @@ body {
   position:fixed;
   top:-100%; left:-100%;
   width:200%; height:200%;
+  background:-moz-linear-gradient(130deg, #7847ff, #4164ff, #33d6ff);
+  background: -webkit-linear-gradient(310deg, #7847ff, #4164ff, #33d6ff);
+  background: -o-linear-gradient(130deg, #7847ff, #4164ff, #33d6ff);
   background: linear-gradient(130deg, #7847ff, #4164ff, #33d6ff);
   -webkit-animation: gra 8s ease infinite;
   -moz-animation: gra 8s ease infinite;
