@@ -457,6 +457,7 @@
     font-weight:900;
     font-size:14px;
     padding-top:2.4%;
+    white-space:nowrap;
 }
 .palm {
     position:absolute;
