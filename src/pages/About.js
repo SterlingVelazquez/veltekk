@@ -23,6 +23,10 @@ const bio = ("I !am !a !full-stack !web !developer !with !a !knack !for !creatin
   "!My !passion !lies !in !creating !a !user !experience !that !leaves !people !appreciating !the !attention !to !the !most !minute !details, " +
   "!and !keeps !them !coming !back.").split('!');
 
+const bigKnowledge = ['Javascript', 'CSS', 'HTML', 'Git/Github', 'Front-End', 'Agile', 'React'];
+const midKnowledge = ['VSCode', 'NodeJS', 'NextJS', 'NoSQL', 'C/C++', 'Back-End', 'Rule-Based', 'Elementor'];
+const smallKnowledge = ['Angular', 'Java', 'Azure', 'AWS', 'TypeScript', 'WordPress', 'eCommerce', 'Kubernetes', 'Docker'];
+
 class About extends React.Component {
 
   constructor(props) {
@@ -32,8 +36,8 @@ class About extends React.Component {
 
   switchMountain() {
     document.getElementById("app").scrollTo({
-      top:0,
-      behavior:"smooth"
+      top: 0,
+      behavior: "smooth"
     })
     if (document.getElementById("bigMountain").className.includes("bubble")) {
       for (var i = 0; i < 3; i++)
@@ -57,6 +61,14 @@ class About extends React.Component {
         document.getElementsByClassName("mountain")[k].className = "mountain";
       document.getElementById("mountaincontainer").classList.toggle("switch");
       document.getElementById("mountaincontainer").classList.toggle("bubble");
+    }
+  }
+
+  rotateExperience(e) {
+    if (document.getElementById("smallMountain").className.includes("bubbleExperience")) {
+      e.stopPropagation();
+      document.getElementById("bigMountain").classList.toggle("rotate");
+      document.getElementById("midMountain").classList.toggle("rotate");
     }
   }
 
@@ -87,13 +99,13 @@ class About extends React.Component {
             </div>
             <p className="aboutLogoText" id="addressText">Atlanta, GA</p>
           </div>
-          <div className="aboutLogoDiv">
+          <div className="aboutLogoDiv" id="degreeLogoDiv">
             <div className="aboutLogoCircle" id="degreeLogo">
               <img className="aboutLogo" src="degree.svg" alt="degree"></img>
             </div>
             <p className="aboutLogoText" id="degreeText">Bachelor's Degree in Computer Science</p>
           </div>
-          <div className="aboutLogoDiv">
+          <div className="aboutLogoDiv" id="collegeLogoDiv">
             <div className="aboutLogoCircle" id="collegeLogo">
               <img className="aboutLogo" src="college.svg" alt="college"></img>
             </div>
@@ -104,42 +116,75 @@ class About extends React.Component {
           <div className="mountain" id="bigMountain">
             <div className="hoverMountain" onClick={e => this.switchBubble("Knowledge")}>
               <p className="mountainText" id="bigMountainText">Knowledge</p>
-              <div className="bubbleKnowledge" id="bigKnowledge">
-                
+              <div className="knowledge" id="bigKnowledge">
+                <h1 className="bigKnowledgeHeader">Advanced</h1>
+                <h1 className="bigKnowledgeSubheader">5+ Years</h1>
+                {bigKnowledge.map(value => <p className="bigKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }}>{value}</p>)}
               </div>
-              <div className="bubbleExperience" id="bigExperience">
-
+              <div className="experience" id="bigExperience">
+                <h1 className="bigExperienceHeader">Freelance Website Developer</h1>
+                <h1 className="bigExperienceSubheader">June 2020 - Present</h1>
+                <p className="bigExperienceText">Addicted to creating modern, unique projects</p>
+                <p className="bigExperienceText">Capable of completing smaller websites in a day</p>
+                <p className="bigExperienceText">Anything from single-page to eCommerce websites</p>
+                <p className="bigExperienceText">Mainly work with JS, CSS/HTML, and React,</p>
+                <p className="bigExperienceText">but also familiar with Wordpress/Elementor</p>
+                <p className="bigExperienceText">Consistent communication <span className="remove">is</span> paramount to every project</p>
               </div>
-              <div className="bubbleBackground" id="bigBackground">
-
+              <div className="background" id="bigBackground">
+                <img className="palm" src="palm.png" alt="palm tree"></img>
+                <div className="leftSlant"></div>
+                <div className="rightSlant"></div>
+                <h1 className="backgroundHeader">My Life In Under One Minute</h1>
+                <p className="backgroundText">I was born in Havana, Cuba and spent my childhood in Miami, Florida. My whole life, I've been raised by a 
+                family and a culture that taught me to take pride in having a hard work ethic and learning something new every day while enjoying the 
+                best life has to offer.</p>
+                <p className="backgroundText">I learned how to play the piano so I could embrace my love for music. I became fluent in English, Spanish, 
+                and continue to study new languages every day like Italian and Japanese because you can never know enough.</p>
+                <p className="backgroundText">I've never let anything get in my way, even struggling to get through intense chemotherapy to graduate from 
+                the School for Advanced Studies in 2016. Now I've graduated from Georgia Tech and work tirelessly every day to hone my skills in computer science.</p>
+                <p className="backgroundText">And I'm enjoying every second.</p>
               </div>
             </div>
           </div>
           <div className="mountain" id="midMountain">
             <div className="hoverMountain" onClick={e => this.switchBubble("Experience")}>
               <p className="mountainText" id="midMountainText">Experience</p>
-              <div className="bubbleKnowledge" id="midKnowledge">
-
+              <div className="knowledge" id="midKnowledge">
+                <h1 className="midKnowledgeHeader">Intermediate</h1>
+                <h1 className="midKnowledgeSubheader">2-5 Years</h1>
+                {midKnowledge.map(value => <p className="midKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }}>{value}</p>)}
               </div>
-              <div className="bubbleExperience" id="midExperience">
-
+              <div className="experience" id="midExperience">
+                <h1 className="midExperienceHeader">AT&#38;T | Systems Engineer</h1>
+                <h1 className="midExperienceSubheader">Feb 2021 - Present</h1>
+                <p className="midExperienceText">Well-versed in Agile software development</p>
+                <p className="midExperienceText">Rule-based programming with JS &#38;</p>
+                <p className="midExperienceText">Cloud-based development with Azure</p>
+                <p className="midExperienceText">Collaborating with various teams of 6+ people,</p>
+                <p className="midExperienceText">with <span className="remove">an</span> emphasis on communication and timeliness</p>
+                <p className="midExperienceText">Trained in <span className="remove">Microsoft</span> Azure and ServiceNow Fundamentals</p>
               </div>
-              <div className="bubbleBackground" id="midBackground">
-
+              <div className="background" id="midBackground">
+                <img className="portrait" src="portrait2.png" alt="portrait"></img>
               </div>
             </div>
           </div>
           <div className="mountain" id="smallMountain">
-            <div className="hoverMountain" onClick={e => this.switchBubble("Background")}>
-              <p className="mountainText" id="smallMountainText">Background</p>
-              <div className="bubbleKnowledge" id="smallKnowledge">
-
-              </div>
-              <div className="bubbleExperience" id="smallExperience">
-
-              </div>
-              <div className="bubbleBackground" id="smallBackground">
-
+            <div className="mountainRotater">
+              <div className="hoverMountain" onClick={e => this.switchBubble("Background")}>
+                <p className="mountainText" id="smallMountainText">Background</p>
+                <div className="knowledge" id="smallKnowledge">
+                  <h1 className="smallKnowledgeHeader">Beginner</h1>
+                  <h1 className="smallKnowledgeSubheader">&#60;2 Years</h1>
+                  {smallKnowledge.map(value => <p className="smallKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }}>{value}</p>)}
+                </div>
+                <div className="experience" id="smallExperience" onClick={e => this.rotateExperience(e)}>
+                  <img className="rotateArrow" src="rotate.svg" alt="rotate"></img>
+                </div>
+                <div className="background" id="smallBackground">
+                  <img className="piano" src="piano.gif" alt="piano"></img>
+                </div>
               </div>
             </div>
           </div>
@@ -153,14 +198,3 @@ class About extends React.Component {
 }
 
 export default About;
-
-/*
-<svg viewBox="0 0 500 500" className="curveContainer">
-  <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
-  <text width="500" className="curveText">
-    <textPath xlinkHref="#curve">
-      Advanced | 5+ Years
-    </textPath>
-  </text>
-</svg>
-*/

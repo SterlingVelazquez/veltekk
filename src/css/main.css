@@ -15,7 +15,6 @@ body {
   position:fixed;
   height:100%; width:100%;
   overflow:hidden;
-  top:0; left:0;
 }
 .App:before {
   content:"";
@@ -28,7 +27,7 @@ body {
   animation: gra 8s ease infinite;
 }
 .App::-webkit-scrollbar {
-  height:10px;
+  width:0;
 }
 .App::-webkit-scrollbar-track {
   background:rgb(255, 255, 255);
@@ -236,7 +235,7 @@ body {
     margin-top:160px;
     transform:translate(-50%, -50%) scale(0.9);
   }
-  .homeButtonContainer:nth-child(0) {
+  .homeButtonContainer:nth-child(1) {
     margin-left:-180px;
   }
   .homeButtonContainer:nth-child(2) {

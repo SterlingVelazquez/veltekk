@@ -1,19 +1,9 @@
 .App { overflow-y:auto !important }
-.App::-webkit-scrollbar {
-    height:10px;
-}
-.App::-webkit-scrollbar-track {
-    background:rgb(255, 255, 255);
-}
-.App::-webkit-scrollbar-thumb {
-    background:linear-gradient(rgb(57, 129, 212) 0%, rgb(202, 227, 235) 100%);
-    border-radius:10px;
-}
 
 .aboutMain {
    display:grid;
    grid-template-columns: 50% 50%;
-   height:100%;
+   height:100%; width:100%;
 }
 
 .aboutButtonContainer {
@@ -38,8 +28,10 @@
     filter:drop-shadow(0 0 0px rgba(255, 255, 255, 0));
     transition:0.5s;
 }
-.aboutButtonContainer:hover .aboutButtonCircle {
-    filter:drop-shadow(0 0 20px rgb(255, 255, 255));
+@media (hover: hover) {
+    .aboutButtonContainer:hover .aboutButtonCircle {
+        filter:drop-shadow(0 0 20px rgb(255, 255, 255));
+    }
 }
 .aboutButtonArrow {
     position:absolute;
@@ -80,8 +72,10 @@
     transform:scaleX(0);
     transform-origin:right;
 }
-.aboutButtonContainer:hover .aboutButtonText:after {
-    transform:scaleX(1);
+@media (hover: hover) {
+    .aboutButtonContainer:hover .aboutButtonText:after {
+        transform:scaleX(1);
+    }
 }
 
 .aboutTextContainer {
@@ -179,6 +173,7 @@
     left:0%;
     transition:1s;
     transform:translateX(0);
+    animation:3s mountainFadeUp ease;
 }
 .mountainContainer.switch,
 .mountainContainer.bubble {
@@ -188,6 +183,11 @@
 .mountain {
     position:absolute;
     transition:1s;
+}
+.mountainContainer.switch .mountain, 
+.mountainContainer.bubble .mountain {
+    cursor:pointer;
+    overflow:hidden;
 }
 .mountainSwitch {
     position:absolute;
@@ -202,26 +202,26 @@
     transition:1s;
 }
 .mountainContainer.switch .mountainSwitch {
-    top:0px;
     margin-top:150px;
     left:30vw;
 }
 .mountainContainer.bubble .mountainSwitch {
-    top:0px;
     margin-top:50px;
     left:60px;
 }
-.mountainSwitch:hover {
-    animation:switchScaleIn 3.5s ease-out;
-    transform:scale(1.2);
-    filter:drop-shadow(0 0 40px rgba(255, 255, 255, 0.664));
+@media (hover: hover) {
+    .mountainSwitch:hover {
+        animation:switchScaleIn 3.5s ease-out;
+        transform:scale(1.2);
+        filter:drop-shadow(0 0 40px rgba(255, 255, 255, 0.664));
+    }
 }
 .hikingLogo {
     filter:contrast(0%) brightness(2) drop-shadow(0 0 3px white);
 }
 .mountainText {
-    position:relative;
-    top:300px;
+    position:absolute;
+    left:50%;
     text-align:center;
     font-size:42px;
     font-family: 'Nunito', sans-serif;
@@ -229,11 +229,41 @@
     color:white;
     text-shadow:0 0 10px white;
     letter-spacing:0;
-    opacity:0;
-    transition:1.5s;
+    transform:translate(-50%, 300px);
+    pointer-events:none;
+    opacity:0;    
+    transition:opacity 1s;
 }
 .mountainContainer.switch .mountainText {
     opacity:1;
+}
+
+.bigKnowledgeHeader, .bigKnowledgeSubheader,
+.midKnowledgeHeader, .midKnowledgeSubheader,
+.smallKnowledgeHeader, .smallKnowledgeSubheader,
+.bigExperienceHeader, .bigExperienceSubheader,
+.midExperienceHeader, .midExperienceSubheader,
+.backgroundHeader {
+    position:absolute;
+    font-family: 'Fredoka One', cursive;
+    font-weight:400;
+    color:white;
+}
+.bigKnowledgeText, .midKnowledgeText, .smallKnowledgeText,
+.bigExperienceText, .midExperienceText {
+    position:absolute;
+    font-family: 'Nunito', sans-serif;
+    color:white;
+    white-space:nowrap;
+}
+.bigKnowledgeText { font-weight:900 }
+.midKnowledgeText { font-weight:500 }
+.smallKnowledgeText { font-weight:200 }
+
+#bigKnowledge, #bigExperience, #bigBackground,
+#midKnowledge, #midExperience, #midBackground,
+#smallKnowledge, #smallExperience, #smallBackground {
+    pointer-events:none;
 }
 
 #bigMountain {
@@ -241,50 +271,216 @@
     width:100%;
     height:80%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
-    animation:3s mountainFadeUp ease;
 }
 .mountainContainer.switch #bigMountain {
     width:100vw;
     height:90%;
-    cursor:pointer;
 }
-.mountainContainer.switch #bigMountain:hover {
-    height:95%;
+@media (hover: hover) {
+    .mountainContainer.switch #bigMountain:hover {
+        height:95%;
+    }
 }
+
 #bigMountain.bubbleKnowledge {
     left:calc(100% - 585px); bottom:35%;
     width:500px; height:500px;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     transform:scale(1.8);
 }
+#bigKnowledge {
+    position:absolute;
+    width:100%; height:100%;
+}
+.bigKnowledgeHeader {
+    left:0; top:0;
+    transform:translate(75%, 15%);
+    font-size:40px;
+}
+.bigKnowledgeHeader:before {
+    content:'Advanced';
+    position:absolute;
+    top:-2px; left:-2px;
+    color:rgb(130, 188, 255);
+    z-index:-1;
+}
+.bigKnowledgeHeader:after {
+    content:'Advanced';
+    position:absolute;
+    top:-4px; left:-4px;
+    color:rgb(33, 111, 201);
+    z-index:-2;
+}
+.bigKnowledgeSubheader {
+    left:0; top:0;
+    transform:translate(245%, 170%);
+    font-size:27px;
+}
+.bigKnowledgeSubheader:before {
+    content:'5+ Years';
+    position:absolute;
+    top:-2px; left:-2px;
+    color:rgb(130, 188, 255);
+    z-index:-1;
+}
+.bigKnowledgeSubheader:after {
+    content:'5+ Years';
+    position:absolute;
+    top:-4px; left:-4px;
+    color:rgb(33, 111, 201);
+    z-index:-2;
+}
+.bigKnowledgeText:nth-child(3) { /* Javascript */
+    font-size:27px;
+    transform:translate(210%, 330%);
+}
+.bigKnowledgeText:nth-child(4) { /* CSS */
+    font-size:32px;
+    transform:translate(124%, 575%);
+}
+.bigKnowledgeText:nth-child(5) { /* HTML */
+    font-size:33px;
+    transform:rotateZ(4deg) translate(260%, 610%);
+}
+.bigKnowledgeText:nth-child(6) { /* Git/Github */
+    font-size:24px;
+    transform:rotateZ(10deg) translate(258%, 520%);
+}
+.bigKnowledgeText:nth-child(7) { /* Front-End */
+    font-size:30px;
+    transform:rotateZ(-8deg) translate(25%, 424%);
+}
+.bigKnowledgeText:nth-child(8) { /* Agile */
+    font-size:30px;
+    transform:rotateZ(-4deg) translate(80%, 812%);
+}
+.bigKnowledgeText:nth-child(9) { /* React */
+    font-size:26px;
+    transform:rotateZ(10deg) translate(380%, 1020%);
+}
+
 #bigMountain.bubbleExperience {
     left:calc(100% - 250px); bottom:27.5%;
     width:500px; height:500px;
     clip-path: polygon(0 50%, 0 50%, 100% 50%, 100% 50%, 80% 100%, 80% 100%, 20% 100%, 20% 100%);
+    transform-origin: center 43.5%;
     transform:scale(2.2);
 }
+#bigMountain.rotate {
+    transform:scale(2.2) rotateZ(180deg);
+}
+#bigExperience {
+    width:100%; height:50%;
+    transform:translateX(0px) translateY(92%) rotateZ(180deg);
+}
+.bigExperienceHeader {
+    position:absolute;
+    transform:translate(40%, -45%);
+    font-size:20px;
+}
+.bigExperienceSubheader {
+    position:absolute;
+    transform:translate(133.75%, 120%);
+    font-size:14px;
+    font-weight:200;
+}
+.bigExperienceText { font-size: 13px; }
+.bigExperienceText:nth-child(3) {
+    transform:translate(45.5%, 269%);
+}
+.bigExperienceText:nth-child(4) {
+    transform:translate(38%, 405%);
+}
+.bigExperienceText:nth-child(5) {
+    transform:translate(33%, 543%);
+}
+.bigExperienceText:nth-child(6) {
+    transform:translate(36%, 687%);
+}
+.bigExperienceText:nth-child(7) {
+    transform:translate(61%, 788%);
+}
+.bigExperienceText:nth-child(8) {
+    transform:translate(26.25%, 885%);
+}
+
 #bigMountain.bubbleBackground {
     left:calc(100% - 250px); bottom:35%;
     width:500px; height:500px;
-    clip-path: polygon(20% 100%, 20% 100%, 80% 100%, 80% 100%, 100% 0, 100% 0, 0 0, 0 0);
+    clip-path: polygon(20% 70%, 20% 70%, 80% 70%, 80% 70%, 100% 0, 100% 0, 0 0, 0 0);
     transform:scale(2);
 }
+#bigBackground {
+    height:100%;
+    text-align:center;
+}
+.leftSlant,
+.rightSlant {
+  width: 37%;
+  height: 100%;
+}
+.leftSlant {
+  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
+  float: left;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+.rightSlant {
+  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+  float: right;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.backgroundHeader {
+    font-size:28px;
+    position:static;
+    padding:3.3% 0 2% 0;
+    text-shadow:0 0 1px white;
+}
+.backgroundHeader:before {
+    content:"My LIfe In Under One Minute";
+    z-index:-1;
+    position:absolute;
+    transform:scale(0.98);
+    color:rgb(5, 104, 170);
+}
+.backgroundText {
+    font-family: 'Nunito', sans-serif;
+    font-weight:500;
+    font-size:12px;
+    color:white;
+    padding:0.8% 9%;
+}
+.backgroundText:nth-child(8) {
+    font-weight:900;
+    font-size:14px;
+    padding-top:2.4%;
+}
+.palm {
+    position:absolute;
+    transform:translate(-50%, -30%) scale(0.5);
+    opacity:0.2;
+    z-index:-1;
+}
+
 
 #midMountain {
     bottom:0; left:-5vw;
     width:70%;
     height:60%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
-    animation:3.5s mountainFadeUp ease;
     filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
 }
 .mountainContainer.switch #midMountain {
     width:70vw;
     height:70%;
-    cursor:pointer;
 }
-.mountainContainer.switch #midMountain:hover {
-    height:75%;
+@media (hover: hover) {
+    .mountainContainer.switch #midMountain:hover {
+        height:75%;
+    }
 }
 #midMountain.bubbleKnowledge {
     left:calc(100% + 165px); bottom:35%;
@@ -292,35 +488,147 @@
     clip-path: polygon(36% 0, 70% 5%, 89% 33%, 84% 64%, 59% 85%, 24% 80%, 4% 55%, 10% 21%);
     transform:scale(1.9);
 }
+#midKnowledge {
+    width:81%; height:81%;
+    transform:translate(31px, 12px) rotateZ(8.4deg);
+}
+.midKnowledgeHeader {
+    left:0; top:0;
+    transform:translate(56%, 30%);
+    font-size:32px;
+}
+.midKnowledgeHeader:before {
+    content:'Intermediate';
+    position:absolute;
+    top:-2px; left:-2px;
+    color:rgb(130, 188, 255);
+    z-index:-1;
+}
+.midKnowledgeSubheader {
+    left:0; top:0;
+    transform:translate(225%, 190%);
+    font-size:22px;
+}
+.midKnowledgeSubheader:before {
+    content:'2-5 Years';
+    position:absolute;
+    top:-2px; left:-2px;
+    color:rgb(130, 188, 255);
+    z-index:-1;
+}
+.midKnowledgeText:nth-child(3) { /* VSCode */
+    font-size:23px;
+    transform:rotateZ(-14deg) translate(180%, 1180%);
+}
+.midKnowledgeText:nth-child(4) { /* NodeJS */
+    font-size:20px;
+    transform:rotateZ(-14deg) translate(70%, 900%);
+}
+.midKnowledgeText:nth-child(5) { /* NextJS */
+    font-size:19px;
+    transform:rotateZ(0deg) translate(495%, 940%);
+}
+.midKnowledgeText:nth-child(6) { /* NoSQL */
+    font-size:21px;
+    transform:translate(130%, 365%);
+}
+.midKnowledgeText:nth-child(7) { /* C/C++ */
+    font-size:20px;
+    transform:rotateZ(-7deg) translate(140%, 655%);
+}
+.midKnowledgeText:nth-child(8) { /* Back-End */
+    font-size:23px;
+    transform:rotateZ(-10deg) translate(180%, 475%);
+}
+.midKnowledgeText:nth-child(9) { /* Rule-Based */
+    font-size:24px;
+    transform:rotateZ(-5deg) translate(165%, 615%);
+}
+.midKnowledgeText:nth-child(10) { /* Elementor */
+    font-size:20px;
+    transform:rotateZ(-9deg) translate(105%, 1095%);
+}
+
 #midMountain.bubbleExperience {
     left:calc(100% - 250px); bottom:32.5%;
     width:500px; height:500px;
     clip-path: polygon(20% 0, 20% 0, 80% 0, 80% 0, 100% 50%, 100% 50%, 0 50%, 0 50%);
+    transform-origin: center 56.8%;
     transform:scale(2.2);
 }
+#midMountain.rotate {
+    transform:scale(2.2) rotateZ(180deg);
+}
+#midExperience {
+    width:100%; height:50%;
+    transform:translateX(0px) translateY(3%);
+}
+.midExperienceHeader {
+    position:absolute;
+    transform:translate(44%, 2%);
+    font-size:22px;
+    white-space:nowrap;
+}
+.midExperienceSubheader {
+    position:absolute;
+    transform:translate(150.5%, 200%);
+    font-size:14px;
+    font-weight:200;
+}
+.midExperienceText { font-size: 13px; }
+.midExperienceText:nth-child(3) {
+    transform:translate(48.4%, 350.5%);
+}
+.midExperienceText:nth-child(4) {
+    transform:translate(55%, 508%);
+}
+.midExperienceText:nth-child(5) {
+    transform:translate(75.5%, 607%);
+}
+.midExperienceText:nth-child(6) {
+    transform:translate(35%, 763%);
+}
+.midExperienceText:nth-child(7) {
+    transform:translate(36.5%, 812%);
+}
+.midExperienceText:nth-child(8) {
+    transform:translate(24.2%, 965%);
+}
+
 #midMountain.bubbleBackground {
-    left:calc(100% - 500px); bottom:15%;
+    left:calc(100% - 800px); bottom:15%;
     width:500px; height:500px;
     clip-path: polygon(9% 48%, 9% 48%, 35% 78%, 35% 78%, 100% 65%, 100% 65%, 44% 0, 44% 0);
-    transform:scale(2);
+    transform:scale(2.1);
+}
+#midBackground {
+    height:70%; width:70%;
+    transform:translate(15%, 15%) scale(1.3);
+    object-fit: cover;
+    animation:pictureFade 2s;
+}
+.portrait {
+    position:absolute;
+    width:100%; height:100%;
+    opacity:0.35;
+    object-fit:contain;
+    transform:scale(0.95);
 }
 
 #smallMountain {
-    bottom:0;
-    width:80%;
-    height:50%;
+    bottom:0; left:20vw;
+    width:80%; height:50%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
-    left:20vw;
-    animation:4s mountainFadeUp ease;
     filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
 }
 .mountainContainer.switch #smallMountain {
-    width:100vw;
-    height:60%;
-    cursor:pointer;
+    width:100vw; height:60%;
+    animation:none;
 }
-.mountainContainer.switch #smallMountain:hover {
-    height:65%;
+@media (hover: hover) {
+    .mountainContainer.switch #smallMountain:hover {
+        height:65%;
+    }
 }
 #smallMountain.bubbleKnowledge {
     left:calc(100% - 200px); bottom:-15%;
@@ -328,17 +636,117 @@
     clip-path: polygon(30% 6%, 60% 0, 81% 16%, 88% 41%, 75% 65%, 45% 72%, 23% 57%, 16% 30%);
     transform:scale(2.2);
 }
-#smallMountain.bubbleExperience {
-    left:calc(100% - 250px); bottom:26.25%;
-    width:500px; height:500px;
-    clip-path: polygon(30% 6%, 60% 0, 81% 16%, 88% 41%, 75% 65%, 45% 72%, 23% 57%, 16% 30%);
-    transform:scale(0.7);
+#smallKnowledge {
+    width:70%; height:70%;
+    transform:translate(90px, 12px) rotateZ(-11.3deg);
 }
+.smallKnowledgeHeader {
+    left:0; top:0;
+    transform:translate(80%, 12%);
+    font-size:28px;
+}
+.smallKnowledgeSubheader {
+    left:0; top:0;
+    transform:translate(220%, 150%);
+    font-size:19px;
+    white-space:nowrap;
+}
+.smallKnowledgeText:nth-child(3) { /* Angular */
+    font-size:18px;
+    transform:rotateZ(10deg) translate(250%, 230%);
+}
+.smallKnowledgeText:nth-child(4) { /* Java */
+    font-size:24px;
+    transform:rotateZ(20deg) translate(610%, 55%);
+}
+.smallKnowledgeText:nth-child(5) { /* Azure */
+    font-size:22px;
+    transform:rotateZ(16deg) translate(220%, 720%);
+}
+.smallKnowledgeText:nth-child(6) { /* AWS */
+    font-size:18px;
+    transform:rotateZ(10deg) translate(660%, 510%);
+}
+.smallKnowledgeText:nth-child(7) { /* TypeScript */
+    font-size:19px;
+    transform:rotateZ(8deg) translate(70%, 685%);
+}
+.smallKnowledgeText:nth-child(8) { /* WordPress */
+    font-size:18px;
+    transform:rotateZ(3deg) translate(195%, 1065%);
+}
+.smallKnowledgeText:nth-child(9) { /* eCommerce */
+    font-size:18px;
+    transform:rotateZ(4deg) translate(135%, 565%);
+}
+.smallKnowledgeText:nth-child(10) { /* Kubernetes */
+    font-size:18px;
+    transform:rotateZ(13deg) translate(250%, 685%);
+}
+.smallKnowledgeText:nth-child(11) { /* Docker */
+    font-size:18px;
+    transform:rotateZ(-10deg) translate(60%, 460%);
+}
+
+#smallMountain.bubbleExperience {
+    left:calc(100% - 250px); bottom:30%;
+    width:500px; height:500px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    transform:scale(0.5);
+}
+#smallExperience {
+    width:100%; height:100%;
+    pointer-events:all;
+}
+.rotateArrow {
+    position:absolute;
+    width:40%; height:40%;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    filter:contrast(0%) brightness(2) drop-shadow(0 0 5px white);
+    pointer-events:none;
+}
+.mountainRotater {
+    position:relative;
+    height:100%; width:100%;
+    animation:none;
+}
+#smallMountain.bubbleExperience .mountainRotater {
+    animation:rotateCenter 10s infinite linear;
+}
+
 #smallMountain.bubbleBackground {
-    left:calc(100%); bottom:15%;
+    left:calc(100% + 310px); bottom:21%;
     width:500px; height:500px;
     clip-path: polygon(0 60%, 60% 0, 100% 0, 100% 0, 100% 40%, 40% 100%, 0 100%, 0 100%);
     transform:scale(1.5);
+}
+#smallBackground {
+    pointer-events:none;
+}
+.piano {
+    position:absolute;
+    width:100%; height:100%;
+    opacity:0.3;
+    transform:scale(1.1);
+    animation:pictureFade 2s;
+}
+
+.knowledge, .experience, .background {
+    display:none;
+}
+.mountain.bubbleKnowledge .knowledge,
+.mountain.bubbleExperience .experience,
+.mountain.bubbleBackground .background {
+    display:block;
+}
+.bigKnowledgeText, .midKnowledgeText, .smallKnowledgeText {
+    opacity:0;
+}
+.mountain.bubbleKnowledge .bigKnowledgeText, 
+.mountain.bubbleKnowledge .midKnowledgeText, 
+.mountain.bubbleKnowledge .smallKnowledgeText {
+    opacity:1;
 }
 
 .hoverMountain {
@@ -423,11 +831,11 @@
 @keyframes mountainFadeUp {
     from {
         opacity:0;
-        transform:scale(0);
+        transform:scale(0) translateX(0);
         transform-origin:bottom;
     } to {
         opacity:1;
-        transform:scale(1);
+        transform:scale(1) translateX(0);
         transform-origin:bottom;
     }
 }
@@ -458,6 +866,22 @@
     }
 }
 
+@keyframes rotateCenter {
+    from {
+        transform:rotateZ(0deg)
+    } to {
+        transform:rotateZ(-360deg)
+    }
+}
+
+@keyframes pictureFade {
+    from {
+        filter:opacity(0)
+    } to {
+        filter:opacity(1)
+    }
+}
+
 @media only screen and (max-width:2200px) {
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
@@ -471,71 +895,119 @@
         padding:0 8% 100px 8%;
     }
     .aboutHeader {
-        font-size:65px;
-        padding:20% 0 55px 0;
+        font-size:53px;
+        padding:20% 0 30px 0;
     }
     .aboutBio {
-        padding:0px 0 40px 0;
+        padding:0px 0 50px 0;
     }
     .bioLetter {
-        font-size:30px;
-        line-height:52px;
+        font-size:26px;
+        line-height:45px;
     }
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
         width:50%;
     }
     .aboutLogoCircle {
-        width:70px; height:70px;
+        width:65px; height:65px;
         border-radius:100%;
     }
     .aboutLogo {
-        width:35px; height:35px;
+        width:32px; height:32px;
     }
     .aboutLogoText {
-        padding:50px 0;
-        top:-8px; left:30px;
+        padding:30px 0;
+        top:-21px; left:30px;
         font-size:20px;
         letter-spacing:1px;
     }
 
+    .mountainText {
+        font-size:34px;
+        transform:translate(-50%, 210px);
+    }
+    .mountainContainer.switch .mountainSwitch {
+        margin-top:100px;
+        margin-left:-100px;
+        transform:scale(0.9);
+    }
+
     #bigMountain.bubbleKnowledge {
-        left:calc(100% - 360px); bottom:35%;
+        left:calc(100% - 360px); bottom:25%;
         transform:scale(1.4);
     }
+    .bigKnowledgeText:nth-child(3) { /* Javascript */
+        transform:translate(230%, 330%);
+    }
+    .bigKnowledgeText:nth-child(4) { /* CSS */
+        transform:rotateZ(-4deg) translate(124%, 575%);
+    }
+    .bigKnowledgeText:nth-child(5) { /* HTML */
+        transform:rotateZ(4deg) translate(270%, 600%);
+    }
+    .bigKnowledgeText:nth-child(6) { /* Git/Github */
+        transform:rotateZ(10deg) translate(313%, 490%);
+    }
+    .bigKnowledgeText:nth-child(7) { /* Front-End */
+        transform:rotateZ(-8deg) translate(25%, 384%);
+    }
+    .bigKnowledgeText:nth-child(8) { /* Agile */
+        transform:rotateZ(-2deg) translate(88%, 818%);
+    }
+    .bigKnowledgeText:nth-child(9) { /* React */
+        transform:rotateZ(-4deg) translate(230%, 1160%);
+    }
     #bigMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:24%;
+        left:calc(100% - 250px); bottom:3%;
+        transform-origin: center 46.5%;
         transform:scale(2);
     }
     #bigMountain.bubbleBackground {
-        left:calc(100% - 230px); bottom:30%;
+        left:calc(100% - 230px); bottom:10%;
         transform:scale(1.7);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(100% - 50px); bottom:-10%;
+        left:calc(100% - 50px); bottom:-30%;
         transform:scale(1.6);
     }
+    .midKnowledgeText:nth-child(3) { /* VSCode */ transform:rotateZ(-14deg) translate(180%, 1180%); }
+    .midKnowledgeText:nth-child(4) { /* NodeJS */ 
+        transform:rotateZ(-14deg) translate(30%, 740%); 
+        font-size:24px; 
+    }
+    .midKnowledgeText:nth-child(5) { /* NextJS */ transform:rotateZ(0deg) translate(495%, 950%); }
+    .midKnowledgeText:nth-child(6) { /* NoSQL */ transform:translate(110%, 355%); }
+    .midKnowledgeText:nth-child(7) { /* C/C++ */ transform:rotateZ(-7deg) translate(70%, 635%); }
+    .midKnowledgeText:nth-child(8) { /* Back-End */ transform:rotateZ(-10deg) translate(190%, 475%); }
+    .midKnowledgeText:nth-child(9) { /* Rule-Based */ transform:rotateZ(-5deg) translate(165%, 615%); }
+    .midKnowledgeText:nth-child(10) { /* Elementor */ transform:rotateZ(-9deg) translate(105%, 1095%); }
     #midMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:29%;
+        left:calc(100% - 250px); bottom:7%;
+        transform-origin: center 53.5%;
         transform:scale(2);
     }
     #midMountain.bubbleBackground {
-        left:calc(100% - 480px); bottom:10%;
+        left:calc(100% - 680px); bottom:-15%;
         transform:scale(1.7);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(100% - 400px); bottom:-55%;
+        left:calc(100% - 400px); bottom:-85%;
         transform:scale(1.8);
     }
     #smallMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:22.75%;
-        transform:scale(0.6);
+        left:calc(100% - 250px); bottom:5%;
+        transform:scale(0.35);
     }
     #smallMountain.bubbleBackground {
-        left:calc(100% + 20px); bottom:10%;
+        left:calc(100% + 160px); bottom:-12%;
         transform:scale(1.2);
+    }
+
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(2) rotateZ(180deg);
     }
 }
 
@@ -543,94 +1015,133 @@
     .aboutTextContainer {
         padding:0 8% 80px 8%;
     }
+    .aboutLogoDiv:nth-child(3) {
+        width:55%;
+    }
+    .aboutLogoDiv:nth-child(4) {
+        width:45%;
+    }
+
+    #bigMountain.bubbleExperience {
+        transform:scale(1.7);
+        bottom:13.5%;
+    }
+    #midMountain.bubbleExperience {
+        transform:scale(1.7);
+        bottom:16.5%;
+    }
+    #smallMountain.bubbleExperience {
+        transform:scale(0.3);
+        bottom:15%;
+    }
+
+    #bigMountain.bubbleBackground {
+        left:calc(100% - 230px); bottom:20%;
+        transform:scale(1.5);
+    }
+    #midMountain.bubbleBackground {
+        left:calc(100% - 580px); bottom:0%;
+        transform:scale(1.2);
+    }
+    #smallMountain.bubbleBackground {
+        left:calc(100% + 100px); bottom:5%;
+        transform:scale(0.8);
+    }
+
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(1.7) rotateZ(180deg);
+    }
+}
+
+@media only screen and (max-width:1160px) {
     .aboutHeader {
-        font-size:55px;
-        padding:20% 0 55px 0;
+        font-size:45px;
+        padding:20% 0 20px 0;
     }
     .aboutBio {
         padding:0px 0 50px 0;
     }
     .bioLetter {
-        font-size:25px;
-        line-height:52px;
+        font-size:22px;
+        line-height:40px;
     }
-    .aboutLogoDiv:nth-child(3),
+    .aboutLogoDiv:nth-child(3) {
+        width:60%;
+    }
     .aboutLogoDiv:nth-child(4) {
-        width:100%;
+        width:40%;
     }
     .aboutLogoCircle {
-        width:62px; height:62px;
-        border-radius:100%;
+        width:60px; height:60px;
     }
     .aboutLogo {
-        width:30px; height:30px;
+        width:29px; height:29px;
     }
     .aboutLogoText {
-        padding:30px 0;
-        top:-18px; left:30px;
+        padding:24px 0;
+        top:-22px; left:30px;
         font-size:20px;
         letter-spacing:1px;
     }
 
-    #bigMountain.bubbleBackground {
-        left:calc(100% - 230px); bottom:25%;
-        transform:scale(1.5);
+    .mountainText {
+        font-size:31px;
+        transform:translate(-50%, 190px);
     }
-    #midMountain.bubbleBackground {
-        left:calc(100% - 480px); bottom:5%;
-        transform:scale(1.5);
+    .mountainSwitch {
+        margin-top:300px;
+        left:calc(50% - 50px);
+        z-index:1;
     }
-    #smallMountain.bubbleBackground {
-        left:calc(100% + 20px); bottom:5%;
-        transform:scale(1);
-    }
-}
 
-@media only screen and (max-width:1160px) {
     #bigMountain.bubbleKnowledge {
-        left:calc(100% - 325px); bottom:45%;
+        left:calc(100% - 325px); bottom:30%;
         transform:scale(1);
     }
     #bigMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:20%;
+        left:calc(100% - 250px); bottom:-7%;
         transform:scale(1.8);
     }
     #bigMountain.bubbleBackground {
-        left:calc(100% - 230px); bottom:25%;
+        left:calc(100% - 230px); bottom:12%;
         transform:scale(1.3);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(100% - 125px); bottom:10%;
+        left:calc(100% - 125px); bottom:-15%;
         transform:scale(1.1);
     }
     #midMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:25%;
+        left:calc(100% - 250px); bottom:-3%;
         transform:scale(1.8);
     }
     #midMountain.bubbleBackground {
-        left:calc(100% - 480px); bottom:5%;
-        transform:scale(1.3);
+        left:calc(100% - 520px); bottom:-8%;
+        transform:scale(1);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(100% - 355px); bottom:-25%;
+        left:calc(100% - 355px); bottom:-65%;
         transform:scale(1.4);
     }
     #smallMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:18.75%;
-        transform:scale(0.5);
+        left:calc(100% - 250px); bottom:-5%;
+        transform:scale(0.32);
     }
     #smallMountain.bubbleBackground {
-        left:calc(100% + 20px); bottom:5%;
-        transform:scale(0.85);
+        left:calc(100% + 50px); bottom:-4%;
+        transform:scale(0.7);
+    }
+
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(1.8) rotateZ(180deg);
     }
 }
 
 @media only screen and (max-width:1040px) {
     .aboutButtonContainer {
-        transform:scale(1.05);
-        top:40px; right:40px;
+        transform:scale(0.95);
+        top:20px; right:15px;
     }
     
     .aboutTextContainer {
@@ -639,35 +1150,39 @@
         z-index:1;
     }
     .aboutHeader {
-        font-size:55px;
-        padding:20% 0 45px 0;
-        width:450px;
+        font-size:46px;
+        padding:18% 0 30px 0;
+        width:100%;
     }
     .aboutBio {
         padding:0px 0 50px 0;
     }
     .bioLetter {
         font-size:24px;
-        line-height:52px;
+        line-height:42px;
     }
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
         width:50%;
     }
     .aboutLogoCircle {
-        width:62px; height:62px;
+        width:55px; height:55px;
         border-radius:100%;
     }
     .aboutLogo {
-        width:30px; height:30px;
+        width:27px; height:27px;
     }
     .aboutLogoText {
-        padding:30px 0;
-        top:-18px; left:30px;
-        font-size:20px;
+        padding:23px 0;
+        top:-19px; left:30px;
+        font-size:19px;
         letter-spacing:1px;
     }
 
+    .mountainText {
+        font-size:31px;
+        transform:translate(-50%, 250px);
+    }
     .mountainContainer {
         transform:translateX(-50%);
         width:200%;
@@ -680,10 +1195,14 @@
         background: rgba(88, 188, 255, 0.233);
     }
     .mountainSwitch {
-        top:520px;
-        bottom:50px; 
+        margin-top:700px;
         left:calc(50% - 50px);
-        z-index:1;
+        transform:scale(0.85);
+    }
+    @media (hover: hover) {
+        .mountainSwitch:hover {
+            transform:scale(1);
+        }
     }
     .mountainContainer.switch .mountainSwitch {
         bottom:calc(100% - 250px);
@@ -691,10 +1210,10 @@
         transform:scale(0.9);
     }
     .mountainContainer.bubble .mountainSwitch {
-        top:-18px;
+        top:-30px;
         bottom:0px;
         margin-bottom:0;
-        left:36px;
+        left:20px;
         transform:scale(0.8);
     }
 
@@ -718,42 +1237,68 @@
     }
     
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 337px); bottom:40%;
+        left:calc(50% - 337px); bottom:30%;
         transform:scale(1);
     }
+    .bigKnowledgeText:nth-child(3) { /* Javascript */
+        transform:translate(230%, 340%);
+    }
+    .bigKnowledgeText:nth-child(4) { /* CSS */
+        transform:rotateZ(-4deg) translate(130%, 575%);
+    }
+    .bigKnowledgeText:nth-child(5) { /* HTML */
+        transform:rotateZ(4deg) translate(300%, 610%);
+    }
+    .bigKnowledgeText:nth-child(6) { /* Git/Github */
+        transform:rotateZ(10deg) translate(313%, 490%);
+    }
+    .bigKnowledgeText:nth-child(7) { /* Front-End */
+        transform:rotateZ(-8deg) translate(25%, 394%);
+    }
+    .bigKnowledgeText:nth-child(8) { /* Agile */
+        transform:rotateZ(-2deg) translate(95%, 818%);
+    }
+    .bigKnowledgeText:nth-child(9) { /* React */
+        font-size:30px;
+        transform:rotateZ(-4deg) translate(200%, 1010%);
+    }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:20%;
+        left:calc(50% - 250px); bottom:8%;
         transform:scale(1.6);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:30%;
+        left:calc(50% - 250px); bottom:18%;
         transform:scale(1.3);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 137px); bottom:2.5%;
+        left:calc(50% - 137px); bottom:-14%;
         transform:scale(1.1);
     }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:25%;
+        left:calc(50% - 250px); bottom:12%;
         transform:scale(1.6);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 350px); bottom:5%;
-        transform:scale(1.2);
+        left:calc(50% - 490px); bottom:-10%;
+        transform:scale(1);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 320px); bottom:-35%;
+        left:calc(50% - 320px); bottom:-59%;
         transform:scale(1.3);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:18.75%;
-        transform:scale(0.5);
+        left:calc(50% - 250px); bottom:10%;
+        transform:scale(0.27);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 100px); bottom:5%;
-        transform:scale(0.8);
+        left:calc(50% - 10px); bottom:-3%;
+        transform:scale(0.7);
+    }
+
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(1.6) rotateZ(180deg);
     }
 
     @keyframes aboutHomeButton {
@@ -765,45 +1310,81 @@
             right:40px;
         }
     }
+    @keyframes switchScaleIn {
+        0% {
+            opacity:0;
+            transform:scale(0.4);
+        } 80% {
+            opacity:0;
+            transform:scale(0.4);
+        } 90% {
+            opacity:0.8;
+            transform:scale(1.1);
+        } 100% {
+            opacity:1;
+            transform:scale(0.85);
+        }
+    }
+    @keyframes mountainFadeUp {
+        from {
+            opacity:0;
+            transform:scale(0) translateX(0);
+            transform-origin:bottom;
+        } to {
+            opacity:1;
+            transform:scale(1) translateX(-50%);
+            transform-origin:bottom;
+        }
+    }
 }
 
 @media only screen and (max-width:740px) {
+    .aboutButtonContainer {
+        transform:scale(0.9);
+        top:10px; right:5px;
+        z-index:2;
+    }
 
     .aboutHeader {
-        font-size:48px;
-        padding:30% 0 35px 0;
+        font-size:42px;
+        padding:22% 0 25px 0;
         width:450px;
     }
     .aboutBio {
         padding:0px 0 40px 0;
     }
     .bioLetter {
-        font-size:22px;
-        line-height:52px;
+        font-size:20px;
+        line-height:40px;
     }
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
         width:50%;
     }
     .aboutLogoCircle {
-        width:55px; height:55px;
+        width:52px; height:52px;
         border-radius:100%;
     }
     .aboutLogo {
-        width:26px; height:26px;
+        width:25px; height:25px;
     }
     .aboutLogoText {
-        padding:26px 0;
-        top:-16px; left:24px;
-        font-size:18px;
+        padding:23px 0;
+        top:-17px; left:24px;
+        font-size:17px;
         letter-spacing:1px;
+    }
+
+    .mountainText {
+        font-size:28px;
+        transform:translate(-50%, 220px);
     }
 
     .mountainContainer {
         transform:translateX(-75%);
     }
     .mountainSwitch {
-        top:500px;
+        margin-top:720px;
         margin-left:24.9%;
         left:none; right:none;
         transform:scale(0.9);
@@ -813,9 +1394,9 @@
         transform:scale(0.75);
     }
     .mountainContainer.bubble .mountainSwitch {
-        top:-19px;
-        left:-20%;
-        transform:scale(0.8);
+        top:-45px;
+        left:-23%;
+        transform:scale(0.75);
     }
 
     #bigMountain {
@@ -840,50 +1421,61 @@
         left:0vw;
         width:150%;
     }
-    .mountainText {
-        top:250px;
-        font-size:32px;
-    }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 300px); bottom:45%;
+        left:calc(50% - 300px); bottom:35%;
         transform:scale(0.8);
     }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:25%;
-        transform:scale(1.3);
+        left:calc(50% - 250px); bottom:11%;
+        transform:scale(1.5);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:37%;
+        left:calc(50% - 250px); bottom:25%;
         transform:scale(1.15);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 175px); bottom:12.5%;
+        left:calc(50% - 175px); bottom:-5%;
         transform:scale(0.9);
     }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:30%;
-        transform:scale(1.3);
+        left:calc(50% - 250px); bottom:15%;
+        transform:scale(1.5);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 300px); bottom:12%;
-        transform:scale(1);
+        left:calc(50% - 400px); bottom:-3%;
+        transform:scale(0.8);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 300px); bottom:-17.5%;
+        left:calc(50% - 300px); bottom:-42%;
         transform:scale(1);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:25%;
-        transform:scale(0.4);
+        left:calc(50% - 250px); bottom:13%;
+        transform:scale(0.25);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 170px); bottom:5%;
-        transform:scale(0.7);
+        left:calc(50% - 110px); bottom:1%;
+        transform:scale(0.6);
     }
 
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(1.5) rotateZ(180deg);
+    }
+
+    @keyframes mountainFadeUp {
+        from {
+            opacity:0;
+            transform:scale(0) translateX(0);
+            transform-origin:bottom;
+        } to {
+            opacity:1;
+            transform:scale(1) translateX(-75%);
+            transform-origin:bottom;
+        }
+    }
     @keyframes switchScaleIn {
         0% {
             opacity:0;
@@ -903,22 +1495,22 @@
 
 @media only screen and (max-width:520px) {
     .aboutButtonContainer {
-        transform:scale(0.95);
-        top:30px; right:30px;
+        transform:scale(0.85);
+        top:15px; right:5px;
         z-index:2;
     }
 
     .aboutHeader {
-        font-size:44px;
-        padding:40% 0 30px 0;
+        font-size:38px;
+        padding:32% 0 20px 0;
         width:350px;
     }
     .aboutBio {
         padding:0px 0 40px 0;
     }
     .bioLetter {
-        font-size:18px;
-        line-height:42px;
+        font-size:17px;
+        line-height:36px;
     }
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
@@ -931,70 +1523,73 @@
         width:22px; height:22px;
     }
     .aboutLogoText {
-        padding:20px 0;
-        top:-13px; left:20px;
+        padding:17px 0;
+        top:-16px; left:20px;
         font-size:16px;
         letter-spacing:1px;
     }
 
     .mountainSwitch {
-        top:460px;
-        transform:scale(0.85);
+        margin-top:730px;
+        transform:scale(0.75);
     }
-    .mountainSwitch:hover {
-        transform:scale(1);
-    }
-    .mountainText {
-        top:250px;
-        font-size:28px;
+    @media (hover: hover) {
+        .mountainSwitch:hover {
+            transform:scale(1);
+        }
     }
     .mountainContainer.switch .mountainSwitch {
         margin-left:-90px;
         transform: scale(0.7);
     }
     .mountainContainer.bubble .mountainSwitch {
-        top:-29px;
-        left:-20%;
+        top:-42px;
         transform:scale(0.7);
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 290px); bottom:47.5%;
+        left:calc(50% - 290px); bottom:45%;
         transform:scale(0.6);
     }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:25%;
-        transform:scale(1);
+        left:calc(50% - 250px); bottom:15%;
+        transform-origin: center 41%;
+        transform:scale(1.2);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:37%;
-        transform:scale(0.95);
+        left:calc(50% - 250px); bottom:33%;
+        transform:scale(1);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 200px); bottom:20.5%;
+        left:calc(50% - 200px); bottom:15%;
         transform:scale(0.7);
     }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:30%;
-        transform:scale(1);
+        left:calc(50% - 250px); bottom:25%;
+        transform-origin: center 58%;
+        transform:scale(1.2);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 300px); bottom:18%;
+        left:calc(50% - 320px); bottom:2%;
         transform:scale(0.8);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 300px); bottom:-5%;
+        left:calc(50% - 300px); bottom:-14%;
         transform:scale(0.8);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:25%;
-        transform:scale(0.4);
+        left:calc(50% - 250px); bottom:20%;
+        transform:scale(0.3);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 170px); bottom:14%;
-        transform:scale(0.55);
+        left:calc(50% - 180px); bottom:-7%;
+        transform:scale(0.6);
+    }
+
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(1.2) rotateZ(180deg);
     }
 
     @keyframes aboutHomeButton {
@@ -1010,41 +1605,41 @@
     @keyframes switchScaleIn {
         0% {
             opacity:0;
-            transform:scale(0.35);
+            transform:scale(0.3);
         } 80% {
             opacity:0;
-            transform:scale(0.35);
+            transform:scale(0.3);
         } 90% {
             opacity:0.8;
-            transform:scale(1.05);
+            transform:scale(1);
         } 100% {
             opacity:1;
-            transform:scale(0.85);
+            transform:scale(0.75);
         }
     }
 }
 
 @media only screen and (max-width:420px) {
     .aboutButtonContainer {
-        transform:scale(0.9);
-        top:20px; right:10px;
+        transform:scale(0.8);
+        top:10px; right:0px;
         z-index:2;
+    }
+    .remove {
+        display:none;
     }
 
     .aboutTextContainer {
-        padding:20% 15% 200px 15%;
+        padding:0px 9% 180px 9%;
     }
     .aboutHeader {
-        font-size:40px;
-        padding:50% 0 30px 0;
+        font-size:34px;
+        padding:36% 0 15px 0;
         width:350px;
     }
-    .aboutBio {
-        padding:0px 0 40px 0;
-    }
     .bioLetter {
-        font-size:18px;
-        line-height:30px;
+        font-size:16px;
+        line-height:32px;
     }
     .aboutLogoCircle {
         width:45px; height:45px;
@@ -1053,79 +1648,149 @@
         width:22px; height:22px;
     }
     .aboutLogoText {
-        padding:20px 0;
-        top:-13px; left:20px;
+        padding:16px 0;
+        top:-16px; left:20px;
         font-size:16px;
         letter-spacing:1px;
-        vertical-align:center;
+        width:220px;
+        white-space:normal;
     }
     #degreeText,
     #collegeText {
-        top:-4px;
+        top:-5px;
     }
-    .aboutLogoText {
-        width:70%;
-        white-space: initial;
+    #degreeLogoDiv {
+        top:-15px;
     }
+    #collegeLogoDiv {
+        top:-25px;
+    } 
 
-    .mountainSwitch {
-        top:500px;
-        transform:scale(0.75);
-    }
-    .mountainSwitch:hover {
-        transform:scale(0.9);
-    }
     .mountainText {
-        top:270px;
-        font-size:22px;
+        font-size:21px;
+        transform:translate(-50%, 220px);
+    }
+    .mountainSwitch {
+        margin-top:730px;
+        transform:scale(0.65);
+    }
+    @media (hover: hover) {
+        .mountainSwitch:hover {
+            transform:scale(0.9);
+        }
     }
     .mountainContainer.switch .mountainSwitch {
         margin-left:-85px;
         transform: scale(0.65);
     }
     .mountainContainer.bubble .mountainSwitch {
-        top:-39px;
-        left:-20%;
+        top:-48px;
+        left:-23.2%;
         transform:scale(0.65);
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 270px); bottom:52.5%;
+        left:calc(50% - 270px); bottom:48%;
         transform:scale(0.5);
     }
+    .bigKnowledgeText:nth-child(3) { /* Javascript */
+        transform:translate(230%, 340%);
+    }
+    .bigKnowledgeText:nth-child(5) { /* HTML */
+        transform:rotateZ(4deg) translate(330%, 640%);
+    }
+    .bigKnowledgeText:nth-child(6) { /* Git/Github */
+        transform:rotateZ(5deg) translate(290%, 600%);
+    }
+    .bigKnowledgeText:nth-child(7) { /* Front-End */
+        transform:rotateZ(-8deg) translate(25%, 394%);
+    }
+    .bigKnowledgeText:nth-child(8) { /* Agile */
+        transform:rotateZ(-2deg) translate(110%, 840%);
+    }
+    .bigKnowledgeText:nth-child(9) { /* React */
+        font-size:30px;
+        transform:rotateZ(-4deg) translate(250%, 1040%);
+    }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:24%;
-        transform:scale(0.8);
+        left:calc(50% - 250px); bottom:18%;
+        transform-origin: center 39%;
+        transform:scale(1);
+    }
+    .bigExperienceText:nth-child(6) {
+        transform:translate(37.25%, 687%);
+    }
+    .bigExperienceText:nth-child(7) {
+        transform:translate(58.25%, 788%);
+    }
+    .bigExperienceText:nth-child(8) {
+        transform:translate(29.75%, 930%);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:50%;
-        transform:scale(0.75);
+        left:calc(50% - 250px); bottom:32%;
+        clip-path: polygon(20% 73%, 20% 73%, 80% 73%, 80% 73%, 100% 0, 100% 0, 0 0, 0 0);
+    }
+    .leftSlant,
+    .rightSlant {
+        width: 43%;
+    }
+    .backgroundHeader {
+        font-size:22px;
+    }
+    .backgroundText {
+        padding:0.8% 20%;
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 220px); bottom:25%;
+        left:calc(50% - 220px); bottom:18%;
         transform:scale(0.6);
     }
+    .midKnowledgeText:nth-child(3) { /* VSCode */ transform:rotateZ(-14deg) translate(140%, 1190%); }
+    .midKnowledgeText:nth-child(5) { /* NextJS */ transform:rotateZ(0deg) translate(455%, 980%); }
+    .midKnowledgeText:nth-child(7) { /* C/C++ */ transform:rotateZ(-7deg) translate(70%, 635%); }
+    .midKnowledgeText:nth-child(9) { /* Rule-Based */ transform:rotateZ(-5deg) translate(165%, 625%); }
+    .midKnowledgeText:nth-child(10) { /* Elementor */ transform:rotateZ(-9deg) translate(55%, 1135%); }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:40%;
-        transform:scale(0.8);
+        left:calc(50% - 250px); bottom:30%;
+        transform-origin: center 61%;
+        transform:scale(1);
+    }
+    .midExperienceText:nth-child(4) {
+        transform:translate(57.5%, 508%);
+    }
+    .midExperienceText:nth-child(5) {
+        transform:translate(71.8%, 607%);
+    }
+    .midExperienceText:nth-child(6) {
+        transform:translate(41.9%, 763%);
+    }
+    .midExperienceText:nth-child(7) {
+        transform:translate(38.8%, 856%);
+    }
+    .midExperienceText:nth-child(8) {
+        transform:translate(39.3%, 1012%);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 270px); bottom:19%;
-        transform:scale(0.8);
+        left:calc(50% - 266px); bottom:1%;
+        transform:scale(0.7);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 260px); bottom:-2.5%;
+        left:calc(50% - 260px); bottom:-12%;
         transform:scale(0.7);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:30%;
+        left:calc(50% - 250px); bottom:24%;
         transform:scale(0.3);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:1%;
-        transform:scale(0.5);
+        left:calc(50% - 250px); bottom:-19%;
+        transform:scale(0.55);
+        padding-bottom:50px;
+    }
+
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(1) rotateZ(180deg);
     }
 
     @keyframes aboutHomeButton {
@@ -1147,64 +1812,66 @@
             transform:scale(0.3);
         } 90% {
             opacity:0.8;
-            transform:scale(0.95);
+            transform:scale(0.9);
         } 100% {
             opacity:1;
-            transform:scale(0.75);
+            transform:scale(0.65);
         }
     }
 }
 
 @media only screen and (max-width:320px) {
     .aboutButtonContainer {
-        transform:scale(0.8);
-        top:10px; right:-10px;
+        transform:scale(0.7);
+        top:5px; right:-15px;
         z-index:2;
     }
 
     .aboutTextContainer {
-        padding:20% 15% 200px 15%;
+        padding:0px 9% 150px 9%;
     }
     .aboutHeader {
         font-size:28px;
-        padding:50% 0 20px 0;
-        width:240px;
-    }
-    .aboutBio {
-        padding:0px 0 40px 0;
+        padding:38% 0 15px 0;
+        width:320px;
     }
     .bioLetter {
         font-size:14px;
-        line-height:20px;
+        line-height:26px;
     }
     .aboutLogoCircle {
-        width:36px; height:36px;
+        width:42px; height:42px;
     }
     .aboutLogo {
-        width:18px; height:18px;
+        width:20px; height:20px;
     }
     .aboutLogoText {
-        padding:12px 0;
-        top:-14px; left:16px;
-        font-size:13px;
+        padding:14px 0;
+        top:-17px; left:20px;
+        font-size:16px;
         letter-spacing:1px;
-        vertical-align:center;
+        width:220px;
+        white-space:normal;
     }
-    #degreeText,
-    #collegeText {
-        top:-5px;
+    #degreeLogoDiv {
+        top:-15px;
     }
-    .aboutLogoText {
-        width:70%;
-        white-space: initial;
-    }
+    #collegeLogoDiv {
+        top:-25px;
+    } 
 
-    .mountainSwitch {
-        top:300px;
-        transform:scale(0.7);
+    .mountainText {
+        font-size:21px;
+        transform:translate(-50%, 220px);
     }
-    .mountainSwitch:hover {
-        transform:scale(0.8);
+    .mountainSwitch {
+        margin-top:650px;
+        transform:scale(0.6);
+    }
+    @media (hover: hover) {
+        .mountainSwitch:hover {
+            transform:scale(0.8);
+        }
     }
     .mountainContainer.switch .mountainSwitch {
         margin-left:-70px;
@@ -1212,55 +1879,59 @@
         transform: scale(0.6);
     }
     .mountainContainer.bubble .mountainSwitch {
-        top:-48px;
-        left:-25%;
-        transform:scale(0.6);
-    }
-    .mountainText {
-        top:32%;
-        font-size:20px;
-    }
-    #bigMountainText {
-        top:28%;
+        top:-54px;
+        left:-26%;
+        transform:scale(0.55);
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 270px); bottom:46%;
-        transform:scale(0.4);
+        bottom:40%;
     }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:19%;
-        transform:scale(0.6);
+        left:calc(50% - 250px); bottom:15%;
+        transform:scale(0.88);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:40%;
-        transform:scale(0.65);
+        left:calc(50% - 250px); bottom:25%;
+        clip-path: polygon(20% 80%, 20% 80%, 80% 80%, 80% 80%, 100% 0, 100% 0, 0 0, 0 0);
+    }
+    .leftSlant,
+    .rightSlant {
+        display:none;
+    }
+    .backgroundHeader {
+        font-size:19px;
+    }
+    .backgroundText {
+        padding:0.8% 24%;
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 230px); bottom:18.5%;
-        transform:scale(0.5);
+        bottom:7%;
     }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:38%;
-        transform:scale(0.6);
+        left:calc(50% - 250px); bottom:29%;
+        transform:scale(0.88);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 265px); bottom:15%;
-        transform:scale(0.7);
+        left:calc(50% - 295px); bottom:-9%;
+        transform:scale(0.55);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 260px); bottom:-10%;
-        transform:scale(0.6);
+        bottom:-26%;
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:26%;
-        transform:scale(0.3);
+        left:calc(50% - 250px); bottom:22%;
+        transform:scale(0.25);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:-4%;
-        transform:scale(0.5);
+        left:calc(50% - 210px); bottom:-19%;
+        transform:scale(0.4);
+    }
+
+    #bigMountain.rotate, #midMountain.rotate {
+        transform:scale(0.88) rotateZ(180deg);
     }
 
     @keyframes aboutHomeButton {
@@ -1282,10 +1953,10 @@
             transform:scale(0.25);
         } 90% {
             opacity:0.8;
-            transform:scale(0.85);
+            transform:scale(0.8);
         } 100% {
             opacity:1;
-            transform:scale(0.7);
+            transform:scale(0.6);
         }
     }
 }

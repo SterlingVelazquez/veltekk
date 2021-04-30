@@ -19,6 +19,7 @@ class Projects extends React.Component {
   }
 
   render() {
+    document.getElementById("canvas1").style.display = "none";
     return (
       <motion.div className="aboutMain" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
           <div className="placeholder">
