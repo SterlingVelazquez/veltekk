@@ -606,7 +606,6 @@
     height:70%; width:70%;
     transform:translate(15%, 15%) scale(1.3);
     object-fit: cover;
-    animation:pictureFade 2s;
 }
 .portrait {
     position:absolute;
@@ -730,7 +729,7 @@
     width:100%; height:100%;
     opacity:0.3;
     transform:scale(1.1);
-    animation:pictureFade 2s;
+    animation:bubbleFadeIn 2s;
 }
 
 .knowledge, .experience, .background {
@@ -738,16 +737,14 @@
 }
 .mountain.bubbleKnowledge .knowledge,
 .mountain.bubbleExperience .experience,
-.mountain.bubbleBackground .background {
+.mountain.bubbleBackground #bigBackground,
+.mountain.bubbleBackground #midBackground {
     display:block;
+    animation:bubbleFadeIn 2s;
 }
-.bigKnowledgeText, .midKnowledgeText, .smallKnowledgeText {
-    opacity:0;
-}
-.mountain.bubbleKnowledge .bigKnowledgeText, 
-.mountain.bubbleKnowledge .midKnowledgeText, 
-.mountain.bubbleKnowledge .smallKnowledgeText {
-    opacity:1;
+
+.mountain.bubbleBackground #smallBackground {
+    display:block;
 }
 
 .hoverMountain {
@@ -875,10 +872,12 @@
     }
 }
 
-@keyframes pictureFade {
-    from {
+@keyframes bubbleFadeIn {
+    0% {
         filter:opacity(0)
-    } to {
+    } 20% {
+        filter:opacity(0)
+    } 100% {
         filter:opacity(1)
     }
 }
@@ -1308,7 +1307,7 @@
             right:200px;
         } to {
             opacity:1;
-            right:40px;
+            right:15px;
         }
     }
     @keyframes switchScaleIn {
@@ -1466,6 +1465,15 @@
         transform:scale(1.5) rotateZ(180deg);
     }
 
+    @keyframes aboutHomeButton {
+        from {
+            opacity:0;
+            right:200px;
+        } to {
+            opacity:1;
+            right:5px;
+        }
+    }
     @keyframes mountainFadeUp {
         from {
             opacity:0;
@@ -1596,10 +1604,10 @@
     @keyframes aboutHomeButton {
         from {
             opacity:0;
-            right:150px;
+            right:125px;
         } to {
             opacity:1;
-            right:30px;
+            right:5px;
         }
     }
 
@@ -1800,7 +1808,7 @@
             right:100px;
         } to {
             opacity:1;
-            right:10px;
+            right:0px;
         }
     }
 
@@ -1941,7 +1949,7 @@
             right:90px;
         } to {
             opacity:1;
-            right:-10px;
+            right:-15px;
         }
     }
 
