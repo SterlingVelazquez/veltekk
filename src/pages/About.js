@@ -129,7 +129,7 @@ class About extends React.Component {
                 <p className="bigExperienceText">Anything from single-page to eCommerce websites</p>
                 <p className="bigExperienceText">Mainly work with JS, CSS/HTML, and React,</p>
                 <p className="bigExperienceText">but also familiar with Wordpress/Elementor</p>
-                <p className="bigExperienceText">Consistent communication <span className="remove">is</span> paramount to every project</p>
+                <p className="bigExperienceText">Consistent communication paramount to every project</p>
               </div>
               <div className="background" id="bigBackground">
                 <img className="palm" src="palm.png" alt="palm tree"></img>
@@ -162,8 +162,8 @@ class About extends React.Component {
                 <p className="midExperienceText">Rule-based programming with JS &#38;</p>
                 <p className="midExperienceText">Cloud-based development with Azure</p>
                 <p className="midExperienceText">Collaborating with various teams of 6+ people,</p>
-                <p className="midExperienceText">with <span className="remove">an</span> emphasis on communication and timeliness</p>
-                <p className="midExperienceText">Trained in <span className="remove">Microsoft</span> Azure and ServiceNow Fundamentals</p>
+                <p className="midExperienceText">with emphasis on communication and timeliness</p>
+                <p className="midExperienceText">Trained in Azure and ServiceNow Fundamentals</p>
               </div>
               <div className="background" id="midBackground">
                 <img className="portrait" src="portrait2.png" alt="portrait"></img>
@@ -171,8 +171,8 @@ class About extends React.Component {
             </div>
           </div>
           <div className="mountain" id="smallMountain">
-            <div className="mountainRotater">
-              <div className="hoverMountain" onClick={e => this.switchBubble("Background")}>
+            <div className="mountainRotater" onClick={e => this.switchBubble("Background")}>
+              <div className="hoverMountain">
                 <p className="mountainText" id="smallMountainText">Background</p>
                 <div className="knowledge" id="smallKnowledge">
                   <h1 className="smallKnowledgeHeader">Beginner</h1>

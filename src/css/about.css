@@ -103,7 +103,7 @@
 }
 .aboutBio {
     position:relative;
-    padding:0px 0 50px 0;
+    padding:0px 0 45px 0;
 }
 .bioLetter {
     font-size:36px;
@@ -115,19 +115,18 @@
 }
 .aboutLogoDiv {
     position:relative;
+    display:inline-block;
+    height:130px; width:100%;
     white-space: nowrap;
 }
 .aboutLogoDiv:nth-child(3) {
     width:40%;
-    display:inline-block;
 }
 .aboutLogoDiv:nth-child(4) {
     width:60%;
-    display:inline-block;
 }
 .aboutLogoCircle {
     position:relative;
-    display:inline-block;
     top:50%;
     transform:translateY(-50%);
     width:80px; height:80px;
@@ -147,11 +146,9 @@
     filter:contrast(0%) brightness(2) drop-shadow(0 0 3px white);
 }
 .aboutLogoText {
-    position:relative;
-    display:inline-block;
-    vertical-align: center;
-    padding:50px 0;
-    top:-14px; left:40px;
+    position:absolute;
+    top:50%; transform:translateY(-50%);
+    left:110px;
     font-size:24px;
     font-family: 'Nunito', sans-serif;
     font-weight:300;
@@ -395,13 +392,13 @@
     transform:translate(33%, 543%);
 }
 .bigExperienceText:nth-child(6) {
-    transform:translate(36%, 687%);
+    transform:translate(37.25%, 687%);
 }
 .bigExperienceText:nth-child(7) {
-    transform:translate(61%, 788%);
+    transform:translate(58.25%, 788%);
 }
 .bigExperienceText:nth-child(8) {
-    transform:translate(26.25%, 885%);
+    transform:translate(29.75%, 930%);
 }
 
 #bigMountain.bubbleBackground {
@@ -581,19 +578,19 @@
     transform:translate(48.4%, 350.5%);
 }
 .midExperienceText:nth-child(4) {
-    transform:translate(55%, 508%);
+    transform:translate(57.5%, 508%);
 }
 .midExperienceText:nth-child(5) {
-    transform:translate(75.5%, 607%);
+    transform:translate(71.8%, 607%);
 }
 .midExperienceText:nth-child(6) {
-    transform:translate(35%, 763%);
+    transform:translate(41.9%, 763%);
 }
 .midExperienceText:nth-child(7) {
-    transform:translate(36.5%, 812%);
+    transform:translate(38.8%, 856%);
 }
 .midExperienceText:nth-child(8) {
-    transform:translate(24.2%, 965%);
+    transform:translate(39.3%, 1012%);
 }
 
 #midMountain.bubbleBackground {
@@ -712,6 +709,7 @@
     animation:none;
 }
 #smallMountain.bubbleExperience .mountainRotater {
+    pointer-events:all;
     animation:rotateCenter 10s infinite linear;
 }
 
@@ -899,11 +897,14 @@
         padding:20% 0 30px 0;
     }
     .aboutBio {
-        padding:0px 0 50px 0;
+        padding:0px 0 30px 0;
     }
     .bioLetter {
         font-size:26px;
         line-height:45px;
+    }
+    .aboutLogoDiv {
+        height:100px;
     }
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
@@ -917,8 +918,7 @@
         width:32px; height:32px;
     }
     .aboutLogoText {
-        padding:30px 0;
-        top:-21px; left:30px;
+        left:100px;
         font-size:20px;
         letter-spacing:1px;
     }
@@ -1059,11 +1059,14 @@
         padding:20% 0 20px 0;
     }
     .aboutBio {
-        padding:0px 0 50px 0;
+        padding:0px 0 30px 0;
     }
     .bioLetter {
         font-size:22px;
         line-height:40px;
+    }
+    .aboutLogoDiv {
+        height:85px;
     }
     .aboutLogoDiv:nth-child(3) {
         width:60%;
@@ -1078,8 +1081,7 @@
         width:29px; height:29px;
     }
     .aboutLogoText {
-        padding:24px 0;
-        top:-22px; left:30px;
+        left:85px;
         font-size:20px;
         letter-spacing:1px;
     }
@@ -1155,7 +1157,7 @@
         width:100%;
     }
     .aboutBio {
-        padding:0px 0 50px 0;
+        padding:0px 0 35px 0;
     }
     .bioLetter {
         font-size:24px;
@@ -1173,8 +1175,7 @@
         width:27px; height:27px;
     }
     .aboutLogoText {
-        padding:23px 0;
-        top:-19px; left:30px;
+        left:80px;
         font-size:19px;
         letter-spacing:1px;
     }
@@ -1351,11 +1352,14 @@
         width:450px;
     }
     .aboutBio {
-        padding:0px 0 40px 0;
+        padding:0px 0 25px 0;
     }
     .bioLetter {
         font-size:20px;
         line-height:40px;
+    }
+    .aboutLogoDiv {
+        height:75px;
     }
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
@@ -1369,8 +1373,7 @@
         width:25px; height:25px;
     }
     .aboutLogoText {
-        padding:23px 0;
-        top:-17px; left:24px;
+        left:75px;
         font-size:17px;
         letter-spacing:1px;
     }
@@ -1515,11 +1518,14 @@
         width:350px;
     }
     .aboutBio {
-        padding:0px 0 40px 0;
+        padding:0px 0 25px 0;
     }
     .bioLetter {
         font-size:17px;
         line-height:36px;
+    }
+    .aboutLogoDiv {
+        height:60px;
     }
     .aboutLogoDiv:nth-child(3),
     .aboutLogoDiv:nth-child(4) {
@@ -1532,8 +1538,7 @@
         width:22px; height:22px;
     }
     .aboutLogoText {
-        padding:17px 0;
-        top:-16px; left:20px;
+        left:65px;
         font-size:16px;
         letter-spacing:1px;
     }
@@ -1650,6 +1655,9 @@
         font-size:16px;
         line-height:32px;
     }
+    .aboutLogoDiv {
+        height:65px;
+    }
     .aboutLogoCircle {
         width:45px; height:45px;
     }
@@ -1657,23 +1665,12 @@
         width:22px; height:22px;
     }
     .aboutLogoText {
-        padding:16px 0;
-        top:-16px; left:20px;
+        left:65px;
         font-size:16px;
         letter-spacing:1px;
         width:220px;
         white-space:normal;
     }
-    #degreeText,
-    #collegeText {
-        top:-5px;
-    }
-    #degreeLogoDiv {
-        top:-15px;
-    }
-    #collegeLogoDiv {
-        top:-25px;
-    } 
 
     .mountainText {
         font-size:21px;
@@ -1726,15 +1723,6 @@
         transform-origin: center 39%;
         transform:scale(1);
     }
-    .bigExperienceText:nth-child(6) {
-        transform:translate(37.25%, 687%);
-    }
-    .bigExperienceText:nth-child(7) {
-        transform:translate(58.25%, 788%);
-    }
-    .bigExperienceText:nth-child(8) {
-        transform:translate(29.75%, 930%);
-    }
     #bigMountain.bubbleBackground {
         left:calc(50% - 250px); bottom:32%;
         clip-path: polygon(20% 73%, 20% 73%, 80% 73%, 80% 73%, 100% 0, 100% 0, 0 0, 0 0);
@@ -1763,21 +1751,6 @@
         left:calc(50% - 250px); bottom:30%;
         transform-origin: center 61%;
         transform:scale(1);
-    }
-    .midExperienceText:nth-child(4) {
-        transform:translate(57.5%, 508%);
-    }
-    .midExperienceText:nth-child(5) {
-        transform:translate(71.8%, 607%);
-    }
-    .midExperienceText:nth-child(6) {
-        transform:translate(41.9%, 763%);
-    }
-    .midExperienceText:nth-child(7) {
-        transform:translate(38.8%, 856%);
-    }
-    .midExperienceText:nth-child(8) {
-        transform:translate(39.3%, 1012%);
     }
     #midMountain.bubbleBackground {
         left:calc(50% - 266px); bottom:1%;
@@ -1848,6 +1821,9 @@
         font-size:14px;
         line-height:26px;
     }
+    .aboutLogoDiv {
+        height:60px;
+    }
     .aboutLogoCircle {
         width:42px; height:42px;
     }
@@ -1855,19 +1831,12 @@
         width:20px; height:20px;
     }
     .aboutLogoText {
-        padding:14px 0;
-        top:-17px; left:20px;
-        font-size:16px;
+        left:60px;
+        font-size:14px;
         letter-spacing:1px;
         width:220px;
         white-space:normal;
     }
-    #degreeLogoDiv {
-        top:-15px;
-    }
-    #collegeLogoDiv {
-        top:-25px;
-    } 
 
     .mountainText {
         font-size:21px;
