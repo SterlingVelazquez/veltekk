@@ -136,12 +136,12 @@ class About extends React.Component {
                 <div className="leftSlant"></div>
                 <div className="rightSlant"></div>
                 <h1 className="backgroundHeader">My Life In Under One Minute</h1>
-                <p className="backgroundText">I was born in Havana, Cuba and spent my childhood in Miami, Florida. My whole life, I've been raised by a 
-                family and a culture that taught me to take pride in having a hard work ethic and learning something new every day while enjoying the 
+                <p className="backgroundText">I was born in Havana, Cuba and spent my childhood in Miami, Florida. My whole life, I've been raised by a
+                family and a culture that taught me to take pride in having a hard work ethic and learning something new every day while enjoying the
                 best life has to offer.</p>
-                <p className="backgroundText">I learned how to play the piano so I could embrace my love for music. I became fluent in English, Spanish, 
+                <p className="backgroundText">I learned how to play the piano so I could embrace my love for music. I became fluent in English, Spanish,
                 and continue to study new languages every day like Italian and Japanese because you can never know enough.</p>
-                <p className="backgroundText">I've never let anything get in my way, even struggling to get through intense chemotherapy to graduate from 
+                <p className="backgroundText">I've never let anything get in my way, even struggling to get through intense chemotherapy to graduate from
                 the School for Advanced Studies in 2016. Now I've graduated from Georgia Tech and work tirelessly every day to hone my skills in computer science.</p>
                 <p className="backgroundText">And I'm enjoying every second.</p>
               </div>
@@ -171,8 +171,8 @@ class About extends React.Component {
             </div>
           </div>
           <div className="mountain" id="smallMountain">
-            <div className="mountainRotater" onClick={e => this.switchBubble("Background")}>
-              <div className="hoverMountain">
+            <div className="hoverMountain" onClick={e => this.switchBubble("Background")}>
+              <div className="mountainRotater">
                 <p className="mountainText" id="smallMountainText">Background</p>
                 <div className="knowledge" id="smallKnowledge">
                   <h1 className="smallKnowledgeHeader">Beginner</h1>

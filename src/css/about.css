@@ -814,13 +814,13 @@
 @keyframes logoTextFade {
     0% {
         opacity:0;
-        transform:translateX(-10%);
+        transform:translateX(-10%) translateY(-50%);
     } 55% {
         opacity:0;
-        transform:translateX(-10%);
+        transform:translateX(-10%) translateY(-50%);
     } 100% {
         opacity:1;
-        transform:translateX(0%);
+        transform:translateX(0%) translateY(-50%);
     }
 }
 
