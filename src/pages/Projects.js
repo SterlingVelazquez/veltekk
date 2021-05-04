@@ -1,15 +1,23 @@
 import React from 'react';
 import '../css/index.css';
-import '../css/about.css';
+import '../css/projects.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 
 const pageVariants = {
-  in: { opacity: 1 },
-  out: { opacity: 0 }
+  in: {
+    opacity: 1,
+    transition: {
+      duration: 1
+    }
+  },
+  out: {
+    opacity: 0,
+    transition: {
+      duration: 1
+    }
+  }
 }
-
-const pageTransition = { type: "tween", ease: "easeIn" }
 
 class Projects extends React.Component {
 
@@ -21,13 +29,13 @@ class Projects extends React.Component {
   render() {
     document.getElementById("canvas1").style.display = "none";
     return (
-      <motion.div className="aboutMain" initial="out" animate="in" exit="out" variants={pageVariants} transition={pageTransition}>
+      <motion.div className="projectsMain" initial="out" animate="in" exit="out" variants={pageVariants}>
+        <Link to="/">
           <div className="placeholder">
             <p className="placeholderText">This page is under construction.</p>
-            <Link to="/">
               <button className="placeholderButton">Click here to go back</button>
-            </Link>
           </div>
+        </Link>
       </motion.div>
     );
   }

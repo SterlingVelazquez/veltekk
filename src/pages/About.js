@@ -75,7 +75,7 @@ class About extends React.Component {
   render() {
     document.getElementById("canvas1").style.display = "none";
     return (
-      <motion.div className="aboutMain" id="aboutmain" initial="out" animate="in" exit="out" variants={pageVariants} exitBeforeEnter>
+      <motion.div className="aboutMain" id="aboutmain" initial="out" animate="in" exit="out" variants={pageVariants}>
         <Link to="/" className="aboutButtonContainer">
           <div className="aboutButtonCircle">
             <div className="aboutButtonArrow"></div>

@@ -1,5 +1,20 @@
-.projectsMain {
-    background:lightskyblue;
-    width:100vw;
-    height:100vh;
+.App { overflow-y:auto !important }
+
+.placeholder {
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    padding:100px;
+    cursor:pointer;
+}
+.placeholderText {
+    font-size:40px;
+    color:white;
+}
+.placeholderButton {
+    margin-top:20px;
+    font-size:28px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
 }
