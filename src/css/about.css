@@ -186,6 +186,11 @@
     cursor:pointer;
     overflow:hidden;
 }
+@media (hover: hover) {
+    .mountainContainer.switch .mountain:hover {
+        transform:scaleY(1.1);
+    }
+}
 .mountainSwitch {
     position:absolute;
     margin-top:400px; left:calc(50% - 50px);
@@ -264,23 +269,18 @@
 }
 
 #bigMountain {
-    left:0; bottom:0;
+    left:0; top:20%;
     width:100%;
     height:80%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
 }
 .mountainContainer.switch #bigMountain {
-    width:100vw;
+    width:100vw; top:10%;
     height:90%;
-}
-@media (hover: hover) {
-    .mountainContainer.switch #bigMountain:hover {
-        height:95%;
-    }
 }
 
 #bigMountain.bubbleKnowledge {
-    left:calc(100% - 585px); bottom:35%;
+    left:calc(100% - 585px); top:355px;
     width:500px; height:500px;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     transform:scale(1.8);
@@ -357,7 +357,7 @@
 }
 
 #bigMountain.bubbleExperience {
-    left:calc(100% - 250px); bottom:27.5%;
+    left:calc(100% - 250px); top:473px;
     width:500px; height:500px;
     clip-path: polygon(0 50%, 0 50%, 100% 50%, 100% 50%, 80% 100%, 80% 100%, 20% 100%, 20% 100%);
     transform-origin: center 43.5%;
@@ -402,7 +402,7 @@
 }
 
 #bigMountain.bubbleBackground {
-    left:calc(100% - 250px); bottom:35%;
+    left:calc(100% - 250px); top:385px;
     width:500px; height:500px;
     clip-path: polygon(20% 70%, 20% 70%, 80% 70%, 80% 70%, 100% 0, 100% 0, 0 0, 0 0);
     transform:scale(2);
@@ -465,23 +465,17 @@
 
 
 #midMountain {
-    bottom:0; left:-5vw;
-    width:70%;
-    height:60%;
+    left:-5vw; top:40%;
+    width:70%; height:60%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
     filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
 }
 .mountainContainer.switch #midMountain {
-    width:70vw;
+    width:70vw; top:30%;
     height:70%;
 }
-@media (hover: hover) {
-    .mountainContainer.switch #midMountain:hover {
-        height:75%;
-    }
-}
 #midMountain.bubbleKnowledge {
-    left:calc(100% + 165px); bottom:35%;
+    left:calc(100% + 165px); top:375px;
     width:500px; height:500px;
     clip-path: polygon(36% 0, 70% 5%, 89% 33%, 84% 64%, 59% 85%, 24% 80%, 4% 55%, 10% 21%);
     transform:scale(1.9);
@@ -548,7 +542,7 @@
 }
 
 #midMountain.bubbleExperience {
-    left:calc(100% - 250px); bottom:32.5%;
+    left:calc(100% - 250px); top:405px;
     width:500px; height:500px;
     clip-path: polygon(20% 0, 20% 0, 80% 0, 80% 0, 100% 50%, 100% 50%, 0 50%, 0 50%);
     transform-origin: center 56.8%;
@@ -594,7 +588,7 @@
 }
 
 #midMountain.bubbleBackground {
-    left:calc(100% - 800px); bottom:15%;
+    left:calc(100% - 800px); top:650px;
     width:500px; height:500px;
     clip-path: polygon(9% 48%, 9% 48%, 35% 78%, 35% 78%, 100% 65%, 100% 65%, 44% 0, 44% 0);
     transform:scale(2.1);
@@ -613,22 +607,18 @@
 }
 
 #smallMountain {
-    bottom:0; left:20vw;
+    left:20vw; top:50%;
     width:80%; height:50%;
     clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
     filter:drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
 }
 .mountainContainer.switch #smallMountain {
     width:100vw; height:60%;
+    top:40%;
     animation:none;
 }
-@media (hover: hover) {
-    .mountainContainer.switch #smallMountain:hover {
-        height:65%;
-    }
-}
 #smallMountain.bubbleKnowledge {
-    left:calc(100% - 200px); bottom:-15%;
+    left:calc(100% - 200px); top:1020px;
     width:500px; height:500px;
     clip-path: polygon(30% 6%, 60% 0, 81% 16%, 88% 41%, 75% 65%, 45% 72%, 23% 57%, 16% 30%);
     transform:scale(2.2);
@@ -686,7 +676,7 @@
 }
 
 #smallMountain.bubbleExperience {
-    left:calc(100% - 250px); bottom:30%;
+    left:calc(100% - 250px); top:438px;
     width:500px; height:500px;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     transform:scale(0.5);
@@ -715,7 +705,7 @@
 }
 
 #smallMountain.bubbleBackground {
-    left:calc(100% + 310px); bottom:21%;
+    left:calc(100% + 310px); top:560px;
     width:500px; height:500px;
     clip-path: polygon(0 60%, 60% 0, 100% 0, 100% 0, 100% 40%, 40% 100%, 0 100%, 0 100%);
     transform:scale(1.5);
@@ -935,8 +925,8 @@
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(100% - 360px); bottom:25%;
-        transform:scale(1.4);
+        left:calc(100% - 530px); top:245px;
+        transform:scale(1.3);
     }
     .bigKnowledgeText:nth-child(3) { /* Javascript */
         transform:translate(230%, 330%);
@@ -960,18 +950,18 @@
         transform:rotateZ(-4deg) translate(230%, 1160%);
     }
     #bigMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:3%;
-        transform-origin: center 46.5%;
+        left:calc(100% - 250px);
+        transform-origin: center 44%;
         transform:scale(2);
     }
     #bigMountain.bubbleBackground {
-        left:calc(100% - 230px); bottom:10%;
+        left:calc(100% - 230px); top:335px;
         transform:scale(1.7);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(100% - 50px); bottom:-30%;
-        transform:scale(1.6);
+        left:calc(100% + 70px); top:300px;
+        transform:scale(1.5);
     }
     .midKnowledgeText:nth-child(3) { /* VSCode */ transform:rotateZ(-14deg) translate(180%, 1180%); }
     .midKnowledgeText:nth-child(4) { /* NodeJS */ 
@@ -985,25 +975,25 @@
     .midKnowledgeText:nth-child(9) { /* Rule-Based */ transform:rotateZ(-5deg) translate(165%, 615%); }
     .midKnowledgeText:nth-child(10) { /* Elementor */ transform:rotateZ(-9deg) translate(105%, 1095%); }
     #midMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:7%;
-        transform-origin: center 53.5%;
+        left:calc(100% - 250px);
+        transform-origin: center 56%;
         transform:scale(2);
     }
     #midMountain.bubbleBackground {
-        left:calc(100% - 680px); bottom:-15%;
+        left:calc(100% - 680px); top:600px;
         transform:scale(1.7);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(100% - 400px); bottom:-85%;
+        left:calc(100% - 250px); top:810px;
         transform:scale(1.8);
     }
     #smallMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:5%;
-        transform:scale(0.35);
+        left:calc(100% - 250px);
+        transform:scale(0.4);
     }
     #smallMountain.bubbleBackground {
-        left:calc(100% + 160px); bottom:-12%;
+        left:calc(100% + 160px); top:525px;
         transform:scale(1.2);
     }
 
@@ -1025,28 +1015,30 @@
 
     #bigMountain.bubbleExperience {
         transform:scale(1.7);
-        bottom:13.5%;
+        transform-origin: center 44.5%;
+        top:418px;
     }
     #midMountain.bubbleExperience {
         transform:scale(1.7);
-        bottom:16.5%;
+        transform-origin: center 55.5%;
+        top:367px;
     }
     #smallMountain.bubbleExperience {
-        transform:scale(0.3);
-        bottom:15%;
+        transform:scale(0.35);
+        top:393px;
     }
 
     #bigMountain.bubbleBackground {
-        left:calc(100% - 230px); bottom:20%;
-        transform:scale(1.5);
+        left:calc(100% - 230px); top:320px;
+        transform:scale(1.6);
     }
     #midMountain.bubbleBackground {
-        left:calc(100% - 580px); bottom:0%;
-        transform:scale(1.2);
+        left:calc(100% - 600px); top:555px;
+        transform:scale(1.3);
     }
     #smallMountain.bubbleBackground {
-        left:calc(100% + 100px); bottom:5%;
-        transform:scale(0.8);
+        left:calc(100% + 130px); top:495px;
+        transform:scale(0.9);
     }
 
     #bigMountain.rotate, #midMountain.rotate {
@@ -1098,42 +1090,41 @@
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(100% - 325px); bottom:30%;
-        transform:scale(1);
+        left:calc(100% - 475px); top:225px;
+        transform:scale(1.1);
     }
     #bigMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:-7%;
+        left:calc(100% - 250px); top:448px;
         transform:scale(1.8);
     }
     #bigMountain.bubbleBackground {
-        left:calc(100% - 230px); bottom:12%;
-        transform:scale(1.3);
+        left:calc(100% - 230px); top:295px;
+        transform:scale(1.5);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(100% - 125px); bottom:-15%;
-        transform:scale(1.1);
+        left:calc(100% + 20px); top:280px;
+        transform:scale(1.2);
     }
     #midMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:-3%;
+        left:calc(100% - 250px); top:397px;
         transform:scale(1.8);
     }
     #midMountain.bubbleBackground {
-        left:calc(100% - 520px); bottom:-8%;
-        transform:scale(1);
+        left:calc(100% - 550px); top:550px;
+        transform:scale(1.2);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(100% - 355px); bottom:-65%;
-        transform:scale(1.4);
+        left:calc(100% - 255px); top:690px;
+        transform:scale(1.5);
     }
     #smallMountain.bubbleExperience {
-        left:calc(100% - 250px); bottom:-5%;
-        transform:scale(0.32);
+        left:calc(100% - 250px); top:423px;
     }
     #smallMountain.bubbleBackground {
-        left:calc(100% + 50px); bottom:-4%;
-        transform:scale(0.7);
+        left:calc(100% + 80px); top:490px;
+        transform:scale(0.87);
     }
 
     #bigMountain.rotate, #midMountain.rotate {
@@ -1197,7 +1188,7 @@
         background: rgba(88, 188, 255, 0.233);
     }
     .mountainSwitch {
-        margin-top:700px;
+        margin-top:720px;
         left:calc(50% - 50px);
         transform:scale(0.85);
     }
@@ -1232,70 +1223,80 @@
         left:0vw;
     }
     .mountainContainer.switch #midMountain {
-        left:-10vw;
+        left:-5vw;
     }
     .mountainContainer.switch #smallMountain {
         left:20vw;
     }
     
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 337px); bottom:30%;
-        transform:scale(1);
+        left:calc(50% - 420px); top:105px;
+        transform:scale(0.9);
     }
     .bigKnowledgeText:nth-child(3) { /* Javascript */
-        transform:translate(230%, 340%);
+        transform:translate(220%, 340%);
     }
     .bigKnowledgeText:nth-child(4) { /* CSS */
-        transform:rotateZ(-4deg) translate(130%, 575%);
+        transform:rotateZ(-4deg) translate(130%, 555%);
     }
     .bigKnowledgeText:nth-child(5) { /* HTML */
-        transform:rotateZ(4deg) translate(300%, 610%);
+        transform:rotateZ(4deg) translate(300%, 590%);
     }
     .bigKnowledgeText:nth-child(6) { /* Git/Github */
-        transform:rotateZ(10deg) translate(313%, 490%);
+        transform:rotateZ(10deg) translate(280%, 500%);
     }
     .bigKnowledgeText:nth-child(7) { /* Front-End */
-        transform:rotateZ(-8deg) translate(25%, 394%);
+        transform:rotateZ(-8deg) translate(25%, 384%);
     }
     .bigKnowledgeText:nth-child(8) { /* Agile */
-        transform:rotateZ(-2deg) translate(95%, 818%);
+        transform:rotateZ(-2deg) translate(95%, 780%);
     }
     .bigKnowledgeText:nth-child(9) { /* React */
         font-size:30px;
-        transform:rotateZ(-4deg) translate(200%, 1010%);
+        transform:rotateZ(-4deg) translate(240%, 920%);
     }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:8%;
+        left:calc(50% - 250px); top:358px;
+        transform-origin: center 43%;
         transform:scale(1.6);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:18%;
+        left:calc(50% - 250px); top:225px;
         transform:scale(1.3);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 137px); bottom:-14%;
-        transform:scale(1.1);
+        left:calc(50% - 37px); top:160px;
+        transform:scale(1.05);
     }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:12%;
+        left:calc(50% - 250px); top:287px;
+        transform-origin: center 57%;
         transform:scale(1.6);
     }
+    .midKnowledgeText:nth-child(3) { /* VSCode */ transform:rotateZ(-14deg) translate(150%, 1190%); }
+    .midKnowledgeText:nth-child(4) { /* NodeJS */ transform:rotateZ(-14deg) translate(50%, 740%); }
+    .midKnowledgeText:nth-child(5) { /* NextJS */ transform:rotateZ(0deg) translate(475%, 960%); }
+    .midKnowledgeText:nth-child(6) { /* NoSQL */ transform:translate(140%, 355%); }
+    .midKnowledgeText:nth-child(7) { /* C/C++ */ transform:rotateZ(-7deg) translate(120%, 635%); }
+    .midKnowledgeText:nth-child(8) { /* Back-End */ transform:rotateZ(-10deg) translate(190%, 475%); }
+    .midKnowledgeText:nth-child(9) { /* Rule-Based */ transform:rotateZ(-5deg) translate(165%, 615%); }
+    .midKnowledgeText:nth-child(10) { /* Elementor */ transform:rotateZ(-9deg) translate(85%, 1125%); }
     #midMountain.bubbleBackground {
-        left:calc(50% - 490px); bottom:-10%;
+        left:calc(50% - 490px); top:480px;
         transform:scale(1);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 320px); bottom:-59%;
-        transform:scale(1.3);
+        left:calc(50% - 260px); top:545px;
+        transform:scale(1.28);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:10%;
-        transform:scale(0.27);
+        left:calc(50% - 250px); top:323px;
+        transform:scale(0.35);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 10px); bottom:-3%;
+        left:calc(50% - 10px); top:420px;
         transform:scale(0.7);
     }
 
@@ -1414,54 +1415,87 @@
         left:30vw;
     }
     .mountainContainer.switch #bigMountain {
-        left:-18vw;
+        left:-19vw;
         width:140%;
     }
     .mountainContainer.switch #midMountain {
-        left:-30vw;
+        left:-31vw;
         width:110%;
     }
     .mountainContainer.switch #smallMountain {
-        left:0vw;
+        left:4vw;
         width:150%;
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 300px); bottom:35%;
+        left:calc(50% - 300px); top:60px;
         transform:scale(0.8);
     }
+    .bigKnowledgeText:nth-child(3) { /* Javascript */
+        transform:translate(240%, 340%);
+    }
+    .bigKnowledgeText:nth-child(4) { /* CSS */
+        transform:rotateZ(-4deg) translate(130%, 535%);
+    }
+    .bigKnowledgeText:nth-child(5) { /* HTML */
+        transform:rotateZ(4deg) translate(320%, 600%);
+    }
+    .bigKnowledgeText:nth-child(6) { /* Git/Github */
+        transform:rotateZ(10deg) translate(310%, 490%);
+    }
+    .bigKnowledgeText:nth-child(7) { /* Front-End */
+        transform:rotateZ(-8deg) translate(35%, 370%);
+    }
+    .bigKnowledgeText:nth-child(8) { /* Agile */
+        transform:rotateZ(-2deg) translate(95%, 760%);
+    }
+    .bigKnowledgeText:nth-child(9) { /* React */
+        font-size:30px;
+        transform:rotateZ(-4deg) translate(180%, 960%);
+    }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:11%;
+        left:calc(50% - 250px); top:348px;
         transform:scale(1.5);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:25%;
+        left:calc(50% - 250px); top:165px;
         transform:scale(1.15);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 175px); bottom:-5%;
+        left:calc(50% - 175px); top:400px;
         transform:scale(0.9);
     }
+    .midKnowledgeText:nth-child(3) { /* VSCode */ transform:rotateZ(-14deg) translate(180%, 1130%); }
+    .midKnowledgeText:nth-child(4) { /* NodeJS */ transform:rotateZ(-14deg) translate(5%, 860%); }
+    .midKnowledgeText:nth-child(5) { /* NextJS */ transform:rotateZ(0deg) translate(475%, 660%); }
+    .midKnowledgeText:nth-child(6) { /* NoSQL */ transform:translate(130%, 355%); }
+    .midKnowledgeText:nth-child(7) { /* C/C++ */ transform:rotateZ(-7deg) translate(230%, 820%); }
+    .midKnowledgeText:nth-child(8) { /* Back-End */ transform:rotateZ(-10deg) translate(190%, 475%); }
+    .midKnowledgeText:nth-child(9) { /* Rule-Based */ transform:rotateZ(-5deg) translate(165%, 785%); }
+    .midKnowledgeText:nth-child(10) { /* Elementor */ 
+        transform:rotateZ(-9deg) translate(5%, 530%); 
+        font-size:24px;
+    }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:15%;
+        left:calc(50% - 250px); top:277px;
         transform:scale(1.5);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 400px); bottom:-3%;
+        left:calc(50% - 400px); top:420px;
         transform:scale(0.8);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 300px); bottom:-42%;
+        left:calc(50% - 300px); top:720px;
         transform:scale(1);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:13%;
-        transform:scale(0.25);
+        left:calc(50% - 250px); top:313px;
+        transform:scale(0.32);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 110px); bottom:1%;
+        left:calc(50% - 110px); top:380px;
         transform:scale(0.6);
     }
 
@@ -1563,43 +1597,43 @@
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 290px); bottom:45%;
+        left:calc(50% - 290px); top:30px;
         transform:scale(0.6);
     }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:15%;
-        transform-origin: center 41%;
+        left:calc(50% - 250px); top:258px;
+        transform-origin: center 42.5%;
         transform:scale(1.2);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:33%;
+        left:calc(50% - 250px); top:125px;
         transform:scale(1);
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 200px); bottom:15%;
+        left:calc(50% - 200px); top:300px;
         transform:scale(0.7);
     }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:25%;
-        transform-origin: center 58%;
+        left:calc(50% - 250px); top:187px;
+        transform-origin: center 57.5%;
         transform:scale(1.2);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 320px); bottom:2%;
+        left:calc(50% - 320px); top:410px;
         transform:scale(0.8);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 300px); bottom:-14%;
+        left:calc(50% - 300px); top:560px;
         transform:scale(0.8);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:20%;
-        transform:scale(0.3);
+        left:calc(50% - 250px); top:223px;
+        transform:scale(0.27);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 180px); bottom:-7%;
+        left:calc(50% - 180px); top:510px;
         transform:scale(0.6);
     }
 
@@ -1697,35 +1731,29 @@
     }
 
     #bigMountain.bubbleKnowledge {
-        left:calc(50% - 270px); bottom:48%;
+        left:calc(50% - 270px); top:0px;
         transform:scale(0.5);
     }
-    .bigKnowledgeText:nth-child(3) { /* Javascript */
-        transform:translate(230%, 340%);
+    .bigKnowledgeText:nth-child(4) { /* CSS */
+        transform:rotateZ(-4deg) translate(250%, 535%);
     }
     .bigKnowledgeText:nth-child(5) { /* HTML */
-        transform:rotateZ(4deg) translate(330%, 640%);
-    }
-    .bigKnowledgeText:nth-child(6) { /* Git/Github */
-        transform:rotateZ(5deg) translate(290%, 600%);
-    }
-    .bigKnowledgeText:nth-child(7) { /* Front-End */
-        transform:rotateZ(-8deg) translate(25%, 394%);
+        transform:rotateZ(4deg) translate(370%, 610%);
     }
     .bigKnowledgeText:nth-child(8) { /* Agile */
-        transform:rotateZ(-2deg) translate(110%, 840%);
+        transform:rotateZ(-2deg) translate(100%, 720%);
     }
     .bigKnowledgeText:nth-child(9) { /* React */
         font-size:30px;
-        transform:rotateZ(-4deg) translate(250%, 1040%);
+        transform:rotateZ(-4deg) translate(210%, 900%);
     }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:18%;
-        transform-origin: center 39%;
+        left:calc(50% - 250px); top:188px;
+        transform-origin: center 43%;
         transform:scale(1);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:32%;
+        left:calc(50% - 250px); top:110px;
         clip-path: polygon(20% 73%, 20% 73%, 80% 73%, 80% 73%, 100% 0, 100% 0, 0 0, 0 0);
     }
     .leftSlant,
@@ -1740,34 +1768,35 @@
     }
 
     #midMountain.bubbleKnowledge {
-        left:calc(50% - 220px); bottom:18%;
+        left:calc(50% - 220px); top:240px;
         transform:scale(0.6);
     }
-    .midKnowledgeText:nth-child(3) { /* VSCode */ transform:rotateZ(-14deg) translate(140%, 1190%); }
-    .midKnowledgeText:nth-child(5) { /* NextJS */ transform:rotateZ(0deg) translate(455%, 980%); }
-    .midKnowledgeText:nth-child(7) { /* C/C++ */ transform:rotateZ(-7deg) translate(70%, 635%); }
-    .midKnowledgeText:nth-child(9) { /* Rule-Based */ transform:rotateZ(-5deg) translate(165%, 625%); }
-    .midKnowledgeText:nth-child(10) { /* Elementor */ transform:rotateZ(-9deg) translate(55%, 1135%); }
+    .midKnowledgeText:nth-child(4) { /* NodeJS */ transform:rotateZ(-14deg) translate(30%, 980%); }
+    .midKnowledgeText:nth-child(7) { /* C/C++ */ transform:rotateZ(-7deg) translate(120%, 895%); }
+    .midKnowledgeText:nth-child(10) { /* Elementor */ 
+        transform:rotateZ(-9deg) translate(5%, 530%); 
+        font-size:24px;
+    }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:30%;
-        transform-origin: center 61%;
+        left:calc(50% - 250px); top:117px;
+        transform-origin: center 57%;
         transform:scale(1);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 266px); bottom:1%;
+        left:calc(50% - 300px); top:390px;
         transform:scale(0.7);
     }
 
     #smallMountain.bubbleKnowledge {
-        left:calc(50% - 260px); bottom:-12%;
+        left:calc(50% - 260px); top:485px;
         transform:scale(0.7);
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:24%;
-        transform:scale(0.3);
+        left:calc(50% - 250px); top:153px;
+        transform:scale(0.25);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:-19%;
+        left:calc(50% - 210px); top:520px;
         transform:scale(0.55);
         padding-bottom:50px;
     }
@@ -1867,11 +1896,11 @@
         bottom:40%;
     }
     #bigMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:15%;
+        left:calc(50% - 250px); top:138px;
         transform:scale(0.88);
     }
     #bigMountain.bubbleBackground {
-        left:calc(50% - 250px); bottom:25%;
+        left:calc(50% - 250px); top:95px;
         clip-path: polygon(20% 80%, 20% 80%, 80% 80%, 80% 80%, 100% 0, 100% 0, 0 0, 0 0);
     }
     .leftSlant,
@@ -1889,11 +1918,11 @@
         bottom:7%;
     }
     #midMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:29%;
+        left:calc(50% - 250px); top:67px;
         transform:scale(0.88);
     }
     #midMountain.bubbleBackground {
-        left:calc(50% - 295px); bottom:-9%;
+        left:calc(50% - 295px); top:365px;
         transform:scale(0.55);
     }
 
@@ -1901,11 +1930,11 @@
         bottom:-26%;
     }
     #smallMountain.bubbleExperience {
-        left:calc(50% - 250px); bottom:22%;
-        transform:scale(0.25);
+        left:calc(50% - 250px); top:103px;
+        transform:scale(0.21);
     }
     #smallMountain.bubbleBackground {
-        left:calc(50% - 210px); bottom:-19%;
+        left:calc(50% - 210px); top:445px;
         transform:scale(0.4);
     }
 
