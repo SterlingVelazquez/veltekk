@@ -28,8 +28,11 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    document.getElementById("canvas1").className = "canvas1";
-    try { particleText(true) } catch { /* Error */ }
+    if (document.getElementById("canvas1").className.includes("erase")) {
+      document.getElementById("canvas1").className = "canvas1";
+    } else {
+      try { particleText(true) } catch { /* Error */ }
+    }
   }
 
   exitPage() {
