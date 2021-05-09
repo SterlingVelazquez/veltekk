@@ -188,6 +188,7 @@ export default function particleText(isHome) {
                     this.y -= dy / 25;
                 }
                 if (this.opacity > 0) this.opacity -= 0.03;
+                this.isSet = false;
             }
         }
     }
