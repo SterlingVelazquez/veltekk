@@ -20,6 +20,13 @@ const pageVariants = {
   }
 }
 
+window.addEventListener('popstate', function() {
+  if (document.getElementById("canvas1").className.includes("erase"))
+    document.getElementById("canvas1").className = "canvas1";
+  else 
+    document.getElementById("canvas1").className = "canvas1 erase";
+});
+
 class Home extends React.Component {
 
   constructor(props) {
