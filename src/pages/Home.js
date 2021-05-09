@@ -8,12 +8,15 @@ import { motion } from 'framer-motion'
 const pageVariants = {
   in: { 
     opacity: 1,
+    transition: {
+      duration: 1
+    }
   },
-  out: { 
+  out: {
     opacity: 0,
     transition: {
       duration: 1
-    } 
+    }
   }
 }
 
@@ -24,22 +27,30 @@ class Home extends React.Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    document.getElementById("canvas1").className = "canvas1";
+    try { particleText(true) } catch { /* Error */ }
+  }
+
+  exitPage() {
+    document.getElementById("canvas1").className = "canvas1 erase";
+  }
+
   render() {
     document.getElementById("canvas1").style.display = "block";
-    try { particleText(true) } catch { /* Error */ }
     return (
       <motion.div className="main" initial="out" animate="in" exit="out" variants={pageVariants}>
-        <Link to="/about" className="homeButtonContainer">
-            <div className="homeButtonCircle">
-                <div className="homeButtonArrow"></div>
-            </div>
-            <p className="homeButtonText">About Me</p>
+        <Link to="/about" className="homeButtonContainer" id="aboutBtn" onClick={e => this.exitPage()}>
+          <div className="homeButtonCircle">
+              <div className="homeButtonArrow"></div>
+          </div>
+          <p className="homeButtonText">About Me</p>
         </Link>
-        <Link to="/projects" className="homeButtonContainer">
-            <div className="homeButtonCircle">
-                <div className="homeButtonArrow"></div>
-            </div>
-            <p className="homeButtonText">My Projects</p>
+        <Link to="/projects" className="homeButtonContainer" id="projectsBtn" onClick={e => this.exitPage()}>
+          <div className="homeButtonCircle">
+              <div className="homeButtonArrow"></div>
+          </div>
+          <p className="homeButtonText">My Projects</p>
         </Link>
       </motion.div>
     );

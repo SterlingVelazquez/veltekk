@@ -47,21 +47,18 @@ body {
   width:250px;
   height:80px;
   top:50%; left:50%;
-  margin-top:260px;
+  margin:260px 0 0 -280px;
   padding-bottom:100px;
   transform:translate(-50%, -50%) scale(1.2);
-  transition:0.3s;
+  transition:1s;
   z-index:1;
   cursor:pointer;
   animation:pulseLeft 2s ease;
 }
-.homeButtonContainer:nth-child(1) {
-  margin-left:-280px;
-}
-.homeButtonContainer:nth-child(2) {
+#projectsBtn {
   left:auto; right:50%;
   transform:translate(50%, -50%) scale(1.2);
-  margin-right:-280px;
+  margin:260px -280px 0 0;
   animation:pulseRight 2s ease;
 }
 .homeButtonCircle {
@@ -75,7 +72,7 @@ body {
   box-shadow:0 0 10px rgba(153, 226, 255, 0.26);
   transition:0.5s;
 }
-.homeButtonContainer:nth-child(2) .homeButtonCircle {
+#projectsBtn .homeButtonCircle {
   margin-left:80px;
 }
 .homeButtonContainer:hover .homeButtonCircle {
@@ -92,7 +89,7 @@ body {
   opacity: 0.6;
   filter:drop-shadow(0 0 2px white);
 }
-.homeButtonContainer:nth-child(2) .homeButtonArrow {
+#projectsBtn .homeButtonArrow {
   transform:translate(-50%, -50%) rotateZ(-135deg);
   margin-left:-5px;
 }
@@ -123,19 +120,19 @@ body {
 .homeButtonContainer:hover .homeButtonText:after {
   width:95px;
 }
-.homeButtonContainer:nth-child(2) .homeButtonText {
+#projectsBtn .homeButtonText {
   left:0; right:0;
   text-align:right;
   margin-right:100px;
   margin-left:auto;
 }
-.homeButtonContainer:nth-child(2) .homeButtonText:after {
+#projectsBtn .homeButtonText:after {
   position:absolute;
   right:-2px;
   text-align:right;
   width:0;
 }
-.homeButtonContainer:nth-child(2):hover .homeButtonText:after {
+#projectsBtn:hover .homeButtonText:after {
   width:110px;
 }
 
@@ -154,6 +151,7 @@ body {
   50%{transform:scale(2)}
   100%{transform:scale(1)}
 }
+
 @keyframes pulseLeft {
   0% {
     opacity:0;
@@ -187,15 +185,12 @@ body {
 
 @media only screen and (max-width: 1400px) {
   .homeButtonContainer {
-    margin-top:200px;
+    margin:200px 0 0 -250px;
     transform:translate(-50%, -50%) scale(1);
   }
-  .homeButtonContainer:nth-child(1) {
-    margin-left:-250px;
-  }
-  .homeButtonContainer:nth-child(2) {
+  #projectsBtn {
     transform:translate(50%, -50%) scale(1);
-    margin-right:-250px;
+    margin:200px -250px 0 0;
   }
 
   @keyframes pulseLeft {
@@ -237,15 +232,12 @@ body {
   }
 
   .homeButtonContainer {
-    margin-top:160px;
+    margin:160px 0 0 -180px;
     transform:translate(-50%, -50%) scale(0.9);
   }
-  .homeButtonContainer:nth-child(1) {
-    margin-left:-180px;
-  }
-  .homeButtonContainer:nth-child(2) {
+  #projectsBtn {
     transform:translate(50%, -50%) scale(0.9);
-    margin-right:-180px;
+    margin:160px -180px 0 0;
   }
 
   @keyframes pulseLeft {
@@ -286,15 +278,12 @@ body {
   }
 
   .homeButtonContainer {
-    margin-top:140px;
+    margin:140px 0 0 -150px;
     transform:translate(-50%, -50%) scale(0.8);
   }
-  .homeButtonContainer:nth-child(1) {
-    margin-left:-150px;
-  }
-  .homeButtonContainer:nth-child(2) {
+  #projectsBtn {
     transform:translate(50%, -50%) scale(0.8);
-    margin-right:-150px;
+    margin:140px -150px 0 0;
   }
 
   @keyframes pulseLeft {
@@ -335,15 +324,12 @@ body {
   }
 
   .homeButtonContainer {
-    margin-top:120px;
+    margin:120px 0 0 -110px;
     transform:translate(-50%, -50%) scale(0.7);
   }
-  .homeButtonContainer:nth-child(1) {
-    margin-left:-110px;
-  }
-  .homeButtonContainer:nth-child(2) {
+  #projectsBtn {
     transform:translate(50%, -50%) scale(0.7);
-    margin-right:-110px;
+    margin:120px -110px 0 0;
   }
 
   @keyframes pulseLeft {
@@ -384,15 +370,12 @@ body {
   }
 
   .homeButtonContainer {
-    margin-top:90px;
+    margin:90px 0 0 -70px;
     transform:translate(-50%, -50%) scale(0.6);
   }
-  .homeButtonContainer:nth-child(1) {
-    margin-left:-70px;
-  }
-  .homeButtonContainer:nth-child(2) {
+  #projectsBtn {
     transform:translate(50%, -50%) scale(0.6);
-    margin-right:-70px;
+    margin:90px -70px 0 0;
   }
 
   @keyframes pulseLeft {
@@ -433,15 +416,12 @@ body {
   }
 
   .homeButtonContainer {
-    margin-top:65px;
+    margin:65px 0 0 -60px;
     transform:translate(-50%, -50%) scale(0.5);
   }
-  .homeButtonContainer:nth-child(1) {
-    margin-left:-60px;
-  }
-  .homeButtonContainer:nth-child(2) {
+  #projectsBtn {
     transform:translate(50%, -50%) scale(0.5);
-    margin-right:-60px;
+    margin:65px -60px 0 0;
   }
 
   @keyframes pulseLeft {
@@ -475,4 +455,3 @@ body {
     }
   }
 }
-

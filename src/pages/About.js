@@ -6,12 +6,14 @@ import { motion } from 'framer-motion'
 
 const pageVariants = {
   in: {
-    opacity: 1,
+    x:0,
+    opacity:1,
     transition: {
-      duration: 1
+      duration: 0
     }
   },
-  out: {
+  out: { 
+    x:"-80%",
     opacity: 0,
     transition: {
       duration: 1

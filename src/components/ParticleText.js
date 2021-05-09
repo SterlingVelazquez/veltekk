@@ -35,7 +35,7 @@ export default function particleText(isHome) {
             mouse = {
                 x: null,
                 y: null,
-                radius: 60
+                radius: 90
             }
             initializeParticleText();
         } else if ((window.innerWidth > 768 && window.innerWidth <= 1024) && (typeof canvas.width === "undefined" || adjustX !== 27.6)) {
@@ -49,7 +49,7 @@ export default function particleText(isHome) {
             mouse = {
                 x: null,
                 y: null,
-                radius: 45
+                radius: 60
             }
             initializeParticleText();
         } else if ((window.innerWidth > 560 && window.innerWidth <= 768) && (typeof canvas.width === "undefined" || adjustX !== 22.6)) {
@@ -63,7 +63,7 @@ export default function particleText(isHome) {
             mouse = {
                 x: null,
                 y: null,
-                radius: 35
+                radius: 45
             }
             initializeParticleText();
         } else if ((window.innerWidth > 400 && window.innerWidth <= 560) && (typeof canvas.width === "undefined" || adjustX !== 19.6)) {
@@ -77,7 +77,7 @@ export default function particleText(isHome) {
             mouse = {
                 x: null,
                 y: null,
-                radius: 30
+                radius: 35
             }
             initializeParticleText();
         } else if ((window.innerWidth > 300 && window.innerWidth <= 400) && (typeof canvas.width === "undefined" || adjustX !== 16.3)) {
@@ -91,7 +91,7 @@ export default function particleText(isHome) {
             mouse = {
                 x: null,
                 y: null,
-                radius: 25
+                radius: 30
             }
             initializeParticleText();
         } else if (window.innerWidth <= 300 && (typeof canvas.width === "undefined" || adjustX !== 13.5)) {
@@ -105,7 +105,7 @@ export default function particleText(isHome) {
             mouse = {
                 x: null,
                 y: null,
-                radius: 20
+                radius: 25
             }
             initializeParticleText();
         }
@@ -113,7 +113,7 @@ export default function particleText(isHome) {
 
     function initializeParticleText() {
         particleArray = [];
-        ctx.clearRect(0, 0, canvas.width, canvas.Height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = 'white';
         ctx.font = '20px Verdana';
         ctx.fillText('Veltekk', 0, 30);
@@ -125,9 +125,11 @@ export default function particleText(isHome) {
         constructor(x, y) {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.size = ballSize;
+            this.initX = this.x;
+            this.initY = this.y;
             this.baseX = x;
             this.baseY = y;
+            this.size = ballSize;
             this.density = (Math.random() * 30) + 1;
             this.baseColor = 255;
             this.hoverColor = 255;
@@ -153,27 +155,39 @@ export default function particleText(isHome) {
             var directionY = forceDirectionY * force * this.density;
 
             if (!this.isSet && (Math.abs(this.x - this.baseX) < 1) && (Math.abs(this.y - this.baseY) < 1)) this.isSet = true;
-            if (this.opacity < 1) this.opacity += 0.01;
             
-            if (distance < mouse.radius && this.isSet) {
-                this.x -= directionX;
-                this.y -= directionY;
-                // this.hoverColor = 180 * (mouse.x !== 0 ? (mouse.x / canvas.width) : 0) + 75;
-                if (this.baseColor > 7) {
-                    this.baseColor -= 8;
+            if (!canvas.className.includes("erase")) {
+                if (this.opacity < 1) this.opacity += 0.01;
+                if (distance < mouse.radius && this.isSet) {
+                    this.x -= directionX;
+                    this.y -= directionY;
+                    // this.hoverColor = 180 * (mouse.x !== 0 ? (mouse.x / canvas.width) : 0) + 75;
+                    if (this.baseColor > 7) {
+                        this.baseColor -= 8;
+                    }
+                } else {
+                    if (this.x !== this.baseX) {
+                        dx = this.x - this.baseX;
+                        this.x -= dx / 25;
+                    }
+                    if (this.y !== this.baseY) {
+                        dy = this.y - this.baseY;
+                        this.y -= dy / 25;
+                    }
+                    if (this.baseColor < 255) {
+                        this.baseColor += 2;
+                    }
                 }
             } else {
-                if (this.x !== this.baseX) {
-                    dx = this.x - this.baseX;
+                if (this.x !== this.initX) {
+                    dx = this.x - this.initX;
                     this.x -= dx / 25;
                 }
-                if (this.y !== this.baseY) {
-                    dy = this.y - this.baseY;
+                if (this.y !== this.initY) {
+                    dy = this.y - this.initY;
                     this.y -= dy / 25;
                 }
-                if (this.baseColor < 255) {
-                    this.baseColor += 2;
-                }
+                if (this.opacity > 0) this.opacity -= 0.03;
             }
         }
     }
