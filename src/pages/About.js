@@ -4,6 +4,8 @@ import '../css/about.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 
+var key = 0;
+
 const pageVariants = {
   in: {
     x:0,
@@ -87,7 +89,7 @@ class About extends React.Component {
         <div className="aboutTextContainer" id="abouttextcontainer">
           <h1 className="aboutHeader">Hi, I'm Sterling Velazquez</h1>
           <p className="aboutBio">
-            {bio.map(char => <span className="bioLetter" style={{ animation: `letterFade ${Math.random() * 2 + 0.75}s ease-out` }}>{char}</span>)}
+            {bio.map(char => <span className="bioLetter" style={{ animation: `letterFade ${Math.random() * 2 + 0.75}s ease-out` }} key={key++}>{char}</span>)}
           </p>
           <div className="aboutLogoDiv">
             <div className="aboutLogoCircle" id="ageLogo">
@@ -121,7 +123,7 @@ class About extends React.Component {
               <div className="knowledge" id="bigKnowledge">
                 <h1 className="bigKnowledgeHeader">Advanced</h1>
                 <h1 className="bigKnowledgeSubheader">5+ Years</h1>
-                {bigKnowledge.map(value => <p className="bigKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }}>{value}</p>)}
+                {bigKnowledge.map(value => <p className="bigKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }} key={key++}>{value}</p>)}
               </div>
               <div className="experience" id="bigExperience">
                 <h1 className="bigExperienceHeader">Freelance Website Developer</h1>
@@ -155,7 +157,7 @@ class About extends React.Component {
               <div className="knowledge" id="midKnowledge">
                 <h1 className="midKnowledgeHeader">Intermediate</h1>
                 <h1 className="midKnowledgeSubheader">2-5 Years</h1>
-                {midKnowledge.map(value => <p className="midKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }}>{value}</p>)}
+                {midKnowledge.map(value => <p className="midKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }} key={key++}>{value}</p>)}
               </div>
               <div className="experience" id="midExperience">
                 <h1 className="midExperienceHeader">AT&#38;T | Systems Engineer</h1>
@@ -179,7 +181,7 @@ class About extends React.Component {
                 <div className="knowledge" id="smallKnowledge">
                   <h1 className="smallKnowledgeHeader">Beginner</h1>
                   <h1 className="smallKnowledgeSubheader">&#60;2 Years</h1>
-                  {smallKnowledge.map(value => <p className="smallKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }}>{value}</p>)}
+                  {smallKnowledge.map(value => <p className="smallKnowledgeText" style={{ transition: `opacity ${Math.random() * 4}s ease 0.5s` }} key={key++}>{value}</p>)}
                 </div>
                 <div className="experience" id="smallExperience" onClick={e => this.rotateExperience(e)}>
                   <img className="rotateArrow" src="rotate.svg" alt="rotate"></img>
