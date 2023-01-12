@@ -52,7 +52,7 @@ class Projects extends React.Component {
                   support coming soon.</p>
               </li>
             </a>
-            <a className="projectLink" target="_blank" rel="noopener noreferrer" href="https://www.paoandcamilowedding.vercel.app/">
+            <a className="projectLink" target="_blank" rel="noopener noreferrer" href="https://paoandcamilowedding.vercel.app/">
               <li className="projectItem">
                 <p className="projectHeader">Paola &#38; Camilo's Wedding</p>
                 <p className="projectDescription">A wedding website which leverages React effects to create smooth page animations on scroll. This website, and all the following,
